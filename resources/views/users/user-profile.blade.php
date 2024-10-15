@@ -261,69 +261,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-3 col-md-12 col-xs-12 pl-0 pr-0 user-dash">
-                        <div class="user-profile-box mb-0">
-                            <div class="sidebar-header"><img src="images/logo-blue.svg" alt="header-logo2.png"> </div>
-                            <div class="header clearfix">
-                                <img src="images/testimonials/ts-1.jpg" alt="avatar" class="img-fluid profile-img">
-                            </div>
-                            <div class="active-user">
-                                <h2>Mary Smith</h2>
-                            </div>
-                            <div class="detail clearfix">
-                                <ul class="mb-0">
-                                    <li>
-                                        <a href="dashboard.blade.php">
-                                            <i class="fa fa-map-marker"></i> Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="active" href="user-profile.blade.php">
-                                            <i class="fa fa-user"></i>Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="my-listings.blade.php">
-                                            <i class="fa fa-list" aria-hidden="true"></i>My Properties
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="favorited-listings.blade.php">
-                                            <i class="fa fa-heart" aria-hidden="true"></i>Favorited Properties
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="add-property.blade.php">
-                                            <i class="fa fa-list" aria-hidden="true"></i>Add Property
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="payment-method.blade.php">
-                                            <i class="fas fa-credit-card"></i>Payments
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="invoice.blade.php">
-                                            <i class="fas fa-paste"></i>Invoices
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="change-password.blade.php">
-                                            <i class="fa fa-lock"></i>Change Password
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            <i class="fas fa-sign-out-alt"></i> Log Out
-                                        </a>
-                                        
-                                        <!-- Form ẩn để xử lý đăng xuất -->
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        @include('users.user-profile-box')
+
                     </div>
                     <div class="col-lg-6 col-md-6 col-xs-6 widget-boxed mt-33 mt-0 offset-lg-2 offset-md-3">
                        <div class="col-lg-12 mobile-dashbord dashbord">

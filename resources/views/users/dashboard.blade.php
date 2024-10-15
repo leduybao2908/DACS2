@@ -232,7 +232,7 @@
                         <!-- Right Side Content / --> 
                         <div class="header-user-menu user-menu">
                             <div class="header-user-name">
-                                <span><img src="images/testimonials/ts-1.jpg" alt=""></span>Hi, Mary!
+                                <span><img src="images/testimonials/ts-1-dark.svg" alt=""></span>Hi,{{ Auth::user()->name }}!
                             </div>
                             <ul>
                                 <li><a href="{{ route('user') }}"> Edit profile</a></li>
@@ -256,64 +256,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-3 col-md-12 col-xs-12 pl-0 pr-0 user-dash">
-                        <div class="user-profile-box mb-0">
-                            <div class="sidebar-header"><img src="images/logo-blue.svg" alt="header-logo2.png"> </div>
-                            <div class="header clearfix">
-                                <img src="images/testimonials/ts-1.jpg" alt="avatar" class="img-fluid profile-img">
-                            </div>
-                            <div class="active-user">
-                                <h2>Mary Smith</h2>
-                            </div>
-                            <div class="detail clearfix">
-                                <ul class="mb-0">
-                                    <li>
-                                        <a class="active" href="{{ route('dashboard') }}">
-                                            <i class="fa fa-map-marker"></i> Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('user') }}">
-                                            <i class="fa fa-user"></i>Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('my-listings') }}">
-                                            <i class="fa fa-list" aria-hidden="true"></i>My Properties
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('favorited-listings') }}">
-                                            <i class="fa fa-heart" aria-hidden="true"></i>Favorited Properties
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('add-property') }}">
-                                            <i class="fa fa-list" aria-hidden="true"></i>Add Property
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('payment-method') }}">
-                                            <i class="fas fa-credit-card"></i>Payments
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('invoice') }}">
-                                            <i class="fas fa-paste"></i>Invoices
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="change-password.blade.php">
-                                            <i class="fa fa-lock"></i>Change Password
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index.blade.php">
-                                            <i class="fas fa-sign-out-alt"></i>Log Out
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        @include('users.user-profile-box')
                     </div>
                     <div class="col-lg-9 col-md-12 col-xs-12 pl-0 user-dash2">
                        <div class="col-lg-12 mobile-dashbord dashbord">
@@ -478,7 +421,7 @@
                                             <img class="img-fluid" src="images/testimonials/ts-1.jpg" alt="">
                                         </div>
                                         <div class="body">
-                                            <h6>Mary Smith</h6>
+                                            <h6>{{ Auth::user()->name }}</h6>
                                             <p class="post-time">22 Minutes ago</p>
                                             <p class="content mb-0 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                                             <div class="controller">
@@ -534,7 +477,7 @@
                                         </div>
                                         <div class="body">
                                             <h5>Family House</h5>
-                                            <h6>Mary Smith</h6>
+                                            <h6>{{ Auth::user()->name }}</h6>
                                             <p class="post-time">10 hours ago</p>
                                             <p class="content mb-0 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                                             <ul class="starts mb-0">
