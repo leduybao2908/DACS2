@@ -37,247 +37,7 @@
         <!-- START SECTION HEADINGS -->
         <!-- Header Container
         ================================================== -->
-        <header id="header-container">
-            <!-- Header -->
-            <div id="header">
-                <div class="container container-header">
-                    <!-- Left Side Content -->
-                    <div class="left-side">
-                        <!-- Logo -->
-                        <div id="logo">
-                            <a href="index.html"><img src="images/logo-red.svg" alt=""></a>
-                        </div>
-                        <!-- Mobile Navigation -->
-                        <div class="mmenu-trigger">
-                            <button class="hamburger hamburger--collapse" type="button">
-                                <span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-                                </span>
-                            </button>
-                        </div>
-                        <!-- Main Navigation -->
-                        <nav id="navigation" class="style-1">
-                            <ul id="responsive">
-                                <li><a href="#">Home</a>
-                                    <ul>
-                                        <li><a href="#">Home Map</a>
-                                            <ul>
-                                                <li><a href="index-9.html">Home Map Style 1</a></li>
-                                                <li><a href="index-12.html">Home Map Style 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Home Image</a>
-                                            <ul>
-                                               <li><a href="index.html">Modern Home</a></li>
-                                                <li><a href="index-2.html">Home Boxed Image</a></li>
-                                                <li><a href="index-3.html">Home Modern Image</a></li>
-                                                <li><a href="index-5.html">Home Minimalist Style</a></li>
-                                                <li><a href="index-6.html">Home Parallax Image</a></li>
-                                                <li><a href="index-8.html">Home Search Form</a></li>
-                                                <li><a href="index-10.html">Modern Full Image</a></li>
-                                                <li><a href="index-15.html">Home Typed Image</a></li>
-                                                <li><a href="index-17.html">Modern Parallax Image</a></li>
-                                                <li><a href="index-18.html">Image Filter Search</a>
-                                                <li><a href="index-21.html">Parallax Image video</a></li>
-												<li><a href="index-23.html">Home Image</a></li>
-												<li><a href="index-24.html">Image and video</a></li>
-                                            </ul>
-                                            </li>
-                                            <li><a href="#">Home Video</a>
-                                                <ul>
-                                                    <li><a href="index-4.html">Home Video Image</a></li>
-                                                    <li><a href="index-7.html">Home Video</a></li>
-                                                    <li><a href="index-20.html">Home Modern Video</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Home Slider</a>
-                                                <ul>
-                                                    <li><a href="index-11.html">Slider Presentation 2</a></li>
-                                                    <li><a href="index-16.html">Slider Presentation 3</a></li>
-                                                    <li><a href="index-19.html">Home Modern Slider</a></li>
-                                                    <li><a href="index-22.html">Home Image Slider</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Home Styles</a>
-                                                <ul>
-                                                    <li><a href="index-13.html">Home Style Dark</a></li>
-                                                    <li><a href="index-14.html">Home Style White</a></li>
-                                                </ul>
-                                            </li>
-                                    </ul>
-                                    </li>
-                                    <li><a href="#">Listing</a>
-                                        <ul>
-                                            <li><a href="#">Listing Grid</a>
-                                                <ul>
-                                                    <li><a href="properties-grid-1.html">Grid View 1</a></li>
-                                                    <li><a href="properties-grid-2.html">Grid View 2</a></li>
-                                                    <li><a href="properties-grid-3.html">Grid View 3</a></li>
-                                                    <li><a href="properties-grid-4.html">Grid View 4</a></li>
-                                                    <li><a href="properties-full-grid-1.html">Grid Fullwidth 1</a></li>
-                                                    <li><a href="properties-full-grid-2.html">Grid Fullwidth 2</a></li>
-                                                    <li><a href="properties-full-grid-3.html">Grid Fullwidth 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Listing List</a>
-                                                <ul>
-                                                    <li><a href="properties-full-list-1.html">List View 1</a></li>
-                                                    <li><a href="properties-list-1.html">List View 2</a></li>
-                                                    <li><a href="properties-full-list-2.html">List View 3</a></li>
-                                                    <li><a href="properties-list-2.html">List View 4</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Listing Map</a>
-                                                <ul>
-                                                    <li><a href="properties-half-map-1.html">Half Map 1</a></li>
-                                                    <li><a href="properties-half-map-2.html">Half Map 2</a></li>
-                                                    <li><a href="properties-half-map-3.html">Half Map 3</a></li>
-                                                    <li><a href="properties-top-map-1.html">Top Map 1</a></li>
-                                                    <li><a href="properties-top-map-2.html">Top Map 2</a></li>
-                                                    <li><a href="properties-top-map-3.html">Top Map 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Agent View</a>
-                                                <ul>
-                                                    <li><a href="agents-listing-grid.html">Agent View 1</a></li>
-                                                    <li><a href="agents-listing-row.html">Agent View 2</a></li>
-                                                    <li><a href="agents-listing-row-2.html">Agent View 3</a></li>
-                                                    <li><a href="agent-details.html">Agent Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Agencies View</a>
-                                                <ul>
-                                                    <li><a href="agencies-listing-1.html">Agencies View 1</a></li>
-                                                    <li><a href="agencies-listing-2.html">Agencies View 2</a></li>
-                                                    <li><a href="agencies-details.html">Agencies Details</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Property</a>
-                                        <ul>
-                                            <li><a href="single-property-1.html">Single Property 1</a></li>
-                                            <li><a href="single-property-2.html">Single Property 2</a></li>
-                                            <li><a href="single-property-3.html">Single Property 3</a></li>
-                                            <li><a href="single-property-4.html">Single Property 4</a></li>
-                                            <li><a href="single-property-5.html">Single Property 5</a></li>
-                                            <li><a href="single-property-6.html">Single Property 6</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Pages</a>
-                                        <ul>
-                                            <li><a href="#">Shop</a>
-                                                <ul>
-                                                    <li><a href="shop-with-sidebar.html">Product Sidebar</a></li>
-                                                    <li><a href="shop-full-page.html">Product Fullpage</a></li>
-                                                    <li><a href="shop-single.html">Product Single</a></li>
-                                                    <li><a href="shop-checkout.html">Checkout Page</a></li>
-                                                    <li><a href="shop-order.html">Order Page</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">User Panel</a>
-                                                <ul>
-                                                    <li><a href="dashboard.html">Dashboard</a></li>
-                                                    <li><a href="user-profile.html">User Profile</a></li>
-                                                    <li><a href="my-listings.html">My Properties</a></li>
-                                                    <li><a href="favorited-listings.html">Favorited Properties</a></li>
-                                                    <li><a href="add-property.html">Add Property</a></li>
-                                                    <li><a href="payment-method.html">Payment Method</a></li>
-                                                    <li><a href="invoice.html">Invoice</a></li>
-                                                    <li><a href="change-password.html">Change Password</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="pricing-table.html">Pricing Tables</a></li>
-                                            <li><a href="404.html">Page 404</a></li>
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="register.html">Register</a></li>
-                                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                                            <li><a href="under-construction.html">Under Construction</a></li>
-                                            <li><a href="ui-element.html">UI Elements</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Blog</a>
-                                        <ul>
-                                            <li><a href="#">Grid Layout</a>
-                                                <ul>
-                                                    <li><a href="blog-full-grid.html">Full Grid</a></li>
-                                                    <li><a href="blog-grid-sidebar.html">With Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">List Layout</a>
-                                                <ul>
-                                                    <li><a href="blog-full-list.html">Full List</a></li>
-                                                    <li><a href="blog-list-sidebar.html">With Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact-us.html">Contact</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block"><a href="login.html">Login</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block"><a href="register.html">Register</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0"><a href="add-property.html" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a></li>
-                            </ul>
-                        </nav>
-                        <!-- Main Navigation / End -->
-                    </div>
-                    <!-- Left Side Content / End -->
-
-                    <!-- Right Side Content / End -->
-                    <div class="right-side d-none d-none d-lg-none d-xl-flex">
-                        <!-- Header Widget -->
-                        <div class="header-widget">
-                            <a href="add-property.html" class="button border">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
-                        </div>
-                        <!-- Header Widget / End -->
-                    </div>
-                    <!-- Right Side Content / End -->
-
-                    <!-- Right Side Content / End -->
-                    <div class="header-user-menu user-menu add">
-                        <div class="header-user-name">
-                            <span><img src="images/testimonials/ts-1.jpg" alt=""></span>Hi, Mary!
-                        </div>
-                        <ul>
-                            <li><a href="user-profile.html"> Edit profile</a></li>
-                            <li><a href="add-property.html"> Add Property</a></li>
-                            <li><a href="payment-method.html">  Payments</a></li>
-                            <li><a href="change-password.html"> Change Password</a></li>
-                            <li><a href="#">Log Out</a></li>
-                        </ul>
-                    </div>
-                    <!-- Right Side Content / End -->
-
-                    <div class="right-side d-none d-none d-lg-none d-xl-flex sign ml-0">
-                        <!-- Header Widget -->
-                        <div class="header-widget sign-in">
-                            <div class="show-reg-form modal-open"><a href="#">Sign In</a></div>
-                        </div>
-                        <!-- Header Widget / End -->
-                    </div>
-                    <!-- Right Side Content / End -->
-
-                    <!-- lang-wrap-->
-                    <div class="header-user-menu user-menu add d-none d-lg-none d-xl-flex">
-                        <div class="lang-wrap">
-                            <div class="show-lang"><span><i class="fas fa-globe-americas"></i><strong>ENG</strong></span><i class="fa fa-caret-down arrlan"></i></div>
-                            <ul class="lang-tooltip lang-action no-list-style">
-                                <li><a href="#" class="current-lan" data-lantext="En">English</a></li>
-                                <li><a href="#" data-lantext="Fr">Francais</a></li>
-                                <li><a href="#" data-lantext="Es">Espanol</a></li>
-                                <li><a href="#" data-lantext="De">Deutsch</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- lang-wrap end-->
-
-                </div>
-            </div>
-            <!-- Header / End -->
-
-        </header>
+        @include('layouts.header')
         <div class="clearfix"></div>
         <!-- Header Container / End -->
         <!-- END SECTION HEADINGS -->
@@ -478,345 +238,56 @@
                     </div>
                 </section>
                 <div class="row featured portfolio-items">
-                    <div class="item col-lg-4 col-md-12 col-xs-12 landscapes sale pr-0 pb-0" data-aos="fade-up">
-                        <div class="project-single mb-0 bb-0">
-                            <div class="project-inner project-head">
-                                <div class="homes">
-                                    <!-- homes img -->
-                                    <a href="single-property-1.html" class="homes-img">
-                                        <div class="homes-tag button alt featured">Featured</div>
-                                        <div class="homes-tag button alt sale">For Sale</div>
-                                        <div class="homes-price">$9,000/mo</div>
-                                        <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="button-effect">
-                                    <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                    @foreach ($properties as $property)
+                        <div class="item col-lg-4 col-md-12 col-xs-12 landscapes sale pr-0 pb-0 my-44 ft aos-init aos-animate" data-aos="fade-up">
+                            <div class="project-single mb-0 bb-0">
+                                <div class="project-inner project-head">
+                                    <div class="homes">
+                                        <!-- homes img -->
+                                        <a href="{{ route('properties.list', $property->id) }}" class="homes-img">
+                                            <div class="homes-tag button alt sale">For Sale</div>
+                                            <div class="homes-price">${{ number_format($property->price_per_month, 2) }}/mo</div>
+                                            <img src="{{ asset('storage/' . $property->images) }}" alt="{{ $property->property_title }}" class="img-responsive">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- homes content -->
-                    <div class="col-lg-8 col-md-12 homes-content pb-0 mb-44" data-aos="fade-up">
-                        <!-- homes address -->
-                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
-                        <p class="homes-address mb-3">
-                            <a href="single-property-1.html">
-                                <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
-                            </a>
-                        </p>
-                        <!-- homes List -->
-                        <ul class="homes-list clearfix pb-3">
-                            <li class="the-icons">
-                                <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                <span>6 Bedrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                <span>3 Bathrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                <span>720 sq ft</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                <span>2 Garages</span>
-                            </li>
-                        </ul>
-                        <div class="footer">
-                            <a href="agent-details.html">
-                                <img src="images/testimonials/ts-1.jpg" alt="" class="mr-2"> Lisa Jhonson
-                            </a>
-                            <span>
-                                <i class="fa fa-calendar"></i> 2 months ago
-                            </span>
-                        </div>
-                    </div>
-                    <div class="item col-lg-4 col-md-12 col-xs-12 landscapes sale pr-0 pb-0 my-44 ft" data-aos="fade-up">
-                        <div class="project-single mb-0 bb-0">
-                            <div class="project-inner project-head">
-                                <div class="homes">
-                                    <!-- homes img -->
-                                    <a href="single-property-1.html" class="homes-img">
-                                        <div class="homes-tag button sale rent">For Rent</div>
-                                        <div class="homes-price">$3,000/mo</div>
-                                        <img src="images/blog/b-12.jpg" alt="home-1" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="button-effect">
-                                    <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-                                </div>
+                        <!-- homes content -->
+                        <div class="col-lg-8 col-md-12 homes-content pb-0 my-44 ft mb-44 aos-init aos-animate" data-aos="fade-up">
+                            <!-- homes address -->
+                            <h3><a href="{{ route('properties.list', $property->id) }}">{{ $property->property_title }}</a></h3>
+                            <p class="homes-address mb-3">
+                                <a href="{{ route('properties.list', $property->id) }}">
+                                    <i class="fa fa-map-marker"></i><span>{{ $property->location }}</span>
+                                </a>
+                            </p>
+                            <!-- homes List -->
+                            <ul class="homes-list clearfix pb-3">
+                                <li class="the-icons">
+                                    <i class="flaticon-square mr-2" aria-hidden="true"></i>
+                                    <span>{{ $property->area }} Sqft</span>
+                                </li>
+                            </ul>
+                            <div class="footer">
+                                <a href="agent-details.html">
+                                    <img src="images/testimonials/ts-1.jpg" alt="" class="mr-2"> {{ $property->owner->name ?? 'Owner Name' }}
+                                </a>
+                                <span>
+                                    <i class="fa fa-calendar"></i> {{ $property->created_at->format('d M Y') }}
+                                </span>
                             </div>
+                            <br>
+                        <br>
+                        <br>
                         </div>
-                    </div>
-                    <!-- homes content -->
-                    <div class="col-lg-8 col-md-12 homes-content pb-0 my-44 ft mb-44" data-aos="fade-up">
-                        <!-- homes address -->
-                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
-                        <p class="homes-address mb-3">
-                            <a href="single-property-1.html">
-                                <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
-                            </a>
-                        </p>
-                        <!-- homes List -->
-                        <ul class="homes-list clearfix pb-3">
-                            <li class="the-icons">
-                                <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                <span>6 Bedrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                <span>3 Bathrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                <span>720 sq ft</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                <span>2 Garages</span>
-                            </li>
-                        </ul>
-                        <div class="footer">
-                            <a href="agent-details.html">
-                                <img src="images/testimonials/ts-2.jpg" alt="" class="mr-2"> Karl Smith
-                            </a>
-                            <span>
-                                <i class="fa fa-calendar"></i> 2 months ago
-                            </span>
-                        </div>
-                    </div>
-                    <div class="item col-lg-4 col-md-12 col-xs-12 landscapes sale pr-0 pb-0" data-aos="fade-up">
-                        <div class="project-single mb-0 bb-0">
-                            <div class="project-inner project-head">
-                                <div class="homes">
-                                    <!-- homes img -->
-                                    <a href="single-property-1.html" class="homes-img">
-                                        <div class="homes-tag button alt sale">For Sale</div>
-                                        <div class="homes-price">$9,000/mo</div>
-                                        <img src="images/blog/b-1.jpg" alt="home-1" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="button-effect">
-                                    <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- homes content -->
-                    <div class="col-lg-8 col-md-12 homes-content pb-0 mb-44" data-aos="fade-up">
-                        <!-- homes address -->
-                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
-                        <p class="homes-address mb-3">
-                            <a href="single-property-1.html">
-                                <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
-                            </a>
-                        </p>
-                        <!-- homes List -->
-                        <ul class="homes-list clearfix pb-3">
-                            <li class="the-icons">
-                                <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                <span>6 Bedrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                <span>3 Bathrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                <span>720 sq ft</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                <span>2 Garages</span>
-                            </li>
-                        </ul>
-                        <div class="footer">
-                            <a href="agent-details.html">
-                                <img src="images/testimonials/ts-3.jpg" alt="" class="mr-2"> katy Teddy
-                            </a>
-                            <span>
-                                <i class="fa fa-calendar"></i> 2 months ago
-                            </span>
-                        </div>
-                    </div>
-                    <div class="item col-lg-4 col-md-12 col-xs-12 landscapes sale pr-0 pb-0 my-44 ft" data-aos="fade-up">
-                        <div class="project-single mb-0 bb-0">
-                            <div class="project-inner project-head">
-                                <div class="homes">
-                                    <!-- homes img -->
-                                    <a href="single-property-1.html" class="homes-img">
-                                        <div class="homes-tag button alt featured">Featured</div>
-                                        <div class="homes-tag button sale rent">For Rent</div>
-                                        <div class="homes-price">$3,000/mo</div>
-                                        <img src="images/feature-properties/fp-10.jpg" alt="home-1" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="button-effect">
-                                    <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- homes content -->
-                    <div class="col-lg-8 col-md-12 homes-content pb-0 my-44 ft mb-44" data-aos="fade-up">
-                        <!-- homes address -->
-                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
-                        <p class="homes-address mb-3">
-                            <a href="properties-details.html">
-                                <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
-                            </a>
-                        </p>
-                        <!-- homes List -->
-                        <ul class="homes-list clearfix pb-3">
-                            <li class="the-icons">
-                                <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                <span>6 Bedrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                <span>3 Bathrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                <span>720 sq ft</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                <span>2 Garages</span>
-                            </li>
-                        </ul>
-                        <div class="footer">
-                            <a href="agent-details.html">
-                                <img src="images/testimonials/ts-4.jpg" alt="" class="mr-2"> Jhon Malon
-                            </a>
-                            <span>
-                                <i class="fa fa-calendar"></i> 2 months ago
-                            </span>
-                        </div>
-                    </div>
-                    <div class="item col-lg-4 col-md-12 col-xs-12 landscapes sale pr-0 pb-0" data-aos="fade-up">
-                        <div class="project-single mb-0 bb-0">
-                            <div class="project-inner project-head">
-                                <div class="homes">
-                                    <!-- homes img -->
-                                    <a href="single-property-1.html" class="homes-img">
-                                        <div class="homes-tag button alt sale">For Sale</div>
-                                        <div class="homes-price">$9,000/mo</div>
-                                        <img src="images/feature-properties/fp-11.jpg" alt="home-1" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="button-effect">
-                                    <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- homes content -->
-                    <div class="col-lg-8 col-md-12 homes-content pb-0 mb-44" data-aos="fade-up">
-                        <!-- homes address -->
-                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
-                        <p class="homes-address mb-3">
-                            <a href="single-property-1.html">
-                                <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
-                            </a>
-                        </p>
-                        <!-- homes List -->
-                        <ul class="homes-list clearfix pb-3">
-                            <li class="the-icons">
-                                <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                <span>6 Bedrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                <span>3 Bathrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                <span>720 sq ft</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                <span>2 Garages</span>
-                            </li>
-                        </ul>
-                        <div class="footer">
-                            <a href="agent-details.html">
-                                <img src="images/testimonials/ts-5.jpg" alt="" class="mr-2"> Susan Delman
-                            </a>
-                            <span>
-                                <i class="fa fa-calendar"></i> 2 months ago
-                            </span>
-                        </div>
-                    </div>
-                    <div class="item col-lg-4 col-md-12 col-xs-12 landscapes sale pr-0 pb-0 my-44 ft" data-aos="fade-up">
-                        <div class="project-single mb-0 bb-0">
-                            <div class="project-inner project-head">
-                                <div class="homes">
-                                    <!-- homes img -->
-                                    <a href="single-property-1.html" class="homes-img">
-                                        <div class="homes-tag button sale rent">For Rent</div>
-                                        <div class="homes-price">$3,000/mo</div>
-                                        <img src="images/feature-properties/fp-12.jpg" alt="home-1" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="button-effect">
-                                    <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- homes content -->
-                    <div class="col-lg-8 col-md-12 homes-content pb-0 my-44 ft mb-44" data-aos="fade-up">
-                        <!-- homes address -->
-                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
-                        <p class="homes-address mb-3">
-                            <a href="single-property-1.html">
-                                <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
-                            </a>
-                        </p>
-                        <!-- homes List -->
-                        <ul class="homes-list clearfix pb-3">
-                            <li class="the-icons">
-                                <i class="flaticon-bed mr-2" aria-hidden="true"></i>
-                                <span>6 Bedrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-bathtub mr-2" aria-hidden="true"></i>
-                                <span>3 Bathrooms</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-square mr-2" aria-hidden="true"></i>
-                                <span>720 sq ft</span>
-                            </li>
-                            <li class="the-icons">
-                                <i class="flaticon-car mr-2" aria-hidden="true"></i>
-                                <span>2 Garages</span>
-                            </li>
-                        </ul>
-                        <div class="footer">
-                            <a href="agent-details.html">
-                                <img src="images/testimonials/ts-6.jpg" alt="" class="mr-2"> Chan Lee
-                            </a>
-                            <span>
-                                <i class="fa fa-calendar"></i> 2 months ago
-                            </span>
-                        </div>
-                    </div>
+                        
+                    @endforeach
                 </div>
+                
+                <br> 
+                <br>
+                <br>
                 <nav aria-label="..." class="pt-0">
                     <ul class="pagination lis-view">
                         <li class="page-item disabled">

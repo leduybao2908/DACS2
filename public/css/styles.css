@@ -2784,16 +2784,18 @@ section.portfolio {
 }
 
 .portfolio .homes-price {
-  color: #fff;
-  font-size: 13px !important;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 2px;
-  background: #3a2c5f;
-  bottom: 15px;
-  left: 15px;
-  z-index: 1;
+    color: #fff;
+    font-size: 13px !important;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 2px;
+    background: #3a2c5f;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1;
+    text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
 }
+
 
 .portfolio .homes-content {
   background: #fff !important;
@@ -24837,5 +24839,7 @@ section.ui-element {
     font-size: 26px;
   }
 }
-
+#edit-form-container {
+  margin-top: 30px; /* Adjust this value as needed */
+}
 /*# sourceMappingURL=styles.css.map */

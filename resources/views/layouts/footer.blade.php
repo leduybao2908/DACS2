@@ -1,6 +1,7 @@
-<footer class="first-footer">
+<!-- START FOOTER -->
+<footer class="first-footer rec-pro">
     <div class="top-footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="netabout">
@@ -26,7 +27,7 @@
                             <li>
                                 <div class="info">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <p class="in-p ti">>NiceLand@GMAIL.COM</p>
+                                    <p class="in-p ti">NiceLand@GMAIL.COM</p>
                                 </div>
                             </li>
                         </ul>
@@ -63,25 +64,7 @@
                                         <i class="fa fa-twitter" aria-hidden="true"></i>
                                     </div>
                                     <div class="text">
-                                        <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                        <h4>about 5 days ago</h4>
-                                    </div>
-                                </div>
-                                <div class="single-item">
-                                    <div class="icon-holder">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                        <h4>about 5 days ago</h4>
-                                    </div>
-                                </div>
-                                <div class="single-item">
-                                    <div class="icon-holder">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+                                        <h5><a href="#">@NiceLand</a> all share them with me baby said inspet.</h5>
                                         <h4>about 5 days ago</h4>
                                     </div>
                                 </div>
@@ -106,9 +89,9 @@
             </div>
         </div>
     </div>
-    <div class="second-footer">
-        <div class="container">
-            <p>2021 © Copyright - All Rights Reserved.</p>
+    <div class="second-footer rec-pro">
+        <div class="container-fluid sd-f">
+            <p>2024 © NiceLand</p>
             <ul class="netsocials">
                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -120,3 +103,4 @@
 </footer>
 
 <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+<!-- END FOOTER -->
