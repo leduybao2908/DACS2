@@ -88,7 +88,7 @@ class PropertiesController extends Controller
     public function display()
     {
         // Fetch all properties from the database
-        $properties = Property::all(); // You can use paginate() if needed
+        $properties = Property::paginate(5); // You can use paginate() if needed
     
         // Return the view with the properties
         return view('uneditfile.properties-full-list-1', compact('properties'));
