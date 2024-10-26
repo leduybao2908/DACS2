@@ -2,14 +2,14 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/index.blade.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:07 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/index')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:07 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="html 5 template">
     <meta name="author" content="">
-    <title>Find Houses - HTML5 Template</title>
+    <title>NiceLand</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -50,7 +50,7 @@
                     <div class="left-side">
                         <!-- Logo -->
                         <div id="logo">
-                            <a href="index.blade.php"><img src="images/logo-white-1.svg" data-sticky-logo="images/logo-red.svg" alt=""></a>
+                            <a href="index')}}"><img src="images/logo-white-1.svg" data-sticky-logo="images/logo-red.svg" alt=""></a>
                         </div>
                         <!-- Mobile Navigation -->
                         <div class="mmenu-trigger">
@@ -64,166 +64,88 @@
                         <nav id="navigation" class="style-1 head-tr">
                             <ul id="responsive">
                                 <li><a href="#">Home</a>
-                                    <ul>
-                                        <li><a href="#">Home Map</a>
-                                            <ul>
-                                                <li><a href="index-9.blade.php">Home Map Style 1</a></li>
-                                                <li><a href="index-12.blade.php">Home Map Style 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Home Image</a>
-                                            <ul>
-                                               <li><a href="index.blade.php">Modern Home</a></li>
-                                                <li><a href="index-2.blade.php">Home Boxed Image</a></li>
-                                                <li><a href="index-3.blade.php">Home Modern Image</a></li>
-                                                <li><a href="index-5.blade.php">Home Minimalist Style</a></li>
-                                                <li><a href="index-6.blade.php">Home Parallax Image</a></li>
-                                                <li><a href="index-8.blade.php">Home Search Form</a></li>
-                                                <li><a href="index-10.blade.php">Modern Full Image</a></li>
-                                                <li><a href="index-15.blade.php">Home Typed Image</a></li>
-                                                <li><a href="index-17.blade.php">Modern Parallax Image</a></li>
-                                                <li><a href="index-18.blade.php">Image Filter Search</a>
-                                                <li><a href="index-21.blade.php">Parallax Image video</a></li>
-												<li><a href="index-23.blade.php">Home Image</a></li>
-												<li><a href="index-24.blade.php">Image and video</a></li>
-                                            </ul>
-                                            </li>
-                                            <li><a href="#">Home Video</a>
-                                                <ul>
-                                                    <li><a href="index-4.blade.php">Home Video Image</a></li>
-                                                    <li><a href="index-7.blade.php">Home Video</a></li>
-                                                    <li><a href="index-20.blade.php">Home Modern Video</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Home Slider</a>
-                                                <ul>
-                                                    <li><a href="index-11.blade.php">Slider Presentation 2</a></li>
-                                                    <li><a href="index-16.blade.php">Slider Presentation 3</a></li>
-                                                    <li><a href="index-19.blade.php">Home Modern Slider</a></li>
-                                                    <li><a href="index-22.blade.php">Home Image Slider</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Home Styles</a>
-                                                <ul>
-                                                    <li><a href="index-13.blade.php">Home Style Dark</a></li>
-                                                    <li><a href="index-14.blade.php">Home Style White</a></li>
-                                                </ul>
-                                            </li>
-                                    </ul>
-                                    </li>
+                                   
                                     <li><a href="#">Listing</a>
                                         <ul>
                                             <li><a href="#">Listing Grid</a>
                                                 <ul>
-                                                    <li><a href="properties-grid-1.blade.php">Grid View 1</a></li>
-                                                    <li><a href="properties-grid-2.blade.php">Grid View 2</a></li>
-                                                    <li><a href="properties-grid-3.blade.php">Grid View 3</a></li>
-                                                    <li><a href="properties-grid-4.blade.php">Grid View 4</a></li>
-                                                    <li><a href="properties-full-grid-1.blade.php">Grid Fullwidth 1</a></li>
-                                                    <li><a href="properties-full-grid-2.blade.php">Grid Fullwidth 2</a></li>
-                                                    <li><a href="properties-full-grid-3.blade.php">Grid Fullwidth 3</a></li>
+                                                    <li><a href="{{ url('/properties-grid-3') }}">Grid View</a></li>
+                                                    <li><a href="{{ url('/properties-full-grid-1') }}">Grid Fullwidth </a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="#">Listing List</a>
-                                                <ul>
-                                                    <li><a href="properties-full-list-1.blade.php">List View 1</a></li>
-                                                    <li><a href="properties-list-1.blade.php">List View 2</a></li>
-                                                    <li><a href="properties-full-list-2.blade.php">List View 3</a></li>
-                                                    <li><a href="properties-list-2.blade.php">List View 4</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Listing Map</a>
-                                                <ul>
-                                                    <li><a href="properties-half-map-1.blade.php">Half Map 1</a></li>
-                                                    <li><a href="properties-half-map-2.blade.php">Half Map 2</a></li>
-                                                    <li><a href="properties-half-map-3.blade.php">Half Map 3</a></li>
-                                                    <li><a href="properties-top-map-1.blade.php">Top Map 1</a></li>
-                                                    <li><a href="properties-top-map-2.blade.php">Top Map 2</a></li>
-                                                    <li><a href="properties-top-map-3.blade.php">Top Map 3</a></li>
-                                                </ul>
-                                            </li>
+                                            <li><a href="{{ url('/properties-list-1') }}">Listing List</a></li>
+                                            <li><a href="{{ url('/properties-half-map-1') }}">Listing Map</a></li>
                                             <li><a href="#">Agent View</a>
                                                 <ul>
-                                                    <li><a href="agents-listing-grid.blade.php">Agent View 1</a></li>
-                                                    <li><a href="agents-listing-row.blade.php">Agent View 2</a></li>
-                                                    <li><a href="agents-listing-row-2.blade.php">Agent View 3</a></li>
-                                                    <li><a href="agent-details.blade.php">Agent Details</a></li>
+                                                    <li><a href="{{url ('/agents-listing-grid')}}">Agent View</a></li>
+                                                    <li><a href="{{url('/agent-details')}}">Agent Details</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">Agencies View</a>
                                                 <ul>
-                                                    <li><a href="agencies-listing-1.blade.php">Agencies View 1</a></li>
-                                                    <li><a href="agencies-listing-2.blade.php">Agencies View 2</a></li>
-                                                    <li><a href="agencies-details.blade.php">Agencies Details</a></li>
+                                                    <li><a href="{{url('/agencies-listing-1')}}">Agencies View</a></li>
+                                                    <li><a href="{{url('/agencies-details')}}">Agencies Details</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Property</a>
-                                        <ul>
-                                            <li><a href="single-property-1.blade.php">Single Property 1</a></li>
-                                            <li><a href="single-property-2.blade.php">Single Property 2</a></li>
-                                            <li><a href="single-property-3.blade.php">Single Property 3</a></li>
-                                            <li><a href="single-property-4.blade.php">Single Property 4</a></li>
-                                            <li><a href="single-property-5.blade.php">Single Property 5</a></li>
-                                            <li><a href="single-property-6.blade.php">Single Property 6</a></li>
-                                        </ul>
+                                    <li><a href="{{'/single-property-1'}}">Property</a>
                                     </li>
                                     <li><a href="#">Pages</a>
                                         <ul>
                                             <li><a href="#">Shop</a>
                                                 <ul>
-                                                    <li><a href="shop-with-sidebar.blade.php">Product Sidebar</a></li>
-                                                    <li><a href="shop-full-page.blade.php">Product Fullpage</a></li>
-                                                    <li><a href="shop-single.blade.php">Product Single</a></li>
-                                                    <li><a href="shop-checkout.blade.php">Checkout Page</a></li>
-                                                    <li><a href="shop-order.blade.php">Order Page</a></li>
+                                                    <li><a href="{{url('/shop-with-sidebar')}}">Product Sidebar</a></li>
+                                                    <li><a href="{{url('/shop-full-page')}}">Product Fullpage</a></li>
+                                                    <li><a href="{{url('/shop-single')}}">Product Single</a></li>
+                                                    <li><a href="{{url('/shop-checkout')}}">Checkout Page</a></li>
+                                                    <li><a href="{{url('/shop-order')}}">Order Page</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">User Panel</a>
                                                 <ul>
-                                                    <li><a href="dashboard.blade.php">Dashboard</a></li>
-                                                    <li><a href="user-profile.blade.php">User Profile</a></li>
-                                                    <li><a href="my-listings.blade.php">My Properties</a></li>
-                                                    <li><a href="favorited-listings.blade.php">Favorited Properties</a></li>
-                                                    <li><a href="add-property.blade.php">Add Property</a></li>
-                                                    <li><a href="payment-method.blade.php">Payment Method</a></li>
-                                                    <li><a href="invoice.blade.php">Invoice</a></li>
-                                                    <li><a href="change-password.blade.php">Change Password</a></li>
+                                                    <li><a href="{{url('/dashboard')}}">Dashboard</a></li>
+                                                    <li><a href="{{url('/user-profile')}}">User Profile</a></li>
+                                                    <li><a href="{{url('/my-listings')}}">My Properties</a></li>
+                                                    <li><a href="{{url('/favorited-listings')}}">Favorited Properties</a></li>
+                                                    <li><a href="{{url('/add-property')}}">Add Property</a></li>
+                                                    <li><a href="{{url('/payment-method')}}">Payment Method</a></li>
+                                                    <li><a href="{{url('/invoice')}}">Invoice</a></li>
+                                                    <li><a href="{{url('/change-password')}}">Change Password</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="about.blade.php">About Us</a></li>
-                                            <li><a href="faq.blade.php">Faq</a></li>
-                                            <li><a href="pricing-table.blade.php">Pricing Tables</a></li>
-                                            <li><a href="404.blade.php">Page 404</a></li>
-                                            <li><a href="login.blade.php">Login</a></li>
-                                            <li><a href="register.blade.php">Register</a></li>
-                                            <li><a href="coming-soon.blade.php">Coming Soon</a></li>
-                                            <li><a href="under-construction.blade.php">Under Construction</a></li>
-                                            <li><a href="ui-element.blade.php">UI Elements</a></li>
+                                            <li><a href="{{url('/about')}}">About Us</a></li>
+                                            <li><a href="{{url('/faq')}}">Faq</a></li>
+                                            <li><a href="{{url('/pricing-table')}}">Pricing Tables</a></li>
+                                            <li><a href="{{url('/page404')}}ml">Page 404</a></li>
+                                            <li><a href="{{url('/login')}}">Login</a></li>
+                                            <li><a href="{{url('/register')}}">Register</a></li>
+                                            <li><a href="{{url('/coming-soon')}}">Coming Soon</a></li>
+                                            <li><a href="{{url('/under-construction')}}">Under Construction</a></li>
+                                            <li><a href="{{url('/ui-element')}}">UI Elements</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Blog</a>
                                         <ul>
                                             <li><a href="#">Grid Layout</a>
                                                 <ul>
-                                                    <li><a href="blog-full-grid.blade.php">Full Grid</a></li>
-                                                    <li><a href="blog-grid-sidebar.blade.php">With Sidebar</a></li>
+                                                    <li><a href="{{url('/blog-full-grid')}}">Full Grid</a></li>
+                                                    <li><a href="{{url('/blog-grid-sidebar')}}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">List Layout</a>
                                                 <ul>
-                                                    <li><a href="blog-full-list.blade.php">Full List</a></li>
-                                                    <li><a href="blog-list-sidebar.blade.php">With Sidebar</a></li>
+                                                    <li><a href="{{url('/blog-full-list')}}">Full List</a></li>
+                                                    <li><a href="{{url('/blog-list-sidebar')}}">With Sidebar</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="blog-details.blade.php">Blog Details</a></li>
+                                            <li><a href="{{url('/blog-details')}}">Blog Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact-us.blade.php">Contact</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block"><a href="login.blade.php">Login</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block"><a href="register.blade.php">Register</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0"><a href="add-property.blade.php" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a></li>
+                                    <li><a href="{{url('/contact-us')}}">Contact</a></li>
+                                    <li class="d-none d-xl-none d-block d-lg-block"><a href="{{url('/login')}}">Login</a></li>
+                                    <li class="d-none d-xl-none d-block d-lg-block"><a href="{{url('/register')}}">Register</a></li>
+                                    <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0"><a href="{{url('/add-property')}}" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a></li>
                             </ul>
                         </nav>
                         <!-- Main Navigation / End -->
@@ -234,7 +156,7 @@
                     <div class="right-side d-none d-none d-lg-none d-xl-flex">
                         <!-- Header Widget -->
                         <div class="header-widget">
-                            <a href="add-property.blade.php" class="button border">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
+                            <a href="{{url('/add-property')}}" class="button border">Add Listing<i class="fas fa-laptop-house ml-2"></i></a>
                         </div>
                         <!-- Header Widget / End -->
                     </div>
@@ -242,16 +164,16 @@
 
                     <!-- Right Side Content / End -->
                     <div class="header-user-menu user-menu add">
-                        <!--<div class="header-user-name">
+                        <div class="header-user-name">
                             <span><img src="images/testimonials/ts-1.jpg" alt=""></span>Hi, Mary!
                         </div>
                         <ul>
-                            <li><a href="user-profile.blade.php"> Edit profile</a></li>
-                            <li><a href="add-property.blade.php"> Add Property</a></li>
-                            <li><a href="payment-method.blade.php">  Payments</a></li>
-                            <li><a href="change-password.blade.php"> Change Password</a></li>
+                            <li><a href="{{url('/user-profile')}}"> Edit profile</a></li>
+                            <li><a href="{{url('/add-property')}}"> Add Property</a></li>
+                            <li><a href="{{url('/payment-method')}}">  Payments</a></li>
+                            <li><a href="{{url('/change-password')}}"> Change Password</a></li>
                             <li><a href="#">Log Out</a></li>
-                        </ul> -->
+                        </ul>
                     </div>
                     <!-- Right Side Content / End -->
 
@@ -630,10 +552,10 @@
                     <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="150">
                         <div class="small-category-2">
                             <div class="small-category-2-thumb img-1">
-                                <a href="properties-full-grid-1.blade.php"><img src="images/popular-places/12.jpg" alt=""></a>
+                                <a href="{{url('/properties-full-grid-1')}}"><img src="images/popular-places/12.jpg" alt=""></a>
                             </div>
                             <div class="sc-2-detail">
-                                <h4 class="sc-jb-title"><a href="properties-full-grid-1.blade.php">New York</a></h4>
+                                <h4 class="sc-jb-title"><a href="{{url('/properties-full-grid-1')}}">New York</a></h4>
                                 <span>203 Properties</span>
                             </div>
                         </div>
@@ -642,10 +564,10 @@
                     <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="250">
                         <div class="small-category-2">
                             <div class="small-category-2-thumb img-2">
-                                <a href="properties-full-grid-1.blade.php"><img src="images/popular-places/13.jpg" alt=""></a>
+                                <a href="{{url('/properties-full-grid-1')}}"><img src="images/popular-places/13.jpg" alt=""></a>
                             </div>
                             <div class="sc-2-detail">
-                                <h4 class="sc-jb-title"><a href="properties-full-grid-1.blade.php">Los Angeles</a></h4>
+                                <h4 class="sc-jb-title"><a href="{{url('/properties-full-grid-1')}}">Los Angeles</a></h4>
                                 <span>307 Properties</span>
                             </div>
                         </div>
@@ -654,10 +576,10 @@
                     <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="350">
                         <div class="small-category-2">
                             <div class="small-category-2-thumb img-3">
-                                <a href="properties-full-grid-1.blade.php"><img src="images/popular-places/14.jpg" alt=""></a>
+                                <a href="{{url('/properties-full-grid-1')}}"><img src="images/popular-places/14.jpg" alt=""></a>
                             </div>
                             <div class="sc-2-detail">
-                                <h4 class="sc-jb-title"><a href="properties-full-grid-1.blade.php">San Francisco</a></h4>
+                                <h4 class="sc-jb-title"><a href="{{url('/properties-full-grid-1')}}">San Francisco</a></h4>
                                 <span>409 Properties</span>
                             </div>
                         </div>
@@ -666,10 +588,10 @@
                     <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="450">
                         <div class="small-category-2">
                             <div class="small-category-2-thumb img-3">
-                                <a href="properties-full-grid-1.blade.php"><img src="images/popular-places/9.jpg" alt=""></a>
+                                <a href="{{url('/properties-full-grid-1')}}"><img src="images/popular-places/9.jpg" alt=""></a>
                             </div>
                             <div class="sc-2-detail">
-                                <h4 class="sc-jb-title"><a href="properties-full-grid-1.blade.php">Atlanta</a></h4>
+                                <h4 class="sc-jb-title"><a href="{{url('/properties-full-grid-1')}}">Atlanta</a></h4>
                                 <span>409 Properties</span>
                             </div>
                         </div>
@@ -678,10 +600,10 @@
                     <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="150">
                         <div class="small-category-2 mob-mt">
                             <div class="small-category-2-thumb img-8">
-                                <a href="properties-full-grid-1.blade.php"><img src="images/popular-places/15.jpg" alt=""></a>
+                                <a href="{{url('/properties-full-grid-1')}}"><img src="images/popular-places/15.jpg" alt=""></a>
                             </div>
                             <div class="sc-2-detail">
-                                <h4 class="sc-jb-title"><a href="properties-full-grid-1.blade.php">Miami</a></h4>
+                                <h4 class="sc-jb-title"><a href="{{url('/properties-full-grid-1')}}">Miami</a></h4>
                                 <span>145 Properties</span>
                             </div>
                         </div>
@@ -690,10 +612,10 @@
                     <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="250">
                         <div class="small-category-2">
                             <div class="small-category-2-thumb img-10">
-                                <a href="properties-full-grid-1.blade.php"><img src="images/popular-places/10.jpg" alt=""></a>
+                                <a href="{{url('/properties-full-grid-1')}}"><img src="images/popular-places/10.jpg" alt=""></a>
                             </div>
                             <div class="sc-2-detail">
-                                <h4 class="sc-jb-title"><a href="properties-full-grid-1.blade.php">Chicago</a></h4>
+                                <h4 class="sc-jb-title"><a href="{{url('/properties-full-grid-1')}}">Chicago</a></h4>
                                 <span>112 Properties</span>
                             </div>
                         </div>
@@ -702,10 +624,10 @@
                     <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="350">
                         <div class="small-category-2 si-mt">
                             <div class="small-category-2-thumb img-11">
-                                <a href="properties-full-grid-1.blade.php"><img src="images/popular-places/5.jpg" alt=""></a>
+                                <a href="{{url('/properties-full-grid-1')}}"><img src="images/popular-places/5.jpg" alt=""></a>
                             </div>
                             <div class="sc-2-detail">
-                                <h4 class="sc-jb-title"><a href="properties-full-grid-1.blade.php">Houston</a></h4>
+                                <h4 class="sc-jb-title"><a href="{{url('/properties-full-grid-1')}}">Houston</a></h4>
                                 <span>254 Properties</span>
                             </div>
                         </div>
@@ -714,10 +636,10 @@
                     <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="450">
                         <div class="small-category-2 no-mb si-mt">
                             <div class="small-category-2-thumb img-11">
-                                <a href="properties-full-grid-1.blade.php"><img src="images/popular-places/6.jpg" alt=""></a>
+                                <a href="{{url('/properties-full-grid-1')}}"><img src="images/popular-places/6.jpg" alt=""></a>
                             </div>
                             <div class="sc-2-detail">
-                                <h4 class="sc-jb-title"><a href="properties-full-grid-1.blade.php">Orlando</a></h4>
+                                <h4 class="sc-jb-title"><a href="{{url('/properties-full-grid-1')}}">Orlando</a></h4>
                                 <span>254 Properties</span>
                             </div>
                         </div>
@@ -741,24 +663,24 @@
                             <div class="project-inner project-head">
                                 <div class="homes">
                                     <!-- homes img -->
-                                    <a href="single-property-1.blade.php" class="homes-img">
+                                    <a href="{{url('/single-property-1')}}" class="homes-img">
                                         <div class="homes-tag button alt featured">Featured</div>
                                         <div class="homes-tag button alt sale">For Sale</div>
                                         <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="button-effect">
-                                    <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                    <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                     <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                    <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                 </div>
                             </div>
                             <!-- homes content -->
                             <div class="homes-content">
                                 <!-- homes address -->
-                                <h3><a href="single-property-1.blade.php">Real Luxury Family House Villa</a></h3>
+                                <h3><a href="{{url('/single-property-1')}}">Real Luxury Family House Villa</a></h3>
                                 <p class="homes-address mb-3">
-                                    <a href="single-property-1.blade.php">
+                                    <a href="{{url('/single-property-1')}}">
                                         <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                     </a>
                                 </p>
@@ -783,7 +705,7 @@
                                 </ul>
                                 <div class="price-properties footer pt-3 pb-0">
                                     <h3 class="title mt-3">
-                                     <a href="single-property-1.blade.php">$ 150,000</a>
+                                     <a href="single-property-1')}}">$ 150,000</a>
                                     </h3>
                                     <div class="compare">
                                         <a href="#" title="Compare">
@@ -805,23 +727,23 @@
                             <div class="project-inner project-head">
                                 <div class="homes">
                                     <!-- homes img -->
-                                    <a href="single-property-1.blade.php" class="homes-img">
+                                    <a href="{{url('/single-property-1')}}" class="homes-img">
                                         <div class="homes-tag button sale rent">For Rent</div>
                                         <img src="images/blog/b-12.jpg" alt="home-1" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="button-effect">
-                                    <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                    <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                     <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                    <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                 </div>
                             </div>
                             <!-- homes content -->
                             <div class="homes-content">
                                 <!-- homes address -->
-                                <h3><a href="single-property-1.blade.php">Real Luxury Family House Villa</a></h3>
+                                <h3><a href="{{url('/single-property-1')}}">Real Luxury Family House Villa</a></h3>
                                 <p class="homes-address mb-3">
-                                    <a href="single-property-1.blade.php">
+                                    <a href="{{url('/single-property-1')}}">
                                         <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                     </a>
                                 </p>
@@ -846,7 +768,7 @@
                                 </ul>
                                 <div class="price-properties footer pt-3 pb-0">
                                     <h3 class="title mt-3">
-                                     <a href="single-property-1.blade.php">$ 150,000</a>
+                                     <a href="single-property-1')}}">$ 150,000</a>
                                     </h3>
                                     <div class="compare">
                                         <a href="#" title="Compare">
@@ -868,23 +790,23 @@
                             <div class="project-inner project-head">
                                 <div class="homes">
                                     <!-- homes img -->
-                                    <a href="single-property-1.blade.php" class="homes-img">
+                                    <a href="{{url('/single-property-1')}}" class="homes-img">
                                         <div class="homes-tag button alt sale">For Sale</div>
                                         <img src="images/blog/b-1.jpg" alt="home-1" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="button-effect">
-                                    <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                    <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                     <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                    <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                 </div>
                             </div>
                             <!-- homes content -->
                             <div class="homes-content">
                                 <!-- homes address -->
-                                <h3><a href="single-property-1.blade.php">Real Luxury Family House Villa</a></h3>
+                                <h3><a href="{{url('/single-property-1')}}">Real Luxury Family House Villa</a></h3>
                                 <p class="homes-address mb-3">
-                                    <a href="single-property-1.blade.php">
+                                    <a href="{{url('/single-property-1')}}">
                                         <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                     </a>
                                 </p>
@@ -909,7 +831,7 @@
                                 </ul>
                                 <div class="price-properties footer pt-3 pb-0">
                                     <h3 class="title mt-3">
-                                     <a href="single-property-1.blade.php">$ 150,000</a>
+                                     <a href="{{url('/single-property-1')}}">$ 150,000</a>
                                     </h3>
                                     <div class="compare">
                                         <a href="#" title="Compare">
@@ -931,24 +853,24 @@
                             <div class="project-inner project-head">
                                 <div class="homes">
                                     <!-- homes img -->
-                                    <a href="single-property-1.blade.php" class="homes-img">
+                                    <a href="{{url('/single-property-1')}}" class="homes-img">
                                         <div class="homes-tag button alt featured">Featured</div>
                                         <div class="homes-tag button sale rent">For Rent</div>
                                         <img src="images/feature-properties/fp-10.jpg" alt="home-1" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="button-effect">
-                                    <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                    <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                     <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                    <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                 </div>
                             </div>
                             <!-- homes content -->
                             <div class="homes-content">
                                 <!-- homes address -->
-                                <h3><a href="single-property-1.blade.php">Real Luxury Family House Villa</a></h3>
+                                <h3><a href="{{url('/single-property-1')}}">Real Luxury Family House Villa</a></h3>
                                 <p class="homes-address mb-3">
-                                    <a href="properties-details.blade.php">
+                                    <a href="{{url('/properties-details')}}">
                                         <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                     </a>
                                 </p>
@@ -973,7 +895,7 @@
                                 </ul>
                                 <div class="price-properties footer pt-3 pb-0">
                                     <h3 class="title mt-3">
-                                     <a href="single-property-1.blade.php">$ 150,000</a>
+                                     <a href="{{url('/single-property-1')}}">$ 150,000</a>
                                     </h3>
                                     <div class="compare">
                                         <a href="#" title="Compare">
@@ -995,24 +917,24 @@
                             <div class="project-inner project-head">
                                 <div class="homes">
                                     <!-- homes img -->
-                                    <a href="single-property-1.blade.php" class="homes-img">
+                                    <a href="{{url('/single-property-1')}}" class="homes-img">
                                         <div class="homes-tag button alt featured">Featured</div>
                                         <div class="homes-tag button alt sale">For Sale</div>
                                         <img src="images/feature-properties/fp-11.jpg" alt="home-1" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="button-effect">
-                                    <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                    <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                     <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                    <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                 </div>
                             </div>
                             <!-- homes content -->
                             <div class="homes-content">
                                 <!-- homes address -->
-                                <h3><a href="single-property-1.blade.php">Real Luxury Family House Villa</a></h3>
+                                <h3><a href="{{url('/single-property-1')}}">Real Luxury Family House Villa</a></h3>
                                 <p class="homes-address mb-3">
-                                    <a href="single-property-1.blade.php">
+                                    <a href="{{url('/single-property-1')}}">
                                         <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                     </a>
                                 </p>
@@ -1037,7 +959,7 @@
                                 </ul>
                                 <div class="price-properties footer pt-3 pb-0">
                                     <h3 class="title mt-3">
-                                     <a href="single-property-1.blade.php">$ 150,000</a>
+                                     <a href="{{url('/single-property-1')}}">$ 150,000</a>
                                     </h3>
                                     <div class="compare">
                                         <a href="#" title="Compare">
@@ -1059,23 +981,23 @@
                             <div class="project-inner project-head">
                                 <div class="homes">
                                     <!-- homes img -->
-                                    <a href="single-property-1.blade.php" class="homes-img">
+                                    <a href="{{url('/single-property-1')}}" class="homes-img">
                                         <div class="homes-tag button sale rent">For Rent</div>
                                         <img src="images/feature-properties/fp-12.jpg" alt="home-1" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="button-effect">
-                                    <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                    <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                     <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                    <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                    <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                 </div>
                             </div>
                             <!-- homes content -->
                             <div class="homes-content">
                                 <!-- homes address -->
-                                <h3><a href="single-property-1.blade.php">Real Luxury Family House Villa</a></h3>
+                                <h3><a href="{{url('/single-property-1')}}">Real Luxury Family House Villa</a></h3>
                                 <p class="homes-address mb-3">
-                                    <a href="single-property-1.blade.php">
+                                    <a href="{{url('/single-property-1')}}">
                                         <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                     </a>
                                 </p>
@@ -1100,7 +1022,7 @@
                                 </ul>
                                 <div class="price-properties footer pt-3 pb-0">
                                     <h3 class="title mt-3">
-                                     <a href="single-property-1.blade.php">$ 150,000</a>
+                                     <a href="{{url('/single-property-1')}}">$ 150,000</a>
                                     </h3>
                                     <div class="compare">
                                         <a href="#" title="Compare">
@@ -1119,7 +1041,7 @@
                     </div>
                 </div>
                 <div class="bg-all">
-                    <a href="properties-full-grid-1.blade.php" class="btn btn-outline-light">View More</a>
+                    <a href="{{url('/properties-full-grid-1')}}" class="btn btn-outline-light">View More</a>
                 </div>
             </div>
         </section>
@@ -1197,24 +1119,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.blade.php" class="homes-img">
+                                            <a href="{{url('/single-property-1')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.blade.php">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{url('/single-property-1')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.blade.php">
+                                            <a href="{{url('/single-property-1')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1239,7 +1161,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.blade.php">$ 350,000</a>
+                                                <a href="{{url('/single-property-1')}}">$ 350,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1263,23 +1185,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.blade.php" class="homes-img">
+                                            <a href="{{url('/single-property-1')}}" class="homes-img">
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <img src="images/blog/b-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.blade.php">Real House Luxury Villa</a></h3>
+                                        <h3><a href="single-property-1')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.blade.php">
+                                            <a href="{{url('/single-property-1')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1304,7 +1226,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.blade.php">$ 150,000</a>
+                                                <a href="{{url('/single-property-1')}}">$ 150,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1328,23 +1250,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.blade.php" class="homes-img">
+                                            <a href="{{url('/single-property-1')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/blog/b-1.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.blade.php">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{url('/single-property-1')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.blade.php">
+                                            <a href="{{url('/single-property-1')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1369,7 +1291,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.blade.php">$ 350,000</a>
+                                                <a href="{{url('/single-property-1')}}">$ 350,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1393,24 +1315,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.blade.php" class="homes-img">
+                                            <a href="{{url('/single-property-1')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <img src="images/feature-properties/fp-10.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.blade.php">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{url('/single-property-1')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="properties-details.blade.php">
+                                            <a href="{{url('/properties-details')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1435,7 +1357,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.blade.php">$ 150,000</a>
+                                                <a href="{{url('/single-property-1')}}">$ 150,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1459,23 +1381,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.blade.php" class="homes-img">
+                                            <a href="{{url('/single-property-1')}}" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/feature-properties/fp-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.blade.php">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{url('/single-property-1')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.blade.php">
+                                            <a href="{{url('/single-property-1')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1500,7 +1422,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.blade.php">$ 350,000</a>
+                                                <a href="{{url('/single-property-1')}}">$ 350,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1524,23 +1446,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.blade.php" class="homes-img">
+                                            <a href="{{url('/single-property-1')}}" class="homes-img">
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <img src="images/feature-properties/fp-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.blade.php">Real House Luxury Villa</a></h3>
+                                        <h3><a href="single-property-1')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.blade.php">
+                                            <a href="{{url('/single-property-1')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1565,7 +1487,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.blade.php">$ 150,000</a>
+                                                <a href="single-property-1')}}">$ 150,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1589,24 +1511,24 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.blade.php" class="homes-img">
+                                            <a href="{{url('/single-property-1')}}" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.blade.php">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{url('/single-property-1')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.blade.php">
+                                            <a href="{{url('/single-property-1')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1631,7 +1553,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.blade.php">$ 350,000</a>
+                                                <a href="{{url('/single-property-1')}}">$ 350,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1655,23 +1577,23 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.blade.php" class="homes-img">
+                                            <a href="{{url('/single-property-1')}}" class="homes-img">
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <img src="images/blog/b-12.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.blade.php" class="btn"><i class="fa fa-link"></i></a>
+                                            <a href="{{url('/single-property-1')}}" class="btn"><i class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.blade.php" class="img-poppu btn"><i class="fa fa-photo"></i></a>
+                                            <a href="{{url('/single-property-2')}}" class="img-poppu btn"><i class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.blade.php">Real House Luxury Villa</a></h3>
+                                        <h3><a href="{{url('/single-property-1')}}">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.blade.php">
+                                            <a href="{{url('/single-property-1')}}">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South, NYC</span>
                                             </a>
                                         </p>
@@ -1696,7 +1618,7 @@
                                         </ul>
                                         <div class="price-properties footer pt-3 pb-0">
                                             <h3 class="title mt-3">
-                                                <a href="single-property-1.blade.php">$ 150,000</a>
+                                                <a href="{{url('/single-property-1')}}">$ 150,000</a>
                                             </h3>
                                             <div class="compare">
                                                 <a href="#" title="Compare">
@@ -1732,7 +1654,7 @@
                     <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2" data-aos="fade-up" data-aos-delay="150">
                         <div class="inner-box team-details">
                             <div class="image team-head">
-                                <a href="agents-listing-grid.blade.php"><img src="images/team/t-5.jpg" alt="" /></a>
+                                <a href="{{url('/agents-listing-grid')}}"><img src="images/team/t-5.jpg" alt="" /></a>
                                 <div class="team-hover">
                                     <ul class="team-social">
                                         <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -1743,7 +1665,7 @@
                                 </div>
                             </div>
                             <div class="lower-box">
-                                <h3><a href="agents-listing-grid.blade.php">Carls Jhons</a></h3>
+                                <h3><a href="{{url('/agents-listing-grid')}}">Carls Jhons</a></h3>
                                 <div class="designation">Real Estate Agent</div>
                             </div>
                         </div>
@@ -1752,7 +1674,7 @@
                     <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2" data-aos="fade-up" data-aos-delay="250">
                         <div class="inner-box team-details">
                             <div class="image team-head">
-                                <a href="agents-listing-grid.blade.php"><img src="images/team/t-6.jpg" alt="" /></a>
+                                <a href="{{url('/agents-listing-grid')}}"><img src="images/team/t-6.jpg" alt="" /></a>
                                 <div class="team-hover">
                                     <ul class="team-social">
                                         <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -1763,7 +1685,7 @@
                                 </div>
                             </div>
                             <div class="lower-box">
-                                <h3><a href="agents-listing-grid.blade.php">Arling Tracy</a></h3>
+                                <h3><a href="{{url('/agents-listing-grid')}}">Arling Tracy</a></h3>
                                 <div class="designation">Real Estate Agent</div>
                             </div>
                         </div>
@@ -1772,7 +1694,7 @@
                     <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2" data-aos="fade-up" data-aos-delay="350">
                         <div class="inner-box team-details">
                             <div class="image team-head">
-                                <a href="agents-listing-grid.blade.php"><img src="images/team/t-7.jpg" alt="" /></a>
+                                <a href="{{url('/agents-listing-grid')}}"><img src="images/team/t-7.jpg" alt="" /></a>
                                 <div class="team-hover">
                                     <ul class="team-social">
                                         <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -1783,7 +1705,7 @@
                                 </div>
                             </div>
                             <div class="lower-box">
-                                <h3><a href="agents-listing-grid.blade.php">Mark Web</a></h3>
+                                <h3><a href="{{url('/agents-listing-grid')}}">Mark Web</a></h3>
                                 <div class="designation">Real Estate Agent</div>
                             </div>
                         </div>
@@ -1792,7 +1714,7 @@
                     <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 pb-none" data-aos="fade-up" data-aos-delay="450">
                         <div class="inner-box team-details">
                             <div class="image team-head">
-                                <a href="agents-listing-grid.blade.php"><img src="images/team/t-8.jpg" alt="" /></a>
+                                <a href="{{url('/agents-listing-grid')}}"><img src="images/team/t-8.jpg" alt="" /></a>
                                 <div class="team-hover">
                                     <ul class="team-social">
                                         <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -1803,7 +1725,7 @@
                                 </div>
                             </div>
                             <div class="lower-box">
-                                <h3><a href="agents-listing-grid.blade.php">Katy Grace</a></h3>
+                                <h3><a href="{{url('/agents-listing-grid')}}">Katy Grace</a></h3>
                                 <div class="designation">Real Estate Agent</div>
                             </div>
                         </div>
@@ -1811,7 +1733,7 @@
                     <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 pb-none" data-aos="fade-up" data-aos-delay="550">
                         <div class="inner-box team-details">
                             <div class="image team-head">
-                                <a href="agents-listing-grid.blade.php"><img src="images/team/team-image-2.jpg" alt="" /></a>
+                                <a href="{{url('/agents-listing-grid')}}"><img src="images/team/team-image-2.jpg" alt="" /></a>
                                 <div class="team-hover">
                                     <ul class="team-social">
                                         <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -1822,7 +1744,7 @@
                                 </div>
                             </div>
                             <div class="lower-box">
-                                <h3><a href="agents-listing-grid.blade.php">Chris Melo</a></h3>
+                                <h3><a href="{{url('/agents-listing-grid')}}">Chris Melo</a></h3>
                                 <div class="designation">Real Estate Agent</div>
                             </div>
                         </div>
@@ -1830,7 +1752,7 @@
                     <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2 pb-none" data-aos="fade-up" data-aos-delay="650">
                         <div class="inner-box team-details">
                             <div class="image team-head">
-                                <a href="agents-listing-grid.blade.php"><img src="images/team/team-image-7.jpg" alt="" /></a>
+                                <a href="{{url('/agents-listing-grid')}}"><img src="images/team/team-image-7.jpg" alt="" /></a>
                                 <div class="team-hover">
                                     <ul class="team-social">
                                         <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
@@ -1841,7 +1763,7 @@
                                 </div>
                             </div>
                             <div class="lower-box">
-                                <h3><a href="agents-listing-grid.blade.php">Nina Thomas</a></h3>
+                                <h3><a href="{{url('/agents-listing-grid')}}">Nina Thomas</a></h3>
                                 <div class="designation">Real Estate Agent</div>
                             </div>
                         </div>
@@ -1954,29 +1876,29 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6">
                             <div class="netabout">
-                                <a href="index.blade.php" class="logo">
+                                <a href="{{url('/index')}}" class="logo">
                                     <img src="images/logo-footer.svg" alt="netcom">
                                 </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
+                                <p>NiceLand is the best choice for you if you want to find a good place to stay according to your wishes.</p>
                             </div>
                             <div class="contactus">
                                 <ul>
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <p class="in-p">95 South Park Avenue, USA</p>
+                                            <p class="in-p">470 Đ. Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng, Việt Nam</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <p class="in-p">+456 875 369 208</p>
+                                            <p class="in-p">+373451576</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <p class="in-p ti">support@findhouses.com</p>
+                                            <p class="in-p ti">NiceLand@GMAIL.COM</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -1987,18 +1909,18 @@
                                 <h3>Navigation</h3>
                                 <div class="nav-footer">
                                     <ul>
-                                        <li><a href="index.blade.php">Home One</a></li>
-                                        <li><a href="properties-right-sidebar.blade.php">Properties Right</a></li>
-                                        <li><a href="properties-full-list.blade.php">Properties List</a></li>
-                                        <li><a href="properties-details.blade.php">Property Details</a></li>
-                                        <li class="no-mgb"><a href="agents-listing-grid.blade.php">Agents Listing</a></li>
+                                        <li><a href="{{url('/index')}}">Home One</a></li>
+                                        <li><a href="{{url('/properties-right-sidebar')}}">Properties Right</a></li>
+                                        <li><a href="{{url('/properties-full-list')}}">Properties List</a></li>
+                                        <li><a href="{{url('/properties-details')}}">Property Details</a></li>
+                                        <li class="no-mgb"><a href="{{url('/agents-listing-grid')}}">Agents Listing</a></li>
                                     </ul>
                                     <ul class="nav-right">
-                                        <li><a href="agent-details.blade.php">Agents Details</a></li>
-                                        <li><a href="about.blade.php">About Us</a></li>
-                                        <li><a href="blog.blade.php">Blog Default</a></li>
-                                        <li><a href="blog-details.blade.php">Blog Details</a></li>
-                                        <li class="no-mgb"><a href="contact-us.blade.php">Contact Us</a></li>
+                                        <li><a href="{{url('/agent-details')}}">Agents Details</a></li>
+                                        <li><a href="{{url('/about')}}">About Us</a></li>
+                                        <li><a href="{{url('/blog')}}">Blog Default</a></li>
+                                        <li><a href="{{url('/blog-details')}}">Blog Details</a></li>
+                                        <li class="no-mgb"><a href="{{url('/contact-us')}}">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -2013,25 +1935,7 @@
                                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                                             </div>
                                             <div class="text">
-                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+                                                <h5><a href="#">@NiceLand</a> all share them with me baby said inspet.</h5>
                                                 <h4>about 5 days ago</h4>
                                             </div>
                                         </div>
@@ -2058,7 +1962,7 @@
             </div>
             <div class="second-footer rec-pro">
                 <div class="container-fluid sd-f">
-                    <p>2021 © Copyright - All Rights Reserved.</p>
+                    <p>2024 © NiceLand</p>
                     <ul class="netsocials">
                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -2314,5 +2218,5 @@
 </body>
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/index.blade.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:19 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/index')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:19 GMT -->
 </html>
