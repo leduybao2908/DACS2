@@ -41,212 +41,7 @@
         <!-- Header Container
         ================================================== -->
         <div class="dash-content-wrap">
-            <header id="header-container" class="db-top-header">
-                <!-- Header -->
-                <div id="header">
-                    <div class="container-fluid">
-                        <!-- Left Side Content -->
-                        <div class="left-side">
-                            <!-- Logo -->
-                            <div id="logo">
-                                <a href="index.html"><img src="images/logo.svg" alt=""></a>
-                            </div>
-                            <!-- Mobile Navigation -->
-                            <div class="mmenu-trigger">
-                                <button class="hamburger hamburger--collapse" type="button">
-                                    <span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-                                    </span>
-                                </button>
-                            </div>
-                            <!-- Main Navigation -->
-                            <nav id="navigation" class="style-1">
-                                <ul id="responsive">
-                                <li><a href="#">Home</a>
-                                    <ul>
-                                        <li><a href="#">Home Map</a>
-                                            <ul>
-                                                <li><a href="index-9.html">Home Map Style 1</a></li>
-                                                <li><a href="index-12.html">Home Map Style 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Home Image</a>
-                                            <ul>
-                                               <li><a href="index.html">Modern Home</a></li>
-                                                <li><a href="index-2.html">Home Boxed Image</a></li>
-                                                <li><a href="index-3.html">Home Modern Image</a></li>
-                                                <li><a href="index-5.html">Home Minimalist Style</a></li>
-                                                <li><a href="index-6.html">Home Parallax Image</a></li>
-                                                <li><a href="index-8.html">Home Search Form</a></li>
-                                                <li><a href="index-10.html">Modern Full Image</a></li>
-                                                <li><a href="index-15.html">Home Typed Image</a></li>
-                                                <li><a href="index-17.html">Modern Parallax Image</a></li>
-                                                <li><a href="index-18.html">Image Filter Search</a>
-                                                <li><a href="index-21.html">Parallax Image video</a></li>
-												<li><a href="index-23.html">Home Image</a></li>
-												<li><a href="index-24.html">Image and video</a></li>
-                                            </ul>
-                                            </li>
-                                            <li><a href="#">Home Video</a>
-                                                <ul>
-                                                    <li><a href="index-4.html">Home Video Image</a></li>
-                                                    <li><a href="index-7.html">Home Video</a></li>
-                                                    <li><a href="index-20.html">Home Modern Video</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Home Slider</a>
-                                                <ul>                                                    
-                                                    <li><a href="index-11.html">Slider Presentation 2</a></li>
-                                                    <li><a href="index-16.html">Slider Presentation 3</a></li>
-                                                    <li><a href="index-19.html">Home Modern Slider</a></li>
-                                                    <li><a href="index-22.html">Home Image Slider</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Home Styles</a>
-                                                <ul>
-                                                    <li><a href="index-13.html">Home Style Dark</a></li>
-                                                    <li><a href="index-14.html">Home Style White</a></li>
-                                                </ul>
-                                            </li>
-                                    </ul>
-                                    </li>
-                                    <li><a href="#">Listing</a>
-                                        <ul>
-                                            <li><a href="#">Listing Grid</a>
-                                                <ul>
-                                                    <li><a href="properties-grid-1.html">Grid View 1</a></li>
-                                                    <li><a href="properties-grid-2.html">Grid View 2</a></li>
-                                                    <li><a href="properties-grid-3.html">Grid View 3</a></li>
-                                                    <li><a href="properties-grid-4.html">Grid View 4</a></li>
-                                                    <li><a href="properties-full-grid-1.html">Grid Fullwidth 1</a></li>
-                                                    <li><a href="properties-full-grid-2.html">Grid Fullwidth 2</a></li>
-                                                    <li><a href="properties-full-grid-3.html">Grid Fullwidth 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Listing List</a>
-                                                <ul>
-                                                    <li><a href="properties-full-list-1.html">List View 1</a></li>
-                                                    <li><a href="properties-list-1.html">List View 2</a></li>
-                                                    <li><a href="properties-full-list-2.html">List View 3</a></li>
-                                                    <li><a href="properties-list-2.html">List View 4</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Listing Map</a>
-                                                <ul>
-                                                    <li><a href="properties-half-map-1.html">Half Map 1</a></li>
-                                                    <li><a href="properties-half-map-2.html">Half Map 2</a></li>
-                                                    <li><a href="properties-half-map-3.html">Half Map 3</a></li>
-                                                    <li><a href="properties-top-map-1.html">Top Map 1</a></li>
-                                                    <li><a href="properties-top-map-2.html">Top Map 2</a></li>
-                                                    <li><a href="properties-top-map-3.html">Top Map 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Agent View</a>
-                                                <ul>
-                                                    <li><a href="agents-listing-grid.html">Agent View 1</a></li>
-                                                    <li><a href="agents-listing-row.html">Agent View 2</a></li>
-                                                    <li><a href="agents-listing-row-2.html">Agent View 3</a></li>
-                                                    <li><a href="agent-details.html">Agent Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Agencies View</a>
-                                                <ul>
-                                                    <li><a href="agencies-listing-1.html">Agencies View 1</a></li>
-                                                    <li><a href="agencies-listing-2.html">Agencies View 2</a></li>
-                                                    <li><a href="agencies-details.html">Agencies Details</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Property</a>
-                                        <ul>
-                                            <li><a href="single-property-1.html">Single Property 1</a></li>
-                                            <li><a href="single-property-2.html">Single Property 2</a></li>
-                                            <li><a href="single-property-3.html">Single Property 3</a></li>
-                                            <li><a href="single-property-4.html">Single Property 4</a></li>
-                                            <li><a href="single-property-5.html">Single Property 5</a></li>
-                                            <li><a href="single-property-6.html">Single Property 6</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Pages</a>
-                                        <ul>
-                                            <li><a href="#">Shop</a>
-                                                <ul>
-                                                    <li><a href="shop-with-sidebar.html">Product Sidebar</a></li>
-                                                    <li><a href="shop-full-page.html">Product Fullpage</a></li>
-                                                    <li><a href="shop-single.html">Product Single</a></li>
-                                                    <li><a href="shop-checkout.html">Checkout Page</a></li>
-                                                    <li><a href="shop-order.html">Order Page</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">User Panel</a>
-                                                <ul>
-                                                    <li><a href="dashboard.html">Dashboard</a></li>
-                                                    <li><a href="user-profile.html">User Profile</a></li>
-                                                    <li><a href="my-listings.html">My Properties</a></li>
-                                                    <li><a href="favorited-listings.html">Favorited Properties</a></li>
-                                                    <li><a href="add-property.html">Add Property</a></li>
-                                                    <li><a href="payment-method.html">Payment Method</a></li>
-                                                    <li><a href="invoice.html">Invoice</a></li>
-                                                    <li><a href="change-password.html">Change Password</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="pricing-table.html">Pricing Tables</a></li>
-                                            <li><a href="404.html">Page 404</a></li>
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="register.html">Register</a></li>
-                                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                                            <li><a href="under-construction.html">Under Construction</a></li>
-                                            <li><a href="ui-element.html">UI Elements</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Blog</a>
-                                        <ul>
-                                            <li><a href="#">Grid Layout</a>
-                                                <ul>
-                                                    <li><a href="blog-full-grid.html">Full Grid</a></li>
-                                                    <li><a href="blog-grid-sidebar.html">With Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">List Layout</a>
-                                                <ul>
-                                                    <li><a href="blog-full-list.html">Full List</a></li>
-                                                    <li><a href="blog-list-sidebar.html">With Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact-us.html">Contact</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block"><a href="login.html">Login</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block"><a href="register.html">Register</a></li>
-                                    <li class="d-none d-xl-none d-block d-lg-block mt-5 pb-4 ml-5 border-bottom-0"><a href="add-property.html" class="button border btn-lg btn-block text-center">Add Listing<i class="fas fa-laptop-house ml-2"></i></a></li>
-                            </ul>
-                            </nav>
-                            <div class="clearfix"></div>
-                            <!-- Main Navigation / End -->
-                        </div>
-                        <!-- Left Side Content / End -->
-                        <!-- Right Side Content / -->
-                        <div class="header-user-menu user-menu">
-                            <div class="header-user-name">
-                                <span><img src="images/testimonials/ts-1.jpg" alt=""></span>Hi, Mary!
-                            </div>
-                            <ul>
-                                <li><a href="user-profile.html"> Edit profile</a></li>
-                                <li><a href="add-property.html"> Add Property</a></li>
-                                <li><a href="payment-method.html">  Payments</a></li>
-                                <li><a href="change-password.html"> Change Password</a></li>
-                                <li><a href="#">Log Out</a></li>
-                            </ul>
-                        </div>
-                        <!-- Right Side Content / End -->
-                    </div>
-                </div>
-                <!-- Header / End -->
-            </header>
+            @include('users.header-user')
         </div>
         <div class="clearfix"></div>
         <!-- Header Container / End -->
@@ -256,64 +51,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-3 col-md-12 col-xs-12 pl-0 pr-0 user-dash">
-                        <div class="user-profile-box mb-0">
-                            <div class="sidebar-header"><img src="images/logo-blue.svg" alt="header-logo2.png"> </div>
-                            <div class="header clearfix">
-                                <img src="images/testimonials/ts-1.jpg" alt="avatar" class="img-fluid profile-img">
-                            </div>
-                            <div class="active-user">
-                                <h2>Mary Smith</h2>
-                            </div>
-                            <div class="detail clearfix">
-                                <ul class="mb-0">
-                                    <li>
-                                        <a href="dashboard.html">
-                                            <i class="fa fa-map-marker"></i> Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="user-profile.html">
-                                            <i class="fa fa-user"></i>Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="my-listings.html">
-                                            <i class="fa fa-list" aria-hidden="true"></i>My Properties
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="favorited-listings.html">
-                                            <i class="fa fa-heart" aria-hidden="true"></i>Favorited Properties
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="active" href="add-property.html">
-                                            <i class="fa fa-list" aria-hidden="true"></i>Add Property
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="payment-method.html">
-                                            <i class="fas fa-credit-card"></i>Payments
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="invoice.html">
-                                            <i class="fas fa-paste"></i>Invoices
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="change-password.html">
-                                            <i class="fa fa-lock"></i>Change Password
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">
-                                            <i class="fas fa-sign-out-alt"></i>Log Out
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        @include('users.user-profile-box')
                     </div>
                     <div class="col-lg-9 col-md-12 col-xs-12 royal-add-property-area section_100 pl-0 user-dash2">
                         <div class="col-lg-12 mobile-dashbord dashbord">
@@ -373,12 +111,13 @@
                         <div class="single-add-property">
                             <h3>Property description and price</h3>
                             <div class="property-form-group">
-                                <form>
+                                <form method="post" action="{{ route('users.store') }}" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-12">
                                             <p>
-                                                <label for="title">Property Title</label>
-                                                <input type="text" name="title" id="title" placeholder="Enter your property title">
+                                                <label for="property_title">Property Title</label>
+                                                <input type="text" name="property_title" id="property_title" placeholder="Enter your property title" required>
                                             </p>
                                         </div>
                                     </div>
@@ -386,75 +125,70 @@
                                         <div class="col-md-12">
                                             <p>
                                                 <label for="description">Property Description</label>
-                                                <textarea id="description" name="pro-dexc" placeholder="Describe about your property"></textarea>
+                                                <textarea id="description" name="description" placeholder="Describe about your property"></textarea>
                                             </p>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-4 col-md-12 dropdown faq-drop">
-                                            <div class="form-group categories">
-                                                <div class="nice-select form-control wide" tabindex="0"><span class="current">Select status</span>
-                                                    <ul class="list">
-                                                        <li data-value="1" class="option">Rent</li>
-                                                        <li data-value="2" class="option">Sale</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12 dropdown faq-drop">
-                                            <div class="form-group categories">
-                                                <div class="nice-select form-control wide" tabindex="0"><span class="current">Type</span>
-                                                    <ul class="list">
-                                                        <li data-value="1" class="option">house</li>
-                                                        <li data-value="2" class="option">commercial</li>
-                                                        <li data-value="3" class="option">apartment</li>
-                                                        <li data-value="4" class="option">lot</li>
-                                                        <li data-value="5" class="option">garage</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12 dropdown faq-drop">
-                                            <div class="form-group categories">
-                                                <div class="nice-select form-control wide" tabindex="0"><span class="current">Rooms</span>
-                                                    <ul class="list">
-                                                        <li data-value="1" class="option">1</li>
-                                                        <li data-value="2" class="option">2</li>
-                                                        <li data-value="3" class="option">3</li>
-                                                        <li data-value="4" class="option">4</li>
-                                                        <li data-value="5" class="option">5</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                        <div class="col-md-12">
+                                            <p>
+                                                <label for="location">Location</label>
+                                                <input type="text" name="location" id="location" placeholder="Enter the location" required>
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-12">
-                                            <p class="no-mb">
-                                                <label for="price">Price</label>
-                                                <input type="text" name="price" placeholder="USD" id="price">
+                                        <div class="col-md-6">
+                                            <p>
+                                                <label for="price_per_month">Price Per Month (USD)</label>
+                                                <input type="text" name="price_per_month" id="price_per_month" placeholder="Enter monthly rental price" required>
                                             </p>
                                         </div>
-                                        <div class="col-lg-6 col-md-12">
-                                            <p class="no-mb last">
-                                                <label for="area">Area</label>
-                                                <input type="text" name="area" placeholder="Sqft" id="area">
+                                        <div class="col-md-6">
+                                            <p>
+                                                <label for="area">Area (Sqft)</label>
+                                                <input type="text" name="area" id="area" placeholder="Enter the area" required>
                                             </p>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>
+                                                <label for="electricity_price">Electricity Price (USD)</label>
+                                                <input type="text" name="electricity_price" id="electricity_price" placeholder="Enter electricity price" required>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>
+                                                <label for="water_price">Water Price (USD)</label>
+                                                <input type="text" name="water_price" id="water_price" placeholder="Enter water price" required>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p>
+                                                <label for="property_image">Property Image</label>
+                                                <input type="file" class="form-control-file" name="property_image" id="property_image" accept="image/*" required>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg mt-2">Submit</button>
                                 </form>
                             </div>
                         </div>
+                        
                         <div class="single-add-property">
                             <h3>property Media</h3>
                             <div class="property-form-group">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <form action="https://code-theme.com/file-upload" class="dropzone"></form>
+                                        <form action="{{ route('users.store') }}"type="file" name="images[]" id="formFile" multiple class="dropzone"></form>
                                     </div>
                                 </div>
-                            </div>
+                            </div>  
                         </div>
+                        
                         <div class="single-add-property">
                             <h3>property Location</h3>
                             <div class="property-form-group">
@@ -692,14 +426,7 @@
         <!-- END SECTION USER PROFILE -->
 
         <!-- START FOOTER -->
-        <footer class="first-footer">
-            <div class="second-footer">
-                <div class="container">
-                    <p>2021 © Copyright - All Rights Reserved.</p>
-                    <p>Made With <i class="fa fa-heart" aria-hidden="true"></i> By Code-Theme</p>
-                </div>
-            </div>
-        </footer>
+       
 
         <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
         <!-- END FOOTER -->
@@ -766,5 +493,4 @@
 </body>
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/add-property.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:28:18 GMT -->
 </html>
