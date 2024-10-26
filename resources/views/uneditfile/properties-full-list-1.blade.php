@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/properties-full-list-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:58 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/properties-full-list-1')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:58 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,7 +50,7 @@
                         <div class="detail-wrapper-body">
                             <div class="listing-title-bar">
                                 <div class="text-heading text-left">
-                                    <p><a href="index.html">Home </a> &nbsp;/&nbsp; <span>Listings</span></p>
+                                    <p><a href="{{url('/index')}}">Home </a> &nbsp;/&nbsp; <span>Listings</span></p>
                                 </div>
                                 <h3>List View</h3>
                             </div>
@@ -232,7 +232,7 @@
                             </div>
                             <div class="sorting-options">
                                 <a href="#" class="change-view-btn active-view-btn"><i class="fa fa-th-list"></i></a>
-                                <a href="properties-full-grid-1.html" class="change-view-btn lde"><i class="fa fa-th-large"></i></a>
+                                <a href="{{url('/properties-full-grid-1')}}" class="change-view-btn lde"><i class="fa fa-th-large"></i></a>
                             </div>
                         </div>
                     </div>
@@ -327,7 +327,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6">
                             <div class="netabout">
-                                <a href="index.html" class="logo">
+                                <a href="{{url('/index')}}" class="logo">
                                     <img src="images/logo-footer.svg" alt="netcom">
                                 </a>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
@@ -360,18 +360,18 @@
                                 <h3>Navigation</h3>
                                 <div class="nav-footer">
                                     <ul>
-                                        <li><a href="index.html">Home One</a></li>
-                                        <li><a href="properties-right-sidebar.html">Properties Right</a></li>
-                                        <li><a href="properties-full-list.html">Properties List</a></li>
-                                        <li><a href="properties-details.html">Property Details</a></li>
-                                        <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
+                                        <li><a href="{{url('/index')}}">Home One</a></li>
+                                        <li><a href="{{url('/properties-right-sidebar')}}">Properties Right</a></li>
+                                        <li><a href="{{url('/properties-full-list')}}">Properties List</a></li>
+                                        <li><a href="vproperties-details')}}">Property Details</a></li>
+                                        <li class="no-mgb"><a href="{{url('/agents-listing-grid')}}">Agents Listing</a></li>
                                     </ul>
                                     <ul class="nav-right">
-                                        <li><a href="agent-details.html">Agents Details</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li class="no-mgb"><a href="contact-us.html">Contact Us</a></li>
+                                        <li><a href="{{url('/agent-details')}}">Agents Details</a></li>
+                                        <li><a href="{{url('/about')}}">About Us</a></li>
+                                        <li><a href="{{url('/blog')}}">Blog Default</a></li>
+                                        <li><a href="{{url('/blog-details')}}">Blog Details</a></li>
+                                        <li class="no-mgb"><a href="{{url('/contact-us')}}">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -543,5 +543,5 @@
 </body>
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/properties-full-list-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:58 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/properties-full-list-1')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:58 GMT -->
 </html>
