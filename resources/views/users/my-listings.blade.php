@@ -131,7 +131,15 @@
                                     <tr>
                                         <td class="image">
                                             <a>
-                                                <img alt="{{ $property->property_title }}" src="{{ asset('storage/' . $property->images) }}" class="img-fluid">
+                                                @php
+                                                    $firstImage = json_decode($property->images, true)[0] ?? null; // Get the first image from the array
+                                                @endphp
+
+                                                @if ($firstImage)
+                                                    <img alt="{{ $property->property_title }}" src="{{ asset('storage/' . $firstImage) }}" class="img-fluid">
+                                                @else
+                                                    <p>No image available</p> <!-- Display a fallback message or placeholder if no images are available -->
+                                                @endif
                                             </a>
                                         </td>
                                         <td>
@@ -207,7 +215,7 @@
                             <div class="property-form-group">
                                 <form method="post" id="edit-property-form" enctype="multipart/form-data">
                                     @csrf
-                                    @method('PATCH')
+                                    @method('Post')
                                     <input type="hidden" id="property_id" name="property_id">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -264,15 +272,28 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <p>
-                                                <label for="property_image">Property Image</label>
-                                                <input type="file" class="form-control-file" name="property_image" id="property_image" accept="image/*">
+                                                <label for="property_images">Property Images</label>
+                                                <input type="file" class="form-control-file" name="property_images[]" id="property_images" accept="image/*" multiple>
                                             </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>Current Images:</h4>
+                                            <div id="current-images">
+                                                
+                                                    <p>No images available</p>
+                                                
+                                            </div>
                                         </div>
                                     </div>
                                     <button type="button" class="btn btn-primary btn-lg mt-2" onclick="submitEditForm()">Submit</button>
                                 </form>
                             </div>
                         </div>
+                        
+   
+
                         
                       
                         
@@ -346,62 +367,86 @@
 
         </script>
         <script>
-            function showEditForm(propertyId) {
-                // Fetch the property data using AJAX
-                fetch(`/property/${propertyId}/edit`)
-                    .then(response => response.json())
-                    .then(data => {
-                        // Populate the form fields with the data
-                        document.getElementById('property_id').value = data.id;
-                        document.getElementById('property_title').value = data.property_title;
-                        document.getElementById('description').value = data.description;
-                        document.getElementById('location').value = data.location;
-                        document.getElementById('price_per_month').value = data.price_per_month;
-                        document.getElementById('area').value = data.area;
-                        document.getElementById('electricity_price').value = data.electricity_price;
-                        document.getElementById('water_price').value = data.water_price;
-        
-                        // Show the edit form container
-                        document.getElementById('edit-form-container').style.display = 'block';
-        
-                        // Scroll to the edit form with offset
-                        const editFormContainer = document.getElementById('edit-form-container');
-                        const headerHeight = document.querySelector('h3').offsetHeight; // Get the height of the header
-        
-                        window.scrollTo({
-                            top: editFormContainer.offsetTop - headerHeight +100, // Subtract header height to adjust scroll position
-                            behavior: 'smooth' // Smooth scroll
-                        });
-                    })
-                    .catch(error => console.error('Error:', error));
+           function showEditForm(propertyId) {
+         // Fetch the property data using AJAX
+         fetch(`/property/${propertyId}/edit`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch property data.');
             }
-        
-            function submitEditForm() {
-                const propertyId = document.getElementById('property_id').value;
-                const formData = new FormData(document.getElementById('edit-property-form'));
-        
-                // Submit the form using AJAX
-                fetch(`/property/${propertyId}`, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        alert('Property updated successfully.');
-                        // Optionally, refresh the list or update the displayed data on the page
-                        location.reload(); // Reload the page to show updated data
-                    } else {
-                        throw new Error('Failed to update property.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred while updating the property.');
+            return response.json();
+        })
+        .then(data => {
+            // Populate the form fields with the data
+            document.getElementById('property_id').value = data.id;
+            document.getElementById('property_title').value = data.property_title;
+            document.getElementById('description').value = data.description;
+            document.getElementById('location').value = data.location;
+            document.getElementById('price_per_month').value = data.price_per_month;
+            document.getElementById('area').value = data.area;
+            document.getElementById('electricity_price').value = data.electricity_price;
+            document.getElementById('water_price').value = data.water_price;
+
+            // Display current images
+            const currentImagesContainer = document.getElementById('current-images');
+            const images = JSON.parse(data.images); // Assuming `images` comes as a JSON string
+
+            currentImagesContainer.innerHTML = ''; // Clear previous images
+            if (images.length > 0) {
+                images.forEach(image => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = `/storage/${image}`; // Ensure the path is correct
+                    imgElement.alt = "Property Image";
+                    imgElement.style.width = "100px"; // Adjust size as needed
+                    imgElement.style.marginRight = "10px"; // Add some spacing
+                    currentImagesContainer.appendChild(imgElement);
                 });
+            } else {
+                currentImagesContainer.innerHTML = '<p>No images available</p>';
             }
+
+            // Show the edit form container
+            document.getElementById('edit-form-container').style.display = 'block';
+
+            // Scroll to the edit form with offset
+            const editFormContainer = document.getElementById('edit-form-container');
+            const headerHeight = document.querySelector('h3').offsetHeight;
+
+            window.scrollTo({
+                top: editFormContainer.offsetTop - headerHeight + 100,
+                behavior: 'smooth'
+            });
+        })
+        .catch(error => console.error('Error:', error));
+}
+function submitEditForm() {
+    const propertyId = document.getElementById('property_id').value;
+    const formData = new FormData(document.getElementById('edit-property-form'));
+
+    // Submit the form using AJAX
+    fetch(`/property/${propertyId}/update/`, {
+        method: 'POST', // Use POST for updates
+        body: formData,
+        headers: {
+            'X-CSRF-TOKEN': '{{ csrf_token() }}' // Ensure CSRF token is included
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to update property.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert(data.message);
+        location.reload();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('update property successfully.');
+        location.reload();
+    });
+}
         </script>
         
         

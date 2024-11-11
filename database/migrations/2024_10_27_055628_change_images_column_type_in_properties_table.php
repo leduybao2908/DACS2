@@ -1,26 +1,21 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class ChangeImagesColumnTypeInPropertiesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up()
     {
         Schema::table('properties', function (Blueprint $table) {
-            $table->json('sample_images')->nullable();  // New column for storing multiple images
-        });
-    }
-    
-    public function down()
-    {
-        Schema::table('properties', function (Blueprint $table) {
-            $table->dropColumn('sample_images');
+            $table->text('images')->change(); // Change to text or json as needed
         });
     }
 
-};
+    public function down()
+    {
+        Schema::table('properties', function (Blueprint $table) {
+            $table->string('images')->change(); // Revert back if rolling back the migration
+        });
+    }
+}

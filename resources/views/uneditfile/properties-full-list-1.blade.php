@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/properties-full-list-1')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:58 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/properties-full-list-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:58 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,7 +50,7 @@
                         <div class="detail-wrapper-body">
                             <div class="listing-title-bar">
                                 <div class="text-heading text-left">
-                                    <p><a href="{{url('/index')}}">Home </a> &nbsp;/&nbsp; <span>Listings</span></p>
+                                    <p><a href="index.html">Home </a> &nbsp;/&nbsp; <span>Listings</span></p>
                                 </div>
                                 <h3>List View</h3>
                             </div>
@@ -232,7 +232,7 @@
                             </div>
                             <div class="sorting-options">
                                 <a href="#" class="change-view-btn active-view-btn"><i class="fa fa-th-list"></i></a>
-                                <a href="{{url('/properties-full-grid-1')}}" class="change-view-btn lde"><i class="fa fa-th-large"></i></a>
+                                <a href="properties-full-grid-1.html" class="change-view-btn lde"><i class="fa fa-th-large"></i></a>
                             </div>
                         </div>
                     </div>
@@ -244,10 +244,18 @@
                                 <div class="project-inner project-head">
                                     <div class="homes">
                                         <!-- homes img -->
-                                        <a href="{{ route('properties.list', $property->id) }}" class="homes-img">
+                                        <a href="{{ route('property.view', $property->id) }}" class="homes-img">
                                             <div class="homes-tag button alt sale">For Sale</div>
                                             <div class="homes-price">${{ number_format($property->price_per_month, 2) }}/mo</div>
-                                            <img src="{{ asset('storage/' . $property->images) }}" alt="{{ $property->property_title }}" class="img-responsive">
+                                            @php
+                                            $firstImage = json_decode($property->images, true)[0] ?? null; // Get the first image from the array
+                                        @endphp
+
+                                        @if ($firstImage)
+                                            <img alt="{{ $property->property_title }}" src="{{ asset('storage/' . $firstImage) }}" class="img-fluid">
+                                        @else
+                                            <p>No image available</p> <!-- Display a fallback message or placeholder if no images are available -->
+                                        @endif  
                                         </a>
                                     </div>
                                 </div>
@@ -256,9 +264,9 @@
                         <!-- homes content -->
                         <div class="col-lg-8 col-md-12 homes-content pb-0 my-44 ft mb-44 aos-init aos-animate" data-aos="fade-up">
                             <!-- homes address -->
-                            <h3><a href="{{ route('properties.list', $property->id) }}">{{ $property->property_title }}</a></h3>
+                            <h3><a href="{{ route('property.view', $property->id) }}">{{ $property->property_title }}</a></h3>
                             <p class="homes-address mb-3">
-                                <a href="{{ route('properties.list', $property->id) }}">
+                                <a href="{{ route('property.view', $property->id) }}">
                                     <i class="fa fa-map-marker"></i><span>{{ $property->location }}</span>
                                 </a>
                             </p>
@@ -288,40 +296,160 @@
                 <br> 
                 <br>
                 <br>
-                @if ($properties->lastPage() > 1)
-    <nav aria-label="Page navigation" class="pt-0">
-        <ul class="pagination lis-view">
-            <!-- Previous Page Link -->
-            @if ($properties->onFirstPage())
-                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
-            @else
-                <li class="page-item"><a class="page-link" href="{{ $properties->previousPageUrl() }}">Previous</a></li>
-            @endif
-
-            <!-- Pagination Elements -->
-            @foreach ($properties->links()->elements[0] as $page => $url)
-                @if ($page == $properties->currentPage())
-                    <li class="page-item active"><a class="page-link" href="#">{{ $page }} <span class="sr-only">(current)</span></a></li>
-                @else
-                    <li class="page-item"><a class="page-link" href="{{ $url }}">{{ $page }}</a></li>
-                @endif
-            @endforeach
-
-            <!-- Next Page Link -->
-            @if ($properties->hasMorePages())
-                <li class="page-item"><a class="page-link" href="{{ $properties->nextPageUrl() }}">Next</a></li>
-            @else
-                <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
-            @endif
-        </ul>
-    </nav>
-@endif
+                <nav aria-label="Page navigation" class="pt-0">
+                    <ul class="pagination lis-view">
+                        <!-- Previous button -->
+                        <li class="page-item {{ $properties->onFirstPage() ? 'disabled' : '' }}">
+                            <a class="page-link" href="{{ $properties->previousPageUrl() }}" tabindex="-1">Previous</a>
+                        </li>
+                
+                        <!-- Page number links -->
+                        @foreach ($properties->getUrlRange(1, $properties->lastPage()) as $page => $url)
+                            <li class="page-item {{ $page == $properties->currentPage() ? 'active' : '' }}">
+                                <a class="page-link" href="{{ $url }}">{{ $page }} 
+                                    @if ($page == $properties->currentPage()) 
+                                        <span class="sr-only">(current)</span>
+                                    @endif
+                                </a>
+                            </li>
+                        @endforeach
+                
+                        <!-- Next button -->
+                        <li class="page-item {{ $properties->hasMorePages() ? '' : 'disabled' }}">
+                            <a class="page-link" href="{{ $properties->nextPageUrl() }}">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+                
             </div>
         </section>
         <!-- END SECTION PROPERTIES LISTING -->
 
         <!-- START FOOTER -->
+<<<<<<< Updated upstream
 @include('layouts.footer')
+=======
+        <footer class="first-footer">
+            <div class="top-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="netabout">
+                                <a href="index.html" class="logo">
+                                    <img src="images/logo-footer.svg" alt="netcom">
+                                </a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
+                            </div>
+                            <div class="contactus">
+                                <ul>
+                                    <li>
+                                        <div class="info">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <p class="in-p">95 South Park Avenue, USA</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <p class="in-p">+456 875 369 208</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <p class="in-p ti">support@findhouses.com</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="navigation">
+                                <h3>Navigation</h3>
+                                <div class="nav-footer">
+                                    <ul>
+                                        <li><a href="index.html">Home One</a></li>
+                                        <li><a href="properties-right-sidebar.html">Properties Right</a></li>
+                                        <li><a href="properties-full-list.html">Properties List</a></li>
+                                        <li><a href="properties-details.html">Property Details</a></li>
+                                        <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
+                                    </ul>
+                                    <ul class="nav-right">
+                                        <li><a href="agent-details.html">Agents Details</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="blog.html">Blog Default</a></li>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li class="no-mgb"><a href="contact-us.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget">
+                                <h3>Twitter Feeds</h3>
+                                <div class="twitter-widget contuct">
+                                    <div class="twitter-area">
+                                        <div class="single-item">
+                                            <div class="icon-holder">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+                                                <h4>about 5 days ago</h4>
+                                            </div>
+                                        </div>
+                                        <div class="single-item">
+                                            <div class="icon-holder">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+                                                <h4>about 5 days ago</h4>
+                                            </div>
+                                        </div>
+                                        <div class="single-item">
+                                            <div class="icon-holder">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+                                                <h4>about 5 days ago</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="newsletters">
+                                <h3>Newsletters</h3>
+                                <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</p>
+                            </div>
+                            <form class="bloq-email mailchimp form-inline" method="post">
+                                <label for="subscribeEmail" class="error"></label>
+                                <div class="email">
+                                    <input type="email" id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email">
+                                    <input type="submit" value="Subscribe">
+                                    <p class="subscription-success"></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="second-footer">
+                <div class="container">
+                    <p>2021 © Copyright - All Rights Reserved.</p>
+                    <ul class="netsocials">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+>>>>>>> Stashed changes
 
         <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
         <!-- END FOOTER -->
@@ -424,5 +552,5 @@
 </body>
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/properties-full-list-1')}} by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:58 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/properties-full-list-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:27:58 GMT -->
 </html>

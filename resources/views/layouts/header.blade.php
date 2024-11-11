@@ -1,4 +1,18 @@
+
+
+
 <header id="header-container">
+    <style>
+       /* Apply shadow to the header container */
+       #header {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Horizontal, Vertical, Blur, Spread, Color */
+        }
+
+        /* Optionally, add a shadow to the inner container */
+        .container-header {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
     <!-- Header -->
     <div id="header">
         <div class="container container-header">

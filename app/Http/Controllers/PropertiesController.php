@@ -37,43 +37,64 @@ class PropertiesController extends Controller
      * Store a newly created property in storage.
      */
     public function store(Request $request)
-    {
-        $request->validate([
-            'property_title' => 'required|string|max:255',
-            'location' => 'required|string|max:255',
-            'price_per_month' => 'required|numeric',
-            'electricity_price' => 'required|numeric',
-            'water_price' => 'required|numeric',
-            'area' => 'required|numeric',
-            'property_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validate image
-            'description' => 'nullable|string',
-        ]);
+{
+    // Validate request data
+    $request->validate([
+        'property_title' => 'required|string|max:255',
+        'location' => 'required|string|max:255',
+        'price_per_month' => 'required|numeric',
+        'electricity_price' => 'required|numeric',
+        'water_price' => 'required|numeric',
+        'area' => 'required|numeric',
+        'property_images' => 'required|array', // Validate that at least one image is uploaded
+        'property_images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validate each image
+        'description' => 'nullable|string',
+    ]);
+
+    $imagePaths = [];
     
-        $imagePath = null;
-        if ($request->hasFile('property_image')) {
-            $image = $request->file('property_image');
-            $userId = Auth::id(); // Get the authenticated user's ID
-            $imageName = $userId . '_' . time() . '.' . $image->getClientOriginalExtension(); // Rename the file
-            $imagePath = $image->storeAs('property_images', $imageName, 'public'); // Store the image in 'storage/app/public/property_images'
+    // Handle file uploads
+    if ($request->hasFile('property_images')) {
+        $userId = Auth::id(); // Get the authenticated user's ID
+
+        foreach ($request->file('property_images') as $image) {
+            // Generate a unique name for the image
+            $imageName = $userId . '_' . time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+            // Store the image in 'storage/app/public/property_images'
+            $imagePath = $image->storeAs('property_images', $imageName, 'public');
+            $imagePaths[] = $imagePath; // Collect image paths in an array
         }
-    
-        // Save the property data, including the image path
-        Property::create([
-            'property_title' => $request->property_title,
-            'description' => $request->description,
-            'location' => $request->location,
-            'price_per_month' => $request->price_per_month,
-            'area' => $request->area,
-            'electricity_price' => $request->electricity_price,
-            'water_price' => $request->water_price,
-            'owner_id' => Auth::id(),
-            'images' => $imagePath, // Store the image path as a string
-        ]);
-    
-        return redirect()->route('my-listings')->with('success', 'Property created successfully.');
     }
 
-    
+    // Save the property data, including the image paths as a JSON string
+    Property::create([
+        'property_title' => $request->property_title,
+        'description' => $request->description,
+        'location' => $request->location,
+        'price_per_month' => $request->price_per_month,
+        'area' => $request->area,
+        'electricity_price' => $request->electricity_price,
+        'water_price' => $request->water_price,
+        'owner_id' => Auth::id(), // Save the owner ID
+        'images' => json_encode($imagePaths), // Store the array as a JSON string in the database
+    ]);
+
+    // Redirect back to listings with a success message
+    return redirect()->route('my-listings')->with('success', 'Property created successfully.');
+}
+
+
+public function DisplaySpecifyProperty($id)
+{
+     // Find the property by its ID
+     $property = Property::findOrFail($id);
+
+     // Decode the JSON string for images into an array
+     $property->images = json_decode($property->images);
+
+    // Return the view with the property data
+    return view('uneditfile.single-property-1', compact('property'));
+}
 
     /**
      * Display the specified property.
@@ -88,7 +109,7 @@ class PropertiesController extends Controller
     public function display()
     {
         // Fetch all properties from the database
-        $properties = Property::paginate(5); // You can use paginate() if needed
+        $properties = Property::paginate(8);
     
         // Return the view with the properties
         return view('uneditfile.properties-full-list-1', compact('properties'));
@@ -103,8 +124,23 @@ class PropertiesController extends Controller
     }
     
     public function update(Request $request, $id)
-    {
+    {   
+        // Validate request data
+        $request->validate([
+            'property_title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'location' => 'required|string|max:255',
+            'price_per_month' => 'required|numeric',
+            'area' => 'required|numeric',
+            'electricity_price' => 'required|numeric',
+            'water_price' => 'required|numeric',
+            'property_images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        
+        // Find the property to update
         $property = Property::findOrFail($id);
+        
+        // Update the property fields
         $property->property_title = $request->property_title;
         $property->description = $request->description;
         $property->location = $request->location;
@@ -113,15 +149,31 @@ class PropertiesController extends Controller
         $property->electricity_price = $request->electricity_price;
         $property->water_price = $request->water_price;
     
-        if ($request->hasFile('property_image')) {
-            $path = $request->file('property_image')->store('property_images', 'public');
-            $property->images = $path;
+        // Handle property image update if provided
+        if ($request->hasFile('property_images')) {
+            $imagesArray = [];
+            $userId = Auth::id(); // Get the authenticated user's ID
+    
+            foreach ($request->file('property_images') as $image) {
+                // Generate a unique name for the image using the user ID and property ID
+                $imageName = $userId . '_' . $property->id . '_' . time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                // Store the image in 'storage/app/public/property_images'
+                $path = $image->storeAs('property_images', $imageName, 'public');
+                $imagesArray[] = $path; // Collect image paths in an array
+            }
+            
+            // Convert images array back to JSON and save it
+            $property->images = json_encode(array_unique($imagesArray));
         }
-    
+        
+        // Save the property
         $property->save();
-    
-        return response()->json(['message' => 'Property updated successfully.']);
+        
+        // Redirect back to listings with a success message
+        return redirect()->route('my-listings')->with('success', 'Property updated successfully.');
     }
+    
+    
     
 
 

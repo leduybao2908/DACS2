@@ -168,8 +168,8 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <p>
-                                                <label for="property_image">Property Image</label>
-                                                <input type="file" class="form-control-file" name="property_image" id="property_image" accept="image/*" required>
+                                                <label for="property_images">Property Images</label>
+                                                <input type="file" class="form-control-file" name="property_images[]" id="property_images" accept="image/*" multiple required>
                                             </p>
                                         </div>
                                     </div>
