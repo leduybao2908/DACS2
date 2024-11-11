@@ -288,23 +288,34 @@
                 <br> 
                 <br>
                 <br>
-                <nav aria-label="..." class="pt-0">
-                    <ul class="pagination lis-view">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+                @if ($properties->lastPage() > 1)
+    <nav aria-label="Page navigation" class="pt-0">
+        <ul class="pagination lis-view">
+            <!-- Previous Page Link -->
+            @if ($properties->onFirstPage())
+                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+            @else
+                <li class="page-item"><a class="page-link" href="{{ $properties->previousPageUrl() }}">Previous</a></li>
+            @endif
+
+            <!-- Pagination Elements -->
+            @foreach ($properties->links()->elements[0] as $page => $url)
+                @if ($page == $properties->currentPage())
+                    <li class="page-item active"><a class="page-link" href="#">{{ $page }} <span class="sr-only">(current)</span></a></li>
+                @else
+                    <li class="page-item"><a class="page-link" href="{{ $url }}">{{ $page }}</a></li>
+                @endif
+            @endforeach
+
+            <!-- Next Page Link -->
+            @if ($properties->hasMorePages())
+                <li class="page-item"><a class="page-link" href="{{ $properties->nextPageUrl() }}">Next</a></li>
+            @else
+                <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+            @endif
+        </ul>
+    </nav>
+@endif
             </div>
         </section>
         <!-- END SECTION PROPERTIES LISTING -->
