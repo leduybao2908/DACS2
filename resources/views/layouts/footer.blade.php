@@ -1,4 +1,3 @@
-<!-- START FOOTER -->
 <footer class="first-footer rec-pro">
     <div class="top-footer">
         <div class="container-fluid">
@@ -8,26 +7,26 @@
                         <a href="index.html" class="logo">
                             <img src="images/logo-footer.svg" alt="netcom">
                         </a>
-                        <p>NiceLand is the best choice for you if you want to find a good place to stay according to your wishes.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
                     </div>
                     <div class="contactus">
                         <ul>
                             <li>
                                 <div class="info">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <p class="in-p">470 Đ. Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng, Việt Nam</p>
+                                    <p class="in-p">95 South Park Avenue, USA</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="info">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <p class="in-p">+373451576</p>
+                                    <p class="in-p">+456 875 369 208</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="info">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <p class="in-p ti">NiceLand@GMAIL.COM</p>
+                                    <p class="in-p ti">support@findhouses.com</p>
                                 </div>
                             </li>
                         </ul>
@@ -64,7 +63,25 @@
                                         <i class="fa fa-twitter" aria-hidden="true"></i>
                                     </div>
                                     <div class="text">
-                                        <h5><a href="#">@NiceLand</a> all share them with me baby said inspet.</h5>
+                                        <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+                                        <h4>about 5 days ago</h4>
+                                    </div>
+                                </div>
+                                <div class="single-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
+                                        <h4>about 5 days ago</h4>
+                                    </div>
+                                </div>
+                                <div class="single-item">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="text">
+                                        <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
                                         <h4>about 5 days ago</h4>
                                     </div>
                                 </div>
@@ -91,7 +108,7 @@
     </div>
     <div class="second-footer rec-pro">
         <div class="container-fluid sd-f">
-            <p>2024 © NiceLand</p>
+            <p>2021 © Copyright - All Rights Reserved.</p>
             <ul class="netsocials">
                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -101,6 +118,4 @@
         </div>
     </div>
 </footer>
-
 <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
-<!-- END FOOTER -->

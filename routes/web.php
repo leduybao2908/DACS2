@@ -1,73 +1,73 @@
 <?php
-use App\Http\Controllers\PropertiesController;
-
+use App\Http\Controllers\RoomController;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SearchController;
-
-Route::get('/search', [SearchController::class, 'search'])->name('search');
-
+use App\Http\Controllers\Auth\RegisteredUserController;
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
-Route::get('/home', function () {
-    return view('index');
-})->name('home');;
+Route::get('/properties-list', function () {
+    return view('properties_list'); // Trả về view inner
+});
 
-Route::get('/dashboard', function () {
-    return view('users.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/user', function () {
-    return view('users.user-profile');
-})->name('user')->middleware('auth');
+Route::middleware(['auth', 'verified'])->group(function () {
+    // Dashboard
+    Route::get('/dashboard', function () {
+        return view('user.dashboard.dashboard');
+    })->name('dashboard');
 
+    // User Profile
+    Route::get('/user-profile', function () {
+        return view('user.profile');
+    })->name('user-profile');
 
-Route::post('/properties/upload-media', [PropertiesController::class, 'uploadMedia'])->name('properties.uploadMedia');
+    Route::get('/my-listings', [RoomController::class, 'index'])->name('my-listings');
+    Route::put('/my-listings/{room}', [RoomController::class, 'update'])->name('my-listings.update');
+    Route::delete('/room/{room}', [RoomController::class, 'destroy'])->name('room.destroy');
 
-Route::get('/favorited-listings', function () {
-    return view('users.favorited-listings');
-})->name('favorited-listings')->middleware('auth');
+    // Add Property
+    Route::get('/add-property', function () {
+        return view('user.add-property');
+    })->name('add-property');
 
-Route::get('/add-property', function () {
-    return view('users.add-property');
-})->name('add-property')->middleware('auth');
+    // Payments
+    Route::get('/payment-method', function () {
+        return view('user.payment-method');
+    })->name('payment-method');
 
+    // Invoices
+    Route::get('/invoice', function () {
+        return view('user.invoices');
+    })->name('invoice');
 
-Route::get('/payment-method', function () {
-    return view('users.payment-method');
-})->name('payment-method')->middleware('auth');
+    // Change Password
+    Route::get('/change-password', function () {
+        return view('user.change-password');
+    })->name('change-password');
+});
 
-Route::get('/single-property', function () {
-    return view('uneditfile.single-property-1');
-})->name('single-property');
-
-Route::get('/properties-list', [PropertiesController::class, 'display'])->name('properties.list');
-
-
-
-Route::get('/invoice', function () {
-    return view('users.invoice');
-})->name('invoice')->middleware('auth');
+Route::get('/all-rooms', [RoomController::class, 'displayAllRooms'])->name('all-rooms');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('my-listings', [PropertiesController::class, 'index'])->name('my-listings');
-    Route::post('/users/store', [PropertiesController::class, 'store'])->name('users.store');
-    Route::delete('/properties/{id}', [PropertiesController::class, 'destroy'])->name('property.destroy')->middleware('auth');
-    Route::get('/property/{id}/edit', [PropertiesController::class, 'edit'])->name('property.edit');
-    Route::post('/property/{id}/update', [PropertiesController::class, 'update'])->name('property.update'); 
+    Route::match(['patch', 'put'], '/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
 
 });
 
 
-Route::get('/all-images', [PropertiesController::class, 'showAllImages'])->name('all-images');
+Route::middleware('guest')->group(function () {
+    Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
+    Route::post('/register', [RegisteredUserController::class, 'store']);
+});
 
 
-Route::get('/property/{id}/view', [PropertiesController::class, 'DisplaySpecifyProperty'])->name('property.view');
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/login');
+})->name('logout');
 
 require __DIR__.'/auth.php';
