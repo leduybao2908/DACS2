@@ -44,14 +44,14 @@
                         <!-- Search Form -->
                         <div class="col-12">
                             <div class="banner-search-wrap">
-                                <ul class="nav nav-tabs rld-banner-tab">
+                               {{-- <ul class="nav nav-tabs rld-banner-tab">
                                     <li class="nav-item">
                                         <a class="nav-link active" data-toggle="tab" href="#tabs_1">For Sale</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#tabs_2">For Rent</a>
                                     </li>
-                                </ul>
+                                </ul> --}}
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="tabs_1">
                                         <div class="rld-main-search">
@@ -67,135 +67,149 @@
                                                         <option value="3">Condo</option>
                                                     </select>
                                                 </div>
-                                                <div class="rld-single-select">
-                                                    <select class="select single-select mr-0">
-                                                        <option value="1">Location</option>
-                                                        <option value="2">Los Angeles</option>
-                                                        <option value="3">Chicago</option>
-                                                        <option value="3">Philadelphia</option>
-                                                        <option value="3">San Francisco</option>
-                                                        <option value="3">Miami</option>
-                                                        <option value="3">Houston</option>
-                                                    </select>
-                                                </div>
-                                                <div class="dropdown-filter"><span>Advanced Search</span></div>
-                                                <div class="col-xl-2 col-lg-2 col-md-4 pl-0">
-                                                    <a class="btn btn-yellow" href="#">Search Now</a>
-                                                </div>
-                                                <div class="explore__form-checkbox-list full-filter">
-                                                    <div class="row">
-                                                        <div class="col-lg-4 col-md-6 py-1 pr-30 pl-0">
-                                                            <!-- Form Property Status -->
-                                                            <div class="form-group categories">
-                                                                <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-home"></i>Property Status</span>
-                                                                    <ul class="list">
-                                                                        <li data-value="1" class="option selected ">For Sale</li>
-                                                                        <li data-value="2" class="option">For Rent</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <!--/ End Form Property Status -->
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-6 py-1 pr-30 pl-0 ">
-                                                            <!-- Form Bedrooms -->
-                                                            <div class="form-group beds">
-                                                                <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-bed" aria-hidden="true"></i> Bedrooms</span>
-                                                                    <ul class="list">
-                                                                        <li data-value="1" class="option selected">1</li>
-                                                                        <li data-value="2" class="option">2</li>
-                                                                        <li data-value="3" class="option">3</li>
-                                                                        <li data-value="3" class="option">4</li>
-                                                                        <li data-value="3" class="option">5</li>
-                                                                        <li data-value="3" class="option">6</li>
-                                                                        <li data-value="3" class="option">7</li>
-                                                                        <li data-value="3" class="option">8</li>
-                                                                        <li data-value="3" class="option">9</li>
-                                                                        <li data-value="3" class="option">10</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <!--/ End Form Bedrooms -->
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-6 py-1 pr-30 pl-0">
-                                                            <!-- Form Bathrooms -->
-                                                            <div class="form-group bath">
-                                                                <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-bath" aria-hidden="true"></i> Bathrooms</span>
-                                                                    <ul class="list">
-                                                                        <li data-value="1" class="option selected">1</li>
-                                                                        <li data-value="2" class="option">2</li>
-                                                                        <li data-value="3" class="option">3</li>
-                                                                        <li data-value="3" class="option">4</li>
-                                                                        <li data-value="3" class="option">5</li>
-                                                                        <li data-value="3" class="option">6</li>
-                                                                        <li data-value="3" class="option">7</li>
-                                                                        <li data-value="3" class="option">8</li>
-                                                                        <li data-value="3" class="option">9</li>
-                                                                        <li data-value="3" class="option">10</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <!--/ End Form Bathrooms -->
-                                                        </div>
-                                                        <div class="col-lg-5 col-md-12 col-sm-12 py-1 pr-30 mr-5 sld d-none d-lg-none d-xl-flex">
-                                                            <!-- Price Fields -->
-                                                            <div class="main-search-field-2">
-                                                                <!-- Area Range -->
-                                                                <div class="range-slider">
-                                                                    <label>Area Size</label>
-                                                                    <div id="area-range" data-min="0" data-max="1300" data-unit="sq ft"></div>
-                                                                    <div class="clearfix"></div>
-                                                                </div>
-                                                                <br>
-                                                                <!-- Price Range -->
-                                                                <div class="range-slider">
-                                                                    <label>Price Range</label>
-                                                                    <div id="price-range" data-min="0" data-max="600000" data-unit="$"></div>
-                                                                    <div class="clearfix"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-md-6 col-sm-12 py-1 pr-30 d-none d-lg-none d-xl-flex">
-                                                            <!-- Checkboxes -->
-                                                            <div class="checkboxes one-in-row margin-bottom-10 ch-1">
-                                                                <input id="check-2" type="checkbox" name="check">
-                                                                <label for="check-2">Air Conditioning</label>
-                                                                <input id="check-3" type="checkbox" name="check">
-                                                                <label for="check-3">Swimming Pool</label>
-                                                                <input id="check-4" type="checkbox" name="check">
-                                                                <label for="check-4">Central Heating</label>
-                                                                <input id="check-5" type="checkbox" name="check">
-                                                                <label for="check-5">Laundry Room</label>
-                                                                <input id="check-6" type="checkbox" name="check">
-                                                                <label for="check-6">Gym</label>
-                                                                <input id="check-7" type="checkbox" name="check">
-                                                                <label for="check-7">Alarm</label>
-                                                                <input id="check-8" type="checkbox" name="check">
-                                                                <label for="check-8">Window Covering</label>
-                                                            </div>
-                                                            <!-- Checkboxes / End -->
-                                                        </div>
-                                                        <div class="col-lg-3 col-md-6 col-sm-12 py-1 pr-30 d-none d-lg-none d-xl-flex">
-                                                            <!-- Checkboxes -->
-                                                            <div class="checkboxes one-in-row margin-bottom-10 ch-2">
-                                                                <input id="check-9" type="checkbox" name="check">
-                                                                <label for="check-9">WiFi</label>
-                                                                <input id="check-10" type="checkbox" name="check">
-                                                                <label for="check-10">TV Cable</label>
-                                                                <input id="check-11" type="checkbox" name="check">
-                                                                <label for="check-11">Dryer</label>
-                                                                <input id="check-12" type="checkbox" name="check">
-                                                                <label for="check-12">Microwave</label>
-                                                                <input id="check-13" type="checkbox" name="check">
-                                                                <label for="check-13">Washer</label>
-                                                                <input id="check-14" type="checkbox" name="check">
-                                                                <label for="check-14">Refrigerator</label>
-                                                                <input id="check-15" type="checkbox" name="check">
-                                                                <label for="check-15">Outdoor Shower</label>
-                                                            </div>
-                                                            <!-- Checkboxes / End -->
+                                                <div class="custom-select">
+                                                    <div class="select-box">
+                                                        <span class="selected-option">Select City</span>
+                                                        <div class="options">
+                                                            <div class="option">Hà Nội</div>
+                                                            <div class="option">Hồ Chí Minh</div>
+                                                            <div class="option">Hải Phòng</div>
+                                                            <div class="option">Đà Nẵng</div>
+                                                            <div class="option">Cần Thơ</div>
+                                                            <div class="option">An Giang</div>
+                                                            <div class="option">Bà Rịa–Vũng Tàu</div>
+                                                            <div class="option">Bạc Liêu</div>
+                                                            <div class="option">Bắc Giang</div>
+                                                            <div class="option">Bắc Kạn</div>
+                                                            <div class="option">Bắc Ninh</div>
+                                                            <div class="option">Bến Tre</div>
+                                                            <div class="option">Bình Dương</div>
+                                                            <div class="option">Bình Phước</div>
+                                                            <div class="option">Bình Thuận</div>
+                                                            <div class="option">Cà Mau</div>
+                                                            <div class="option">Cao Bằng</div>
+                                                            <div class="option">Đắk Lắk</div>
+                                                            <div class="option">Đắk Nông</div>
+                                                            <div class="option">Điện Biên</div>
+                                                            <div class="option">Đồng Nai</div>
+                                                            <div class="option">Đồng Tháp</div>
+                                                            <div class="option">Gia Lai</div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                
+                                                <style>
+                                                .custom-select {
+                                                    position: relative;
+                                                    width: 100%;  /* Cho phép custom select có chiều rộng tự động phù hợp với phần tử cha */
+                                                    max-width: 150px;  /* Giới hạn chiều rộng tối đa của select box */
+                                                    height: 48px;
+                                                    box-sizing: border-box; /* Bao gồm padding và border vào trong tính toán chiều cao */
+
+                                                }
+                                                
+                                                .select-box {
+                                                    display: flex;
+                                                    align-items: center;  /* Căn giữa văn bản theo chiều dọc */
+                                                    height: 48px;  /* Chiều cao cố định của select box */
+                                                    padding: 0 10px;  /* Padding cho phần tử select box */
+                                                    border: 1px solid #ebebeb;
+                                                    border-top: none;  /* Bỏ viền phía trên */
+                                                    background-color: #fff;
+                                                    cursor: pointer;
+                                                    font-size: 14px;
+                                                    border-radius: 4px;
+                                                    width: 100%;  /* Đảm bảo chiều rộng của select box khớp với phần tử cha */
+                                                }   
+                                                
+                                                .selected-option {
+                                                    color: #333;
+                                                }
+                                                
+                                                .options {
+                                                    display: none;  /* Ẩn danh sách mặc định */
+                                                    max-height: 180px; /* Giới hạn chiều cao */
+                                                    overflow-y: auto; /* Cho phép thanh cuộn xuất hiện khi cần */
+                                                    position: absolute;
+                                                    top: 100%;
+                                                    left: 0;
+                                                    right: 0;
+                                                    background-color: #fff;
+                                                    border: 1px solid #ddd;
+                                                    border-radius: 4px;
+                                                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                                    z-index: 999;
+                                                    width: 100%;  /* Chiều rộng của options khớp với select box */
+                                                }
+                                                
+                                                .option {
+                                                    padding: 10px;
+                                                    cursor: pointer;
+                                                }
+                                                
+                                                .option:hover {
+                                                    background-color: #f0f0f0;
+                                                }
+                                                
+                                                .custom-select.open .options {
+                                                    display: block; /* Hiển thị danh sách khi mở */
+                                                }
+                                                </style>
+                                                
+                                                <script>
+                                                    const selectBox = document.querySelector('.select-box');
+                                                    const options = document.querySelector('.options');
+                                                    const customSelect = document.querySelector('.custom-select');
+                                                
+                                                    // Mở/đóng dropdown khi click vào select box
+                                                    selectBox.addEventListener('click', function(event) {
+                                                        customSelect.classList.toggle('open');
+                                                        event.stopPropagation();  // Ngừng sự kiện để tránh tắt dropdown khi click vào nó
+                                                    });
+                                                
+                                                    // Thêm sự kiện để thay đổi lựa chọn khi nhấp vào option
+                                                    const optionElements = document.querySelectorAll('.option');
+                                                    optionElements.forEach(option => {
+                                                        option.addEventListener('click', function() {
+                                                            selectBox.querySelector('.selected-option').textContent = option.textContent;
+                                                            customSelect.classList.remove('open');  // Ẩn danh sách sau khi chọn
+                                                        });
+                                                    });
+                                                
+                                                    // Đóng dropdown khi click ra ngoài
+                                                    document.addEventListener('click', function(event) {
+                                                        if (!customSelect.contains(event.target)) {
+                                                            customSelect.classList.remove('open');
+                                                        }
+                                                    });
+                                                </script>
+                                                
+                                                
+                                            <div class="dropdown-filter"><span>Advanced Search</span></div>
+                                                <div class="col-xl-2 col-lg-2 col-md-4 pl-0">
+                                                    <a class="btn btn-yellow" href="#">Search Now</a>
+                                                </div>
+                                                <div class="explore__form-checkbox-list full-filter" style="display: flex; justify-content: center; align-items: center; width: 90%; max-width: 1000px; min-width: 350px; padding: 30px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+                                                    <div class="row justify-content-center" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                                        <div class="col-lg-5 col-md-12 col-sm-12" style="flex: 1; max-width: 100%; margin-right: 15px;">
+                                                            <!-- Area Range -->
+                                                            <div class="range-slider">
+                                                                <label>Area Size</label>
+                                                                <div id="area-range" data-min="0" data-max="1300" data-unit="sq ft"></div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            <br>
+                                                            <!-- Price Range -->
+                                                            <div class="range-slider">
+                                                                <label>Price Range</label>
+                                                                <div id="price-range" data-min="0" data-max="600000" data-unit="$"></div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -205,23 +219,15 @@
                                                 <div class="rld-single-input">
                                                     <input type="text" placeholder="Enter Keyword...">
                                                 </div>
-                                                <div class="rld-single-select ml-22">
-                                                    <select class="select single-select">
-                                                        <option value="1">Property Type</option>
-                                                        <option value="2">Family House</option>
-                                                        <option value="3">Apartment</option>
-                                                        <option value="3">Condo</option>
-                                                    </select>
-                                                </div>
                                                 <div class="rld-single-select">
                                                     <select class="select single-select mr-0">
                                                         <option value="1">Location</option>
                                                         <option value="2">Los Angeles</option>
                                                         <option value="3">Chicago</option>
-                                                        <option value="3">Philadelphia</option>
-                                                        <option value="3">San Francisco</option>
-                                                        <option value="3">Miami</option>
-                                                        <option value="3">Houston</option>
+                                                        <option value="4">Philadelphia</option>
+                                                        <option value="5">San Francisco</option>
+                                                        <option value="6">Miami</option>
+                                                        <option value="7">Houston</option>
                                                     </select>
                                                 </div>
                                                 <div class="dropdown-filter"><span>Advanced Search</span></div>

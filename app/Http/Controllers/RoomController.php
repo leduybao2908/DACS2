@@ -1,10 +1,12 @@
 <?php
-
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Room;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
+
+
 class RoomController extends Controller
 {
     /**
@@ -68,7 +70,6 @@ class RoomController extends Controller
         $room->images = json_encode($imagePaths);
         $room->save();  
     }
-
     // Redirect with success message
     return redirect()->route('my-listings')->with('success', 'Room added successfully!');
 }

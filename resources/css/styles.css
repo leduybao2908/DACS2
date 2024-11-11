@@ -5224,6 +5224,7 @@ element.style {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-top: 20px;
+  
 }
 
 .homepage-2 .range-slider .ui-slider .ui-slider-handle {
@@ -7841,7 +7842,7 @@ html input[disabled] {
 }
 
 .hp-6 .explore__form-checkbox-list.full-filter {
-  top: 75px;
+  top: 60px;
 }
 
 .hp-6 .explore__form-checkbox-list.full-filter.filter-block {
