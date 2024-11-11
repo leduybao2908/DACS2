@@ -7,10 +7,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="html 5 template">
     <meta name="author" content="">
-    <title>Find Houses - HTML5 Template</title>
+    <title>@yield('title', 'Default Title')</title>
     
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css')}}">
     
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
@@ -19,12 +20,13 @@
     
 </head>
 
-<body class="@yield('body-class')">
-    <div id="wrapper">
-    @include('layouts.navbar')
+<body class="{{ $bodyClass ?? 'maxw1600 m0a dashboard-bd' }}">
+    <div id="wrapper" class="int_main_wraapper">
+    @include('user.dashboard.layout.header')
+    
     @yield('content')
 
-    @include('layouts.footer')
+    
 
    <!-- ARCHIVES JS -->
    @stack('scripts')
