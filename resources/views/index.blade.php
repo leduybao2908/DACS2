@@ -383,34 +383,35 @@
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="tabs_2">
-                                                <div class="rld-main-search">
-                                                    <div class="row">
-                                                        <div class="rld-single-input">
-                                                            <input type="text" placeholder="Enter Keyword...">
-                                                        </div>
-                                                        <div class="rld-single-select ml-22">
-                                                            <select class="select single-select">
-                                                                <option value="1">Property Type</option>
-                                                                <option value="2">Family House</option>
-                                                                <option value="3">Apartment</option>
-                                                                <option value="3">Condo</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="rld-single-select">
-                                                            <select class="select single-select mr-0">
-                                                                <option value="1">Location</option>
-                                                                <option value="2">Los Angeles</option>
-                                                                <option value="3">Chicago</option>
-                                                                <option value="3">Philadelphia</option>
-                                                                <option value="3">San Francisco</option>
-                                                                <option value="3">Miami</option>
-                                                                <option value="3">Houston</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="dropdown-filter"><span>Advanced Search</span></div>
-                                                        <div class="col-xl-2 col-lg-2 col-md-4 pl-0">
-                                                            <a class="btn btn-yellow" href="#">Search Now</a>
-                                                        </div>
+                                                <form action="{{ route('search') }}" method="GET">
+                                                    <div class="rld-single-input">
+                                                        <input type="text" name="keyword" placeholder="Enter Keyword...">
+                                                    </div>
+                                                    <div class="rld-single-select ml-22">
+                                                        <select class="select single-select" name="property_type">
+                                                            <option value="">Property Type</option>
+                                                            <option value="Family House">Family House</option>
+                                                            <option value="Apartment">Apartment</option>
+                                                            <option value="Condo">Condo</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="rld-single-select">
+                                                        <select class="select single-select mr-0" name="location">
+                                                            <option value="">Location</option>
+                                                            <option value="Los Angeles">Los Angeles</option>
+                                                            <option value="Chicago">Chicago</option>
+                                                            <option value="Philadelphia">Philadelphia</option>
+                                                            <option value="San Francisco">San Francisco</option>
+                                                            <option value="Miami">Miami</option>
+                                                            <option value="Houston">Houston</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="dropdown-filter"><span>Advanced Search</span></div>
+                                                    <div class="col-xl-2 col-lg-2 col-md-4 pl-0">
+                                                        <button type="submit" class="btn btn-yellow">Search Now</button>
+                                                    </div>
+                                                </form>
+                                                
                                                         <div class="explore__form-checkbox-list full-filter">
                                                             <div class="row">
                                                                 <div class="col-lg-4 col-md-6 py-1 pr-30 pl-0">
