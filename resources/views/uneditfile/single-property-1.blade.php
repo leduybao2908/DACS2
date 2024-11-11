@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/single-property-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:28:06 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/single-room-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:28:06 GMT -->
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="html 5 template">
     <meta name="author" content="">
-    <title>Property Details</title>
+    <title>room Details</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
@@ -49,10 +49,7 @@
         <!-- Header Container
         ================================================== -->
         @include('layouts.header')
-<<<<<<< Updated upstream
         <div class="clearfix"></div>
-=======
->>>>>>> Stashed changes
         <!-- Header Container / End -->
         <!-- END SECTION HEADINGS -->
 
@@ -67,12 +64,12 @@
                                     <div class="pro-wrapper">
                                         <div class="detail-wrapper-body">
                                             <div class="listing-title-bar">
-                                                <h3>{{ $property->property_title }}<span
+                                                <h3>{{ $room->room_title }}<span
                                                         class="mrg-l-5 category-tag">For Sale</span></h3>
                                                 <div class="mt-0">
                                                     <a href="#listing-location" class="listing-address">
                                                         <i
-                                                            class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>{{ $property->location }}
+                                                            class="fa fa-map-marker pr-2 ti-location-pin mrg-r-5"></i>{{ $room->location }}
                                                     </a>
                                                 </div>
                                             </div>
@@ -80,10 +77,10 @@
                                         <div class="single detail-wrapper mr-2">
                                             <div class="detail-wrapper-body">
                                                 <div class="listing-title-bar">
-                                                    <h4>{{ $property->price_per_month }}$</h4>
+                                                    <h4>{{ $room->price_per_month }}$</h4>
                                                     <div class="mt-0">
                                                         <a href="#listing-location" class="listing-address">
-                                                           
+
                                                         </a>
                                                     </div>
                                                 </div>
@@ -95,7 +92,7 @@
                                 <div id="listingDetailsSlider" class="carousel listing-details-sliders slide mb-30">
                                     <h5 class="mb-4">Gallery</h5>
                                     <div class="carousel-inner">
-                                        @foreach ($property->images as $index => $image)
+                                        @foreach (json_decode($room->images) as $index => $image)
                                             <div class="{{ $index === 0 ? 'active' : '' }} item carousel-item"
                                                 data-slide-number="{{ $index }}">
                                                 <img src="{{ asset('storage/' . $image) }}" class="img-fluid"
@@ -111,7 +108,7 @@
                                     </div>
                                     <!-- main slider carousel nav controls -->
                                     <ul class="carousel-indicators smail-listing list-inline">
-                                        @foreach ($property->images as $index => $image)
+                                        @foreach ($room->images as $index => $image)
                                             <li class="list-inline-item {{ $index === 0 ? 'active' : '' }}">
                                                 <a id="carousel-selector-{{ $index }}"
                                                     data-slide-to="{{ $index }}"
@@ -126,28 +123,28 @@
                                 </div>
                                 <div class="blog-info details mb-30">
                                     <h5 class="mb-4">Description</h5>
-                                    <p class="mb-3">{{ $property->description }} </p>
+                                    <p class="mb-3">{{ $room->description }} </p>
                                 </div>
                             </div>
                         </div>
                         <div class="single homes-content details mb-30">
                             <!-- title -->
-                            <h5 class="mb-4">Property Details</h5>
+                            <h5 class="mb-4">room Details</h5>
                             <ul class="homes-list clearfix">
                                 <li>
-                                    <span class="font-weight-bold mr-1">Property ID:</span>
+                                    <span class="font-weight-bold mr-1">room ID:</span>
                                     <span class="det">V254680</span>
                                 </li>
                                 <li>
-                                    <span class="font-weight-bold mr-1">Property Type:</span>
+                                    <span class="font-weight-bold mr-1">room Type:</span>
                                     <span class="det">House</span>
                                 </li>
                                 <li>
-                                    <span class="font-weight-bold mr-1">Property status:</span>
+                                    <span class="font-weight-bold mr-1">room status:</span>
                                     <span class="det">For Sale</span>
                                 </li>
                                 <li>
-                                    <span class="font-weight-bold mr-1">Property Price:</span>
+                                    <span class="font-weight-bold mr-1">room Price:</span>
                                     <span class="det">$230,000</span>
                                 </li>
                                 <li>
@@ -213,13 +210,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="floor-plan property wprt-image-video w50 pro">
+                        <div class="floor-plan room wprt-image-video w50 pro">
                             <h5>Floor Plans</h5>
                             <img alt="image" src="images/bg/floor-plan-1.png">
                         </div>
-                        <div class="floor-plan property wprt-image-video w50 pro">
+                        <div class="floor-plan room wprt-image-video w50 pro">
                             <h5>What's Nearby</h5>
-                            <div class="property-nearby">
+                            <div class="room-nearby">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="nearby-info mb-4">
@@ -228,7 +225,7 @@
                                                     class="title">Education</b>
                                             </span>
                                             <div class="nearby-list">
-                                                <ul class="property-list list-unstyled mb-0">
+                                                <ul class="room-list list-unstyled mb-0">
                                                     <li class="d-flex">
                                                         <h6 class="mb-3 mr-2">Education Mandarin</h6>
                                                         <span>(15.61 miles)</span>
@@ -286,7 +283,7 @@
                                                     Medical</b>
                                             </span>
                                             <div class="nearby-list">
-                                                <ul class="property-list list-unstyled mb-0">
+                                                <ul class="room-list list-unstyled mb-0">
                                                     <li class="d-flex">
                                                         <h6 class="mb-3 mr-2">Natural Market</h6>
                                                         <span>(13.20 miles)</span>
@@ -343,7 +340,7 @@
                                                 <i class="fas fa-car mr-2"></i><b class="title">Transportation</b>
                                             </span>
                                             <div class="nearby-list">
-                                                <ul class="property-list list-unstyled mb-0">
+                                                <ul class="room-list list-unstyled mb-0">
                                                     <li class="d-flex">
                                                         <h6 class="mb-3 mr-2">Airport Transportation</h6>
                                                         <span>(11.36 miles)</span>
@@ -399,8 +396,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="property wprt-image-video w50 pro">
-                            <h5>Property Video</h5>
+                        <div class="room wprt-image-video w50 pro">
+                            <h5>room Video</h5>
                             <img alt="image" src="images/slider/home-slider-4.jpg">
                             <a class="icon-wrap popup-video popup-youtube"
                                 href="https://www.youtube.com/watch?v=14semTlwyUY">
@@ -412,7 +409,7 @@
                                 <div class="waves wave-3"></div>
                             </div>
                         </div>
-                        <div class="property-location map">
+                        <div class="room-location map">
                             <h5>Location</h5>
                             <div class="divider-fade"></div>
                             <div id="map-contact" class="contact-map"></div>
@@ -444,7 +441,7 @@
                                                 quam congue dictum luctus, lacus magna congue ante, in finibus dui
                                                 sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum
                                                 vestibulum sed.</p>
-                                            <div class="rest"><img src="images/single-property/s-1.jpg"
+                                            <div class="rest"><img src="images/single-room/s-1.jpg"
                                                     class="img-fluid" alt=""></div>
                                         </div>
                                     </li>
@@ -505,9 +502,9 @@
                                                 sapien eu dolor. Integer tincidunt suscipit erat, nec laoreet ipsum
                                                 vestibulum sed.</p>
                                             <div class="resti">
-                                                <div class="rest"><img src="images/single-property/s-2.jpg"
+                                                <div class="rest"><img src="images/single-room/s-2.jpg"
                                                         class="img-fluid" alt=""></div>
-                                                <div class="rest"><img src="images/single-property/s-3.jpg"
+                                                <div class="rest"><img src="images/single-room/s-3.jpg"
                                                         class="img-fluid" alt=""></div>
                                             </div>
                                         </div>
@@ -587,7 +584,7 @@
                     <aside class="col-lg-4 col-md-12 car">
                         <div class="single widget">
                             <!-- Start: Schedule a Tour -->
-                            
+
                             <!-- End: Schedule a Tour -->
                             <!-- end author-verified-badge -->
                             <div class="sidebar">
@@ -601,7 +598,7 @@
                                                 <img src="images/testimonials/ts-1.jpg" alt="author-image"
                                                     class="author__img">
                                                 <h4 class="author__title">Lisa Clark</h4>
-                                                <p class="author__meta">Agent of Property</p>
+                                                <p class="author__meta">Agent of room</p>
                                             </div>
                                             <ul class="author__contact">
                                                 <li><span class="la la-map-marker"><i
@@ -834,7 +831,7 @@
                                             <h4>Specials of the day</h4>
                                         </div>
                                         <div class="widget-boxed-body">
-                                            <div class="banner"><img src="images/single-property/banner.jpg"
+                                            <div class="banner"><img src="images/single-room/banner.jpg"
                                                     alt=""></div>
                                         </div>
                                     </div>
@@ -884,7 +881,7 @@
                     </aside>
                 </div>
                 <!-- START SIMILAR PROPERTIES -->
-                <section class="similar-property featured portfolio p-0 bg-white-inner">
+                <section class="similar-room featured portfolio p-0 bg-white-inner">
                     <div class="container">
                         <h5>Similar Properties</h5>
                         <div class="row portfolio-items">
@@ -893,7 +890,7 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="single-room-1.html" class="homes-img">
                                                 <div class="homes-tag button alt featured">Featured</div>
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <div class="homes-price">$9,000/mo</div>
@@ -902,20 +899,20 @@
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i
+                                            <a href="single-room-1.html" class="btn"><i
                                                     class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY"
                                                 class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i
+                                            <a href="single-room-2.html" class="img-poppu btn"><i
                                                     class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="single-room-1.html">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="single-room-1.html">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South,
                                                     NYC</span>
                                             </a>
@@ -954,7 +951,7 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="single-room-1.html" class="homes-img">
                                                 <div class="homes-tag button sale rent">For Rent</div>
                                                 <div class="homes-price">$3,000/mo</div>
                                                 <img src="images/blog/b-12.jpg" alt="home-1"
@@ -962,20 +959,20 @@
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i
+                                            <a href="single-room-1.html" class="btn"><i
                                                     class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY"
                                                 class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i
+                                            <a href="single-room-2.html" class="img-poppu btn"><i
                                                     class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="single-room-1.html">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="single-room-1.html">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South,
                                                     NYC</span>
                                             </a>
@@ -1014,27 +1011,27 @@
                                     <div class="project-inner project-head">
                                         <div class="homes">
                                             <!-- homes img -->
-                                            <a href="single-property-1.html" class="homes-img">
+                                            <a href="single-room-1.html" class="homes-img">
                                                 <div class="homes-tag button alt sale">For Sale</div>
                                                 <div class="homes-price">$9,000/mo</div>
                                                 <img src="images/blog/b-1.jpg" alt="home-1" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="button-effect">
-                                            <a href="single-property-1.html" class="btn"><i
+                                            <a href="single-room-1.html" class="btn"><i
                                                     class="fa fa-link"></i></a>
                                             <a href="https://www.youtube.com/watch?v=14semTlwyUY"
                                                 class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                                            <a href="single-property-2.html" class="img-poppu btn"><i
+                                            <a href="single-room-2.html" class="img-poppu btn"><i
                                                     class="fa fa-photo"></i></a>
                                         </div>
                                     </div>
                                     <!-- homes content -->
                                     <div class="homes-content">
                                         <!-- homes address -->
-                                        <h3><a href="single-property-1.html">Real House Luxury Villa</a></h3>
+                                        <h3><a href="single-room-1.html">Real House Luxury Villa</a></h3>
                                         <p class="homes-address mb-3">
-                                            <a href="single-property-1.html">
+                                            <a href="single-room-1.html">
                                                 <i class="fa fa-map-marker"></i><span>Est St, 77 - Central Park South,
                                                     NYC</span>
                                             </a>
@@ -1077,75 +1074,74 @@
         <!-- END SECTION PROPERTIES LISTING -->
 
         <!-- START FOOTER -->
-<<<<<<< Updated upstream
-@include('layouts.footer')
+        <<<<<<< Updated upstream @include('layouts.footer')=======@include('layouts.footer')>>>>>>> Stashed changes
+            <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up"
+                    aria-hidden="true"></i></a>
+            <!-- END FOOTER -->
 
-=======
-        @include('layouts.footer')
->>>>>>> Stashed changes
-        <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
-        <!-- END FOOTER -->
-
-        <!--register form -->
-        <div class="login-and-register-form modal">
-            <div class="main-overlay"></div>
-            <div class="main-register-holder">
-                <div class="main-register fl-wrap">
-                    <div class="close-reg"><i class="fa fa-times"></i></div>
-                    <h3>Welcome to <span>Find<strong>Houses</strong></span></h3>
-                    <div class="soc-log fl-wrap">
-                        <p>Login</p>
-                        <a href="#" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with
-                            Facebook</a>
-                        <a href="#" class="twitter-log"><i class="fa fa-twitter"></i> Log in with Twitter</a>
-                    </div>
-                    <div class="log-separator fl-wrap"><span>Or</span></div>
-                    <div id="tabs-container">
-                        <ul class="tabs-menu">
-                            <li class="current"><a href="#tab-1">Login</a></li>
-                            <li><a href="#tab-2">Register</a></li>
-                        </ul>
-                        <div class="tab">
-                            <div id="tab-1" class="tab-contents">
-                                <div class="custom-form">
-                                    <form method="post" name="registerform">
-                                        <label>Username or Email Address * </label>
-                                        <input name="email" type="text" onClick="this.select()" value="">
-                                        <label>Password * </label>
-                                        <input name="password" type="password" onClick="this.select()"
-                                            value="">
-                                        <button type="submit" class="log-submit-btn"><span>Log In</span></button>
-                                        <div class="clearfix"></div>
-                                        <div class="filter-tags">
-                                            <input id="check-a" type="checkbox" name="check">
-                                            <label for="check-a">Remember me</label>
-                                        </div>
-                                    </form>
-                                    <div class="lost_password">
-                                        <a href="#">Lost Your Password?</a>
-                                    </div>
-                                </div>
-                            </div>
+            <!--register form -->
+            <div class="login-and-register-form modal">
+                <div class="main-overlay"></div>
+                <div class="main-register-holder">
+                    <div class="main-register fl-wrap">
+                        <div class="close-reg"><i class="fa fa-times"></i></div>
+                        <h3>Welcome to <span>Find<strong>Houses</strong></span></h3>
+                        <div class="soc-log fl-wrap">
+                            <p>Login</p>
+                            <a href="#" class="facebook-log"><i class="fa fa-facebook-official"></i>Log in with
+                                Facebook</a>
+                            <a href="#" class="twitter-log"><i class="fa fa-twitter"></i> Log in with
+                                Twitter</a>
+                        </div>
+                        <div class="log-separator fl-wrap"><span>Or</span></div>
+                        <div id="tabs-container">
+                            <ul class="tabs-menu">
+                                <li class="current"><a href="#tab-1">Login</a></li>
+                                <li><a href="#tab-2">Register</a></li>
+                            </ul>
                             <div class="tab">
-                                <div id="tab-2" class="tab-contents">
+                                <div id="tab-1" class="tab-contents">
                                     <div class="custom-form">
-                                        <form method="post" name="registerform" class="main-register-form"
-                                            id="main-register-form2">
-                                            <label>First Name * </label>
-                                            <input name="name" type="text" onClick="this.select()"
-                                                value="">
-                                            <label>Second Name *</label>
-                                            <input name="name2" type="text" onClick="this.select()"
-                                                value="">
-                                            <label>Email Address *</label>
+                                        <form method="post" name="registerform">
+                                            <label>Username or Email Address * </label>
                                             <input name="email" type="text" onClick="this.select()"
                                                 value="">
-                                            <label>Password *</label>
+                                            <label>Password * </label>
                                             <input name="password" type="password" onClick="this.select()"
                                                 value="">
-                                            <button type="submit"
-                                                class="log-submit-btn"><span>Register</span></button>
+                                            <button type="submit" class="log-submit-btn"><span>Log In</span></button>
+                                            <div class="clearfix"></div>
+                                            <div class="filter-tags">
+                                                <input id="check-a" type="checkbox" name="check">
+                                                <label for="check-a">Remember me</label>
+                                            </div>
                                         </form>
+                                        <div class="lost_password">
+                                            <a href="#">Lost Your Password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab">
+                                    <div id="tab-2" class="tab-contents">
+                                        <div class="custom-form">
+                                            <form method="post" name="registerform" class="main-register-form"
+                                                id="main-register-form2">
+                                                <label>First Name * </label>
+                                                <input name="name" type="text" onClick="this.select()"
+                                                    value="">
+                                                <label>Second Name *</label>
+                                                <input name="name2" type="text" onClick="this.select()"
+                                                    value="">
+                                                <label>Email Address *</label>
+                                                <input name="email" type="text" onClick="this.select()"
+                                                    value="">
+                                                <label>Password *</label>
+                                                <input name="password" type="password" onClick="this.select()"
+                                                    value="">
+                                                <button type="submit"
+                                                    class="log-submit-btn"><span>Register</span></button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1153,91 +1149,90 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!--register form end -->
+            <!--register form end -->
 
-        <!-- ARCHIVES JS -->
-        <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-        <script src="{{ asset('js/jquery-ui.js') }}"></script>
-        <script src="{{ asset('js/range-slider.js') }}"></script>
-        <script src="{{ asset('js/tether.min.js') }}"></script>
-        <script src="{{ asset('js/popper.min.js') }}"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('js/mmenu.min.js') }}"></script>
-        <script src="{{ asset('js/mmenu.js') }}"></script>
-        <script src="{{ asset('js/slick.min.js') }}"></script>
-        <script src="{{ asset('js/slick4.js') }}"></script>
-        <script src="{{ asset('js/fitvids.js') }}"></script>
-        <script src="{{ asset('js/smooth-scroll.min.js') }}"></script>
-        <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
-        <script src="{{ asset('js/popup.js') }}"></script>
-        <script src="{{ asset('js/ajaxchimp.min.js') }}"></script>
-        <script src="{{ asset('js/newsletter.js') }}"></script>
-        <script src="{{ asset('js/timedropper.js') }}"></script>
-        <script src="{{ asset('js/datedropper.js') }}"></script>
-        <script src="{{ asset('js/jqueryadd-count.js') }}"></script>
-        <script src="{{ asset('js/leaflet.js') }}"></script>
-        <script src="{{ asset('js/leaflet-gesture-handling.min.js') }}"></script>
-        <script src="{{ asset('js/leaflet-providers.js') }}"></script>
-        <script src="{{ asset('js/leaflet.markercluster.js') }}"></script>
-        <script src="{{ asset('js/map-single.js') }}"></script>
-        <script src="{{ asset('js/color-switcher.js') }}"></script>
-        <script src="{{ asset('js/inner.js') }}"></script>
+            <!-- ARCHIVES JS -->
+            <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+            <script src="{{ asset('js/jquery-ui.js') }}"></script>
+            <script src="{{ asset('js/range-slider.js') }}"></script>
+            <script src="{{ asset('js/tether.min.js') }}"></script>
+            <script src="{{ asset('js/popper.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('js/mmenu.min.js') }}"></script>
+            <script src="{{ asset('js/mmenu.js') }}"></script>
+            <script src="{{ asset('js/slick.min.js') }}"></script>
+            <script src="{{ asset('js/slick4.js') }}"></script>
+            <script src="{{ asset('js/fitvids.js') }}"></script>
+            <script src="{{ asset('js/smooth-scroll.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+            <script src="{{ asset('js/popup.js') }}"></script>
+            <script src="{{ asset('js/ajaxchimp.min.js') }}"></script>
+            <script src="{{ asset('js/newsletter.js') }}"></script>
+            <script src="{{ asset('js/timedropper.js') }}"></script>
+            <script src="{{ asset('js/datedropper.js') }}"></script>
+            <script src="{{ asset('js/jqueryadd-count.js') }}"></script>
+            <script src="{{ asset('js/leaflet.js') }}"></script>
+            <script src="{{ asset('js/leaflet-gesture-handling.min.js') }}"></script>
+            <script src="{{ asset('js/leaflet-providers.js') }}"></script>
+            <script src="{{ asset('js/leaflet.markercluster.js') }}"></script>
+            <script src="{{ asset('js/map-single.js') }}"></script>
+            <script src="{{ asset('js/color-switcher.js') }}"></script>
+            <script src="{{ asset('js/inner.js') }}"></script>
 
 
-        <!-- Date Dropper Script-->
-        <script>
-            $('#reservation-date').dateDropper();
-        </script>
-        <!-- Time Dropper Script-->
-        <script>
-            this.$('#reservation-time').timeDropper({
-                setCurrentTime: false,
-                meridians: true,
-                primaryColor: "#e8212a",
-                borderColor: "#e8212a",
-                minutesInterval: '15'
-            });
-        </script>
-
-        <script>
-            $(document).ready(function() {
-                $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-                    disableOn: 700,
-                    type: 'iframe',
-                    mainClass: 'mfp-fade',
-                    removalDelay: 160,
-                    preloader: false,
-                    fixedContentPos: false
+            <!-- Date Dropper Script-->
+            <script>
+                $('#reservation-date').dateDropper();
+            </script>
+            <!-- Time Dropper Script-->
+            <script>
+                this.$('#reservation-time').timeDropper({
+                    setCurrentTime: false,
+                    meridians: true,
+                    primaryColor: "#e8212a",
+                    borderColor: "#e8212a",
+                    minutesInterval: '15'
                 });
-            });
-        </script>
+            </script>
 
-        <script>
-            $('.slick-carousel').each(function() {
-                var slider = $(this);
-                $(this).slick({
-                    infinite: true,
-                    dots: false,
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '0'
+            <script>
+                $(document).ready(function() {
+                    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+                        disableOn: 700,
+                        type: 'iframe',
+                        mainClass: 'mfp-fade',
+                        removalDelay: 160,
+                        preloader: false,
+                        fixedContentPos: false
+                    });
                 });
+            </script>
 
-                $(this).closest('.slick-slider-area').find('.slick-prev').on("click", function() {
-                    slider.slick('slickPrev');
+            <script>
+                $('.slick-carousel').each(function() {
+                    var slider = $(this);
+                    $(this).slick({
+                        infinite: true,
+                        dots: false,
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '0'
+                    });
+
+                    $(this).closest('.slick-slider-area').find('.slick-prev').on("click", function() {
+                        slider.slick('slickPrev');
+                    });
+                    $(this).closest('.slick-slider-area').find('.slick-next').on("click", function() {
+                        slider.slick('slickNext');
+                    });
                 });
-                $(this).closest('.slick-slider-area').find('.slick-next').on("click", function() {
-                    slider.slick('slickNext');
-                });
-            });
-        </script>
+            </script>
 
     </div>
     <!-- Wrapper / End -->
 </body>
 
 
-<!-- Mirrored from code-theme.com/html/findhouses/single-property-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:28:07 GMT -->
+<!-- Mirrored from code-theme.com/html/findhouses/single-room-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Oct 2024 14:28:07 GMT -->
 
 </html>

@@ -83,11 +83,15 @@ public function displayAllRooms()
     /**
      * Display the specified room.
      */
-    public function show(Room $room)
+    public function show($room_id)
     {
-        return view('rooms.show', compact('room'));
+        // Find the room by room_id
+        $room = Room::with('owner')->findOrFail($room_id);
+        
+    
+        // Return the view with the room data
+        return view('show', compact('room'));
     }
-
     /**
      * Show the form for editing the specified room.
      */
@@ -151,4 +155,8 @@ public function displayAllRooms()
         // Quay lại trang danh sách phòng với thông báo thành công
         return redirect()->route('my-listings')->with('success', 'Room deleted successfully!');
     }
+
+
+
+
 }
