@@ -59,5 +59,11 @@ public function user()
       $images = json_decode($this->images, true);
       return isset($images[0]) ? $images[0] : null;  // Trả về ảnh đầu tiên trong mảng
   }
+  public function reviews()
+  {
+      return $this->hasMany(Review::class, 'room_id'); 
+  }
+
+
 
 }

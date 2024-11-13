@@ -30,7 +30,7 @@
                     <div class="detail-wrapper-body">
                         <div class="listing-title-bar">
                             <div class="text-heading text-left">
-                                <p><a href="index.html">Home </a> &nbsp;/&nbsp; <span>Listings</span></p>
+                                <p><a href="/">Home </a> &nbsp;/&nbsp; <span>Listings</span></p>
                             </div>
                             <h3>List View</h3>
                         </div>
@@ -306,9 +306,8 @@
                             <i class="fa fa-expand"></i> <span>{{ $room->area }}m²</span>
                         </p>
                         <p class="homes-description">
-                            {{ \Illuminate\Support\Str::limit($room->description, 60, '...') }}
+                            {!! \Illuminate\Support\Str::limit(strip_tags($room->description), 60, '...') !!}                        </p>
                         </p>
-
                         <!-- Price -->
                         <div class="price-properties">
                             <h3 class="title mt-3">

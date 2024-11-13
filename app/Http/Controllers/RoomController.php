@@ -26,12 +26,6 @@ class RoomController extends Controller
         return view('rooms.create');
     }
 
-
-
-
-
-
-    
     /**
      * Store a newly created room in storage.
      */
@@ -161,8 +155,4 @@ public function displayAllRooms()
         // Quay lại trang danh sách phòng với thông báo thành công
         return redirect()->route('my-listings')->with('success', 'Room deleted successfully!');
     }
-
-
-
-
 }

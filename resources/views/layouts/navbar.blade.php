@@ -6,7 +6,7 @@
             <div class="left-side">
                 <!-- Logo -->
                 <div id="logo">
-                    <a href="index.html"><img src="images/logo-red.svg" alt=""></a>
+                    <a href="/"><img src="images/logo-red.svg" alt=""></a>
                 </div>
                 <!-- Mobile Navigation -->
                 <div class="mmenu-trigger">

@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
@@ -63,7 +65,11 @@ Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
     Route::post('/register', [RegisteredUserController::class, 'store']);
 });
+
+
 Route::get('/rooms/{room}', [RoomController::class, 'show'])->name('rooms.show');
+Route::post('/rooms/{room}/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+Route::get('/reviews/{roomId}', [ReviewController::class, 'show'])->name('reviews.show');
 
 
 Route::post('/logout', function () {

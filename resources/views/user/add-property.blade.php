@@ -1,6 +1,8 @@
 @extends('user.dashboard.layout.user_app')
 @section('title','Add Property')
 @push('styles')
+
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
@@ -100,10 +102,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <p>
-                                        <label for="description">Property Description</label>
-                                        <textarea id="description" name="description" placeholder="Describe your property" required></textarea>
-                                    </p>
+                                    <label for="description">Property Description</label>
+                                    <!-- Container for Quill Editor -->
+                                    <div id="description-editor" style="height: 150px; background: #fff;"></div>
+                                    <input type="hidden" name="description" id="description">
                                 </div>
                             </div>
                             <div class="row">
@@ -191,9 +193,28 @@
 <script src="{{ asset('js/forms-2.js') }}"></script>
 <script src="{{ asset('js/color-switcher.js') }}"></script>
 <script src="{{ asset('js/dropzone.js') }}"></script>
-
+<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 <!-- MAIN JS -->
 <script src="{{ asset('js/script.js') }}"></script>
+<script>document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Quill
+    var quill = new Quill('#description-editor', {
+        theme: 'snow',
+        placeholder: 'Describe your property...',
+        modules: {
+            toolbar: [
+                ['bold', 'italic', 'underline'],
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                ['emoji']  // Add emoji picker plugin here if using
+            ]
+        }
+    });
+
+    // Sync Quill content with hidden input field for form submission
+    quill.on('text-change', function() {
+        document.getElementById('description').value = quill.root.innerHTML;
+    });
+});</script>
 <script>
     $(".dropzone").dropzone({
         dictDefaultMessage: "<i class='fa fa-cloud-upload'></i> Click here or drop files to upload",
@@ -206,5 +227,5 @@
         $(this).toggleClass("hu-menu-visdec");
     });
 
-</script>
+</scrip>
 @endpush
