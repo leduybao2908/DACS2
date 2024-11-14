@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Room;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Log;
-
 
 class RoomController extends Controller
 {
@@ -30,7 +30,8 @@ class RoomController extends Controller
      * Store a newly created room in storage.
      */
     public function store(Request $request)
-    {
+{
+    try {
         // Validate the request data
         $request->validate([
             'title' => 'required|string|max:255',
@@ -38,11 +39,11 @@ class RoomController extends Controller
             'price' => 'required|numeric',
             'area' => 'required|numeric',
             'location' => 'required|string',
-            'type' => 'required|string|in:apartment,house', // Validate 'type'
-            'city' => 'required|string', // Validate 'city'
+            'city' => 'required|string',
+            'type' => 'required|string',
             'status' => 'nullable|string|in:available,occupied',  // Default is 'available'
         ]);
-    
+
         // Create a new room with the authenticated user as the owner
         $room = new Room();
         $room->title = $request->input('title');
@@ -50,35 +51,50 @@ class RoomController extends Controller
         $room->price = $request->input('price');
         $room->area = $request->input('area');
         $room->location = $request->input('location');
-        $room->type = $request->input('type');  // Store the room type
-        $room->city = $request->input('city');  // Store the city
+        $room->city = $request->input('city');
+        $room->type = $request->input('type');
         $room->status = $request->input('status', 'available');  // Default status is 'available'
         $room->owner_id = Auth::id();  // Set the owner_id to the authenticated user
         $room->user_id = null;  // No tenant initially
-    
+
         // Save the room first to generate the room_id
         $room->save();
-    
+
         // Handle image uploads after saving the room (so we can use room_id)
         if ($request->hasFile('images')) {
             $imagePaths = [];
             foreach ($request->file('images') as $image) {
                 // Generate unique filename based on owner_id, room_id, and current time
-                $filename = Auth::id() . '-' . Carbon::now()->timestamp . '.' . $image->getClientOriginalExtension();
-                
+                $filename = Auth::id() . '-'  . time() . '.' . $image->getClientOriginalExtension();
+
+                // Store image
                 $path = $image->storeAs('rooms', $filename, 'public');
-    
+
                 $imagePaths[] = $path;
             }
-    
+
+            // Update the images after uploading
             $room->images = json_encode($imagePaths);
             $room->save();  
         }
-    
+
         // Redirect with success message
         return redirect()->route('my-listings')->with('success', 'Room added successfully!');
+
+    } catch (QueryException $e) {
+        // Log the error for debugging purposes
+        Log::error('Error storing room: ' . $e->getMessage());
+
+        // Redirect with an error message
+        return redirect()->back()->with('error', 'An error occurred while saving the room. Please try again.');
+    } catch (\Exception $e) {
+        // Catch any other exceptions
+        Log::error('General error: ' . $e->getMessage());
+
+        // Redirect with a general error message
+        return redirect()->back()->with('error', 'An unexpected error occurred. Please try again.');
     }
-    
+}
 
 public function displayAllRooms()
 {
@@ -120,6 +136,8 @@ public function displayAllRooms()
     $room->price = $request->input('price');
     $room->area = $request->input('area');
     $room->location = $request->input('location');
+    $room->city = $request->input('city');
+    $room->type = $request->input('type');
 
     // Mảng để lưu các đường dẫn ảnh sau khi lưu
     $imagePaths = [];
@@ -129,7 +147,7 @@ public function displayAllRooms()
         $imagePaths = [];
         foreach ($request->file('images') as $image) {
             // Generate unique filename based on owner_id, room_id, and current time
-            $filename = Auth::id() . '-' . Carbon::now()->timestamp . '.' . $image->getClientOriginalExtension();
+            $filename = Auth::id() . '-'  . '.' . $image->getClientOriginalExtension();
             
             $path = $image->storeAs('rooms', $filename, 'public');
 
