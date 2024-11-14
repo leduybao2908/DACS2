@@ -30,49 +30,55 @@ class RoomController extends Controller
      * Store a newly created room in storage.
      */
     public function store(Request $request)
-{
-    // Validate the request data
-    $request->validate([
-        'title' => 'required|string|max:255',
-        'description' => 'required|string',
-        'price' => 'required|numeric',
-        'area' => 'required|numeric',
-        'location' => 'required|string',
-        'status' => 'nullable|string|in:available,occupied',  // Default is 'available'
-    ]);
-
-    // Create a new room with the authenticated user as the owner
-    $room = new Room();
-    $room->title = $request->input('title');
-    $room->description = $request->input('description');
-    $room->price = $request->input('price');
-    $room->area = $request->input('area');
-    $room->location = $request->input('location');
-    $room->status = $request->input('status', 'available');  // Default status is 'available'
-    $room->owner_id = Auth::id();  // Set the owner_id to the authenticated user
-    $room->user_id = null;  // No tenant initially
-
-    // Save the room first to generate the room_id
-    $room->save();
-
-    // Handle image uploads after saving the room (so we can use room_id)
-    if ($request->hasFile('images')) {
-        $imagePaths = [];
-        foreach ($request->file('images') as $image) {
-            // Generate unique filename based on owner_id, room_id, and current time
-            $filename = Auth::id() . '-' . Carbon::now()->timestamp . '.' . $image->getClientOriginalExtension();
-            
-            $path = $image->storeAs('rooms', $filename, 'public');
-
-            $imagePaths[] = $path;
+    {
+        // Validate the request data
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'price' => 'required|numeric',
+            'area' => 'required|numeric',
+            'location' => 'required|string',
+            'type' => 'required|string|in:apartment,house', // Validate 'type'
+            'city' => 'required|string', // Validate 'city'
+            'status' => 'nullable|string|in:available,occupied',  // Default is 'available'
+        ]);
+    
+        // Create a new room with the authenticated user as the owner
+        $room = new Room();
+        $room->title = $request->input('title');
+        $room->description = $request->input('description');
+        $room->price = $request->input('price');
+        $room->area = $request->input('area');
+        $room->location = $request->input('location');
+        $room->type = $request->input('type');  // Store the room type
+        $room->city = $request->input('city');  // Store the city
+        $room->status = $request->input('status', 'available');  // Default status is 'available'
+        $room->owner_id = Auth::id();  // Set the owner_id to the authenticated user
+        $room->user_id = null;  // No tenant initially
+    
+        // Save the room first to generate the room_id
+        $room->save();
+    
+        // Handle image uploads after saving the room (so we can use room_id)
+        if ($request->hasFile('images')) {
+            $imagePaths = [];
+            foreach ($request->file('images') as $image) {
+                // Generate unique filename based on owner_id, room_id, and current time
+                $filename = Auth::id() . '-' . Carbon::now()->timestamp . '.' . $image->getClientOriginalExtension();
+                
+                $path = $image->storeAs('rooms', $filename, 'public');
+    
+                $imagePaths[] = $path;
+            }
+    
+            $room->images = json_encode($imagePaths);
+            $room->save();  
         }
-
-        $room->images = json_encode($imagePaths);
-        $room->save();  
+    
+        // Redirect with success message
+        return redirect()->route('my-listings')->with('success', 'Room added successfully!');
     }
-    // Redirect with success message
-    return redirect()->route('my-listings')->with('success', 'Room added successfully!');
-}
+    
 
 public function displayAllRooms()
 {

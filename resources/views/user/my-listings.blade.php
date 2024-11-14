@@ -1,8 +1,7 @@
 @extends('user.dashboard.layout.user_app')
 @section('title', 'My Listing')
 @push('styles')
-
-<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- ARCHIVES CSS -->
@@ -19,6 +18,12 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" id="color" href="css/default.css">
+    <style>
+        #city {
+            max-height: 150px; /* Giới hạn chiều cao cho ô select */
+            overflow-y: auto; /* Thêm dải cuộn khi chiều cao vượt quá giới hạn */
+        }
+    </style>
 @endpush
 
 @php
@@ -100,6 +105,8 @@
                                     <th>Description</th>
                                     <th>Date Added</th>
                                     <th>Views</th>
+                                    <th>City</th>
+                                    <th>Type</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -132,29 +139,34 @@
                                                 {{ ucfirst($room->status) }}
                                             </span>
                                         </td>
-                                        <td>{{ substr($room->description, 0, 30) . (strlen($room->description) > 50 ? '...' : '') }}</td>
+                                        <td>{{ substr($room->description, 0, 30) . (strlen($room->description) > 50 ? '...' : '') }}
+                                        </td>
 
                                         <td>{{ $room->created_at }}</td>
                                         <td>{{ $room->views }}</td>
+                                        <td>{{ $room->city }}</td>
+                                        <td>{{ $room->type }}</td>
                                         <td class="actions">
-                                            <a href="#" class="edit" data-room-id="{{ $room->room_id }}" data-room="{{ json_encode($room) }}">
+                                            <a href="#" class="edit" data-room-id="{{ $room->room_id }}"
+                                                data-room="{{ json_encode($room) }}">
                                                 <i class="lni-pencil"></i>Edit
                                             </a>
-                                            
 
-                                            <form action="{{ route('room.destroy', $room->room_id) }}" method="POST" style="display:inline;">
+
+                                            <form action="{{ route('room.destroy', $room->room_id) }}" method="POST"
+                                                style="display:inline;">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" style="border: none; background: none; color: inherit; padding: 0; cursor: pointer;">
+                                                <button type="submit"
+                                                    style="border: none; background: none; color: inherit; padding: 0; cursor: pointer;">
                                                     <i class="far fa-trash-alt"></i>
                                                 </button>
                                             </form>
-                                            
+
 
                                         </td>
-                                        
+
                                     </tr>
-                                    
                                 @endforeach
                             </tbody>
                         </table>
@@ -172,7 +184,8 @@
 
                                     @foreach ($rooms->links()->elements[0] as $page => $url)
                                         @if ($page == $rooms->currentPage())
-                                            <li class="page-item active"><span class="page-link">{{ $page }}</span>
+                                            <li class="page-item active"><span
+                                                    class="page-link">{{ $page }}</span>
                                             </li>
                                         @else
                                             <li class="page-item"><a class="page-link"
@@ -198,12 +211,13 @@
                             <form method="POST" enctype="multipart/form-data" id="editRoomForm">
                                 @csrf
                                 @method('PUT')
-                                <input type="hidden" name="room_id" id="room_id"> 
+                                <input type="hidden" name="room_id" id="room_id">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p>
                                             <label for="title">Property Title</label>
-                                            <input type="text" name="title" id="title" placeholder="Enter your property title" required>
+                                            <input type="text" name="title" id="title"
+                                                placeholder="Enter your property title" required>
                                         </p>
                                     </div>
                                 </div>
@@ -219,13 +233,15 @@
                                     <div class="col-lg-6 col-md-12">
                                         <p class="no-mb">
                                             <label for="price">Price</label>
-                                            <input type="number" name="price" placeholder="USD" id="price" required>
+                                            <input type="number" name="price" placeholder="USD" id="price"
+                                                required>
                                         </p>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <p class="no-mb last">
                                             <label for="area">Area</label>
-                                            <input type="text" name="area" placeholder="Sqft" id="area" required>
+                                            <input type="text" name="area" placeholder="Sqft" id="area"
+                                                required>
                                         </p>
                                     </div>
                                 </div>
@@ -233,8 +249,87 @@
                                     <div class="col-md-12">
                                         <p>
                                             <label for="location">Location</label>
-                                            <input type="text" name="location" id="location" placeholder="Enter location" required>
+                                            <input type="text" name="location" id="location"
+                                                placeholder="Enter location" required>
                                         </p>
+                                    </div>
+                                </div>
+                                <!-- New fields for City and Type -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>
+                                            <label for="city">City</label>
+                                            <br>
+                                            <select name="city" id="city" required>
+                                                <option value="">Chọn Thành phố</option>
+                                                <option value="Hà Nội">Hà Nội</option>
+                                                <option value="Thành phố Hồ Chí Minh">Thành phố Hồ Chí Minh</option>
+                                                <option value="Đà Nẵng">Đà Nẵng</option>
+                                                <option value="Hải Phòng">Hải Phòng</option>
+                                                <option value="Cần Thơ">Cần Thơ</option>
+                                                <option value="Nghệ An">Nghệ An</option>
+                                                <option value="Bình Dương">Bình Dương</option>
+                                                <option value="Đồng Nai">Đồng Nai</option>
+                                                <option value="Bình Phước">Bình Phước</option>
+                                                <option value="Vĩnh Long">Vĩnh Long</option>
+                                                <option value="Thanh Hóa">Thanh Hóa</option>
+                                                <option value="Quảng Ninh">Quảng Ninh</option>
+                                                <option value="An Giang">An Giang</option>
+                                                <option value="Bắc Giang">Bắc Giang</option>
+                                                <option value="Bắc Kạn">Bắc Kạn</option>
+                                                <option value="Bạc Liêu">Bạc Liêu</option>
+                                                <option value="Bình Định">Bình Định</option>
+                                                <option value="Bình Thuận">Bình Thuận</option>
+                                                <option value="Cà Mau">Cà Mau</option>
+                                                <option value="Cao Bằng">Cao Bằng</option>
+                                                <option value="Gia Lai">Gia Lai</option>
+                                                <option value="Hà Giang">Hà Giang</option>
+                                                <option value="Hà Nam">Hà Nam</option>
+                                                <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                                <option value="Hậu Giang">Hậu Giang</option>
+                                                <option value="Hòa Bình">Hòa Bình</option>
+                                                <option value="Hưng Yên">Hưng Yên</option>
+                                                <option value="Khánh Hòa">Khánh Hòa</option>
+                                                <option value="Kiên Giang">Kiên Giang</option>
+                                                <option value="Kon Tum">Kon Tum</option>
+                                                <option value="Lai Châu">Lai Châu</option>
+                                                <option value="Lâm Đồng">Lâm Đồng</option>
+                                                <option value="Lạng Sơn">Lạng Sơn</option>
+                                                <option value="Lào Cai">Lào Cai</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Nam Định">Nam Định</option>
+                                                <option value="Ninh Bình">Ninh Bình</option>
+                                                <option value="Phú Thọ">Phú Thọ</option>
+                                                <option value="Quảng Bình">Quảng Bình</option>
+                                                <option value="Quảng Nam">Quảng Nam</option>
+                                                <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                                <option value="Quảng Trị">Quảng Trị</option>
+                                                <option value="Sóc Trăng">Sóc Trăng</option>
+                                                <option value="Sơn La">Sơn La</option>
+                                                <option value="Tây Ninh">Tây Ninh</option>
+                                                <option value="Thái Bình">Thái Bình</option>
+                                                <option value="Thái Nguyên">Thái Nguyên</option>
+                                                <option value="Tiền Giang">Tiền Giang</option>
+                                                <option value="Trà Vinh">Trà Vinh</option>
+                                                <option value="Tuyên Quang">Tuyên Quang</option>
+                                                <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                                <option value="Yên Bái">Yên Bái</option>
+
+                                            </select>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <label for="type">Property Type</label>
+                                        <br>
+                                        <select name="type" id="type" required>
+                                            <option value="apartment">Apartment</option>
+                                            <option value="house">House</option>
+                                        </select>
+
                                     </div>
                                 </div>
                                 <div class="single-add-property">
@@ -251,8 +346,8 @@
                                     <button type="submit" class="btn btn-primary">Update Room</button>
                                 </div>
                             </form>
-                            
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -300,57 +395,89 @@
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
     <script>
-    document.querySelectorAll('.edit').forEach(button => {
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
+        document.querySelectorAll('.edit').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
 
-            const roomData = JSON.parse(this.getAttribute('data-room'));
-            const roomId = this.getAttribute('data-room-id');
+                const roomData = JSON.parse(this.getAttribute('data-room'));
+                const roomId = this.getAttribute('data-room-id');
 
-            // Điền dữ liệu vào form
-            document.getElementById('title').value = roomData.title;
-        
-            document.getElementById('price').value = roomData.price;
-            document.getElementById('area').value = roomData.area;
-            document.getElementById('location').value = roomData.location;
-            
-            // Cập nhật nội dung vào Quill editor nếu đã có Quill sẵn
-            if (window.quillEditor) {
-                window.quillEditor.root.innerHTML = roomData.description;
-            }
-            // Cập nhật room_id vào input ẩn
-            document.getElementById('room_id').value = roomId;
+                // Điền dữ liệu vào form
+                document.getElementById('title').value = roomData.title;
 
-            // Cập nhật action của form với room_id hiện tại
-            document.getElementById('editRoomForm').action = `/my-listings/${roomId}`;
-            
-            console.log('Updated form action:', document.getElementById('editRoomForm').action);
+                document.getElementById('price').value = roomData.price;
+                document.getElementById('area').value = roomData.area;
+                document.getElementById('location').value = roomData.location;
+               
+
+              
+                // Cập nhật nội dung vào Quill editor nếu đã có Quill sẵn
+                if (window.quillEditor) {
+                    window.quillEditor.root.innerHTML = roomData.description;
+                }
+                // Cập nhật room_id vào input ẩn
+                document.getElementById('room_id').value = roomId;
+
+                // Cập nhật action của form với room_id hiện tại
+                document.getElementById('editRoomForm').action = `/my-listings/${roomId}`;
+
+                console.log('Updated form action:', document.getElementById('editRoomForm').action);
+            });
         });
-    });
-
-
     </script>
 
+
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize Quill Editor
-    window.quillEditor = new Quill('#description-editor', {
-        theme: 'snow',
-        placeholder: 'Describe your property...',
-    });
+   document.addEventListener('DOMContentLoaded', function () {
+        // Populate cities
+        const citySelect = document.getElementById('city');
+        cities.forEach(city => {
+            const option = document.createElement('option');
+            option.value = city.name;
+            option.textContent = city.name;
+            citySelect.appendChild(option);
+        });
 
-    // Sync Quill content with hidden input field for form submission
-    window.quillEditor.on('text-change', function() {
-        document.getElementById('description').value = window.quillEditor.root.innerHTML;
+        // Populate property types
+        const typeSelect = document.getElementById('type');
+        propertyTypes.forEach(type => {
+            const option = document.createElement('option');
+            option.value = type.name;
+            option.textContent = type.name;
+            typeSelect.appendChild(option);
+        });
     });
+</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Quill Editor
+            window.quillEditor = new Quill('#description-editor', {
+                theme: 'snow',
+                placeholder: 'Describe your property...',
+            });
 
-    // When form is submitted, make sure description is updated with the latest content
-    document.getElementById('editRoomForm').addEventListener('submit', function() {
-        // Ensure description is updated before form submission
-        document.getElementById('description').value = window.quillEditor.root.innerHTML;
-    });
+            // Sync Quill content with hidden input field for form submission
+            window.quillEditor.on('text-change', function() {
+                document.getElementById('description').value = window.quillEditor.root.innerHTML;
+            });
+
+            // When form is submitted, make sure description is updated with the latest content
+            document.getElementById('editRoomForm').addEventListener('submit', function() {
+                // Ensure description is updated before form submission
+                document.getElementById('description').value = window.quillEditor.root.innerHTML;
+            });
+        });
+    </script>
+
+    <script>
+
+document.querySelector('.nice-select').addEventListener('click', function() {
+    const list = this.querySelector('.list');
+    if (list.style.maxHeight === '200px') {
+        list.style.maxHeight = 'none'; // Hoặc một chiều cao khác nếu cần
+    } else {
+        list.style.maxHeight = '200px';
+    }
 });
-
-
     </script>
 @endpush

@@ -16,7 +16,6 @@ class Room extends Model
      */
     protected $primaryKey = 'room_id';
     protected $fillable = [
-
         'owner_id',
         'user_id',
         'location',
@@ -28,6 +27,8 @@ class Room extends Model
         'area',
         'title',
         'property_description',
+        'city', // Add city to fillable
+        'type', // Add type to fillable
     ];
 
     /**
@@ -38,32 +39,35 @@ class Room extends Model
     protected $casts = [
         'images' => 'array',
     ];
+
     /**
- * Get the owner of the room.
- */
-public function owner()
-{
-    return $this->belongsTo(User::class, 'owner_id');
-}
+     * Get the owner of the room.
+     */
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'owner_id');
+    }
 
-/**
- * Get the user who is staying in the room.
- */
-public function user()
-{
-    return $this->belongsTo(User::class, 'user_id');
-}
-  // Giải mã JSON và lấy ảnh đầu tiên
-  public function getFirstImageAttribute()
-  {
-      $images = json_decode($this->images, true);
-      return isset($images[0]) ? $images[0] : null;  // Trả về ảnh đầu tiên trong mảng
-  }
-  public function reviews()
-  {
-      return $this->hasMany(Review::class, 'room_id'); 
-  }
+    /**
+     * Get the user who is staying in the room.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 
+    // Giải mã JSON và lấy ảnh đầu tiên
+    public function getFirstImageAttribute()
+    {
+        $images = json_decode($this->images, true);
+        return isset($images[0]) ? $images[0] : null;  // Trả về ảnh đầu tiên trong mảng
+    }
 
-
+    /**
+     * Get the reviews for the room.
+     */
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'room_id');
+    }
 }
