@@ -6,40 +6,31 @@ use Illuminate\Http\Request;
 
 class PropertySearchController extends Controller
 {
+
     public function search(Request $request)
     {
-        // Tạo query cơ bản
+        $title = $request->input('title');
+        $type = $request->input('type');
+        $city = $request->input('city');  // Lấy giá trị city từ form
+    
+        // Tiến hành tìm kiếm
         $query = Room::query();
-
-        if ($request->has('title') && !empty($request->title)) {
-            $query->where('title', 'LIKE', '%' . $request->title . '%');
+    
+        if ($title) {
+            $query->where('title', 'like', '%' . $title . '%');
         }
-
-        if ($request->has('location') && !empty($request->location)) {
-            $query->where('location', 'LIKE', '%' . $request->location . '%');
+    
+        if ($type) {
+            $query->where('type', $type);
         }
-
-        if ($request->has('price') && !empty($request->price)) {
-            $query->where('price', '<=', $request->price);
+    
+        if ($city) {
+            $query->where('city', $city);
         }
-
-        if ($request->has('area') && !empty($request->area)) {
-            $query->where('area', '>=', $request->area);
-        }
-
-        if ($request->has('city') && !empty($request->city)) {
-            $query->where('city', 'LIKE', '%' . $request->city . '%');
-        }
-
-        if ($request->has('type') && !empty($request->type)) {
-            $query->where('type', '=', $request->type);
-        }
-
-        // Get the search results with pagination
-        $rooms = $query->paginate(6);
-
-
-        // Trả về view với các kết quả tìm kiếm
-        return view('views.All-rooms', compact('rooms'));
+    
+        $rooms = $query->paginate(10);  // Phân trang nếu cần
+    
+        return view('all-rooms', compact('rooms'));
     }
+    
 }

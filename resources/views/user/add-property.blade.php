@@ -140,62 +140,163 @@
                                         <p>
                                             <label for="city">City</label>
                                             <br>
-                                            <select name="city" id="city" required>
-                                                <option value="">Select city</option>
-                                                <option value="Hà Nội">Hà Nội</option>
-                                                <option value="Thành phố Hồ Chí Minh">Thành phố Hồ Chí Minh</option>
-                                                <option value="Đà Nẵng">Đà Nẵng</option>
-                                                <option value="Hải Phòng">Hải Phòng</option>
-                                                <option value="Cần Thơ">Cần Thơ</option>
-                                                <option value="Nghệ An">Nghệ An</option>
-                                                <option value="Bình Dương">Bình Dương</option>
-                                                <option value="Đồng Nai">Đồng Nai</option>
-                                                <option value="Bình Phước">Bình Phước</option>
-                                                <option value="Vĩnh Long">Vĩnh Long</option>
-                                                <option value="Thanh Hóa">Thanh Hóa</option>
-                                                <option value="Quảng Ninh">Quảng Ninh</option>
-                                                <option value="An Giang">An Giang</option>
-                                                <option value="Bắc Giang">Bắc Giang</option>
-                                                <option value="Bắc Kạn">Bắc Kạn</option>
-                                                <option value="Bạc Liêu">Bạc Liêu</option>
-                                                <option value="Bình Định">Bình Định</option>
-                                                <option value="Bình Thuận">Bình Thuận</option>
-                                                <option value="Cà Mau">Cà Mau</option>
-                                                <option value="Cao Bằng">Cao Bằng</option>
-                                                <option value="Gia Lai">Gia Lai</option>
-                                                <option value="Hà Giang">Hà Giang</option>
-                                                <option value="Hà Nam">Hà Nam</option>
-                                                <option value="Hà Tĩnh">Hà Tĩnh</option>
-                                                <option value="Hậu Giang">Hậu Giang</option>
-                                                <option value="Hòa Bình">Hòa Bình</option>
-                                                <option value="Hưng Yên">Hưng Yên</option>
-                                                <option value="Khánh Hòa">Khánh Hòa</option>
-                                                <option value="Kiên Giang">Kiên Giang</option>
-                                                <option value="Kon Tum">Kon Tum</option>
-                                                <option value="Lai Châu">Lai Châu</option>
-                                                <option value="Lâm Đồng">Lâm Đồng</option>
-                                                <option value="Lạng Sơn">Lạng Sơn</option>
-                                                <option value="Lào Cai">Lào Cai</option>
-                                                <option value="Long An">Long An</option>
-                                                <option value="Nam Định">Nam Định</option>
-                                                <option value="Ninh Bình">Ninh Bình</option>
-                                                <option value="Phú Thọ">Phú Thọ</option>
-                                                <option value="Quảng Bình">Quảng Bình</option>
-                                                <option value="Quảng Nam">Quảng Nam</option>
-                                                <option value="Quảng Ngãi">Quảng Ngãi</option>
-                                                <option value="Quảng Trị">Quảng Trị</option>
-                                                <option value="Sóc Trăng">Sóc Trăng</option>
-                                                <option value="Sơn La">Sơn La</option>
-                                                <option value="Tây Ninh">Tây Ninh</option>
-                                                <option value="Thái Bình">Thái Bình</option>
-                                                <option value="Thái Nguyên">Thái Nguyên</option>
-                                                <option value="Tiền Giang">Tiền Giang</option>
-                                                <option value="Trà Vinh">Trà Vinh</option>
-                                                <option value="Tuyên Quang">Tuyên Quang</option>
-                                                <option value="Vĩnh Phúc">Vĩnh Phúc</option>
-                                                <option value="Yên Bái">Yên Bái</option>
+                                            <div class="custom-select">
+                                                <div class="select-box">
+                                                    <span class="selected-option">Select City</span>
+                                                    <div class="options">
+                                                        <div class="option">Hà Nội</div>
+                                                                <div class="option">Hồ Chí Minh</div>
+                                                                <div class="option">Hải Phòng</div>
+                                                                <div class="option">Đà Nẵng</div>
+                                                                <div class="option">Cần Thơ</div>
+                                                                <div class="option">An Giang</div>
+                                                                <div class="option">Bà Rịa–Vũng Tàu</div>
+                                                                <div class="option">Bạc Liêu</div>
+                                                                <div class="option">Bắc Giang</div>
+                                                                <div class="option">Bắc Kạn</div>
+                                                                <div class="option">Bắc Ninh</div>
+                                                                <div class="option">Bến Tre</div>
+                                                                <div class="option">Bình Dương</div>
+                                                                <div class="option">Bình Phước</div>
+                                                                <div class="option">Bình Thuận</div>
+                                                                <div class="option">Cà Mau</div>
+                                                                <div class="option">Cao Bằng</div>
+                                                                <div class="option">Đắk Lắk</div>
+                                                                <div class="option">Đắk Nông</div>
+                                                                <div class="option">Điện Biên</div>
+                                                                <div class="option">Đồng Nai</div>
+                                                                <div class="option">Đồng Tháp</div>
+                                                                <div class="option">Gia Lai</div>
+                                                                <div class="option">Hà Giang</div>
+                                                                <div class="option">Hà Nam</div>
+                                                                <div class="option">Hà Tĩnh</div>
+                                                                <div class="option">Hải Dương</div>
+                                                                <div class="option">Hậu Giang</div>
+                                                                <div class="option">Hòa Bình</div>
+                                                                <div class="option">Hưng Yên</div>
+                                                                <div class="option">Khánh Hòa</div>
+                                                                <div class="option">Kiên Giang</div>
+                                                                <div class="option">Kon Tum</div>
+                                                                <div class="option">Lai Châu</div>
+                                                                <div class="option">Lâm Đồng</div>
+                                                                <div class="option">Lạng Sơn</div>
+                                                                <div class="option">Lào Cai</div>
+                                                                <div class="option">Long An</div>
+                                                                <div class="option">Nam Định</div>
+                                                                <div class="option">Nghệ An</div>
+                                                                <div class="option">Ninh Bình</div>
+                                                                <div class="option">Ninh Thuận</div>
+                                                                <div class="option">Phú Thọ</div>
+                                                                <div class="option">Phú Yên</div>
+                                                                <div class="option">Quảng Bình</div>
+                                                                <div class="option">Quảng Nam</div>
+                                                                <div class="option">Quảng Ngãi</div>
+                                                                <div class="option">Quảng Ninh</div>
+                                                                <div class="option">Quảng Trị</div>
+                                                                <div class="option">Sóc Trăng</div>
+                                                                <div class="option">Sơn La</div>
+                                                                <div class="option">Tây Ninh</div>
+                                                                <div class="option">Thái Bình</div>
+                                                                <div class="option">Thái Nguyên</div>
+                                                                <div class="option">Thanh Hóa</div>
+                                                                <div class="option">Thừa Thiên Huế</div>
+                                                                <div class="option">Tiền Giang</div>
+                                                                <div class="option">Trà Vinh</div>
+                                                                <div class="option">Tuyên Quang</div>
+                                                                <div class="option">Vĩnh Long</div>
+                                                                <div class="option">Vĩnh Phúc</div>
+                                                                <div class="option">Yên Bái</div>
 
-                                            </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="city" id="selected-city">
+                                            <style>
+                                            .custom-select {
+                                                position: relative;
+                                                width: 100%;  /* Cho phép custom select có chiều rộng tự động phù hợp với phần tử cha */
+                                                max-width: 150px;  /* Giới hạn chiều rộng tối đa của select box */
+                                                height: 48px;
+                                                box-sizing: border-box; /* Bao gồm padding và border vào trong tính toán chiều cao */
+
+                                            }
+                                            
+                                            .select-box {
+                                                display: flex;
+                                                align-items: center;  /* Căn giữa văn bản theo chiều dọc */
+                                                height: 48px;  /* Chiều cao cố định của select box */
+                                                padding: 0 10px;  /* Padding cho phần tử select box */
+                                                border: 1px solid #ebebeb;
+                                                border-top: none;  /* Bỏ viền phía trên */
+                                                background-color: #fff;
+                                                cursor: pointer;
+                                                font-size: 14px;
+                                                border-radius: 4px;
+                                                width: 100%;  /* Đảm bảo chiều rộng của select box khớp với phần tử cha */
+                                            }   
+                                            
+                                            .selected-option {
+                                                color: #333;
+                                            }
+                                            
+                                            .options {
+                                                display: none;  /* Ẩn danh sách mặc định */
+                                                max-height: 180px; /* Giới hạn chiều cao */
+                                                overflow-y: auto; /* Cho phép thanh cuộn xuất hiện khi cần */
+                                                position: absolute;
+                                                top: 100%;
+                                                left: 0;
+                                                right: 0;
+                                                background-color: #fff;
+                                                border: 1px solid #ddd;
+                                                border-radius: 4px;
+                                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                                z-index: 999;
+                                                width: 100%;  /* Chiều rộng của options khớp với select box */
+                                            }
+                                            
+                                            .option {
+                                                padding: 10px;
+                                                cursor: pointer;
+                                            }
+                                            
+                                            .option:hover {
+                                                background-color: #f0f0f0;
+                                            }
+                                            
+                                            .custom-select.open .options {
+                                                display: block; /* Hiển thị danh sách khi mở */
+                                            }
+                                            </style>
+                                            
+                                            <script>
+                                                const selectBox = document.querySelector('.select-box');
+                                                const options = document.querySelector('.options');
+                                                const customSelect = document.querySelector('.custom-select');
+                                            
+                                                // Mở/đóng dropdown khi click vào select box
+                                                selectBox.addEventListener('click', function(event) {
+                                                    customSelect.classList.toggle('open');
+                                                    event.stopPropagation();  // Ngừng sự kiện để tránh tắt dropdown khi click vào nó
+                                                });
+                                            
+                                                // Thêm sự kiện để thay đổi lựa chọn khi nhấp vào option
+                                                const optionElements = document.querySelectorAll('.option');
+                                                optionElements.forEach(option => {
+                                                    option.addEventListener('click', function() {
+                                                        selectBox.querySelector('.selected-option').textContent = option.textContent;
+                                                        customSelect.classList.remove('open');  // Ẩn danh sách sau khi chọn
+                                                    });
+                                                });
+                                            
+                                                // Đóng dropdown khi click ra ngoài
+                                                document.addEventListener('click', function(event) {
+                                                    if (!customSelect.contains(event.target)) {
+                                                        customSelect.classList.remove('open');
+                                                    }
+                                                });
+                                            </script>
+                                            
                                         </p>
                                     </div>
                                 </div>

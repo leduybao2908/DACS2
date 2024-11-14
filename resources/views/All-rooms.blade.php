@@ -37,7 +37,73 @@
                     </div>
                 </div>
             </section>
-@include('layouts.searchbar')
+           <!-- Search Form -->
+           <div class="col-12 px-0 parallax-searchs">
+            <div class="banner-search-wrap">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tabs_1">
+                        <div class="rld-main-search">
+                            <div class="row">
+                                <div class="rld-single-input">
+                                    <input type="text" placeholder="Enter Keyword...">
+                                </div>
+                                <div class="rld-single-select ml-22">
+                                    <select class="select single-select">
+                                        <option value="1">Property Type</option>
+                                        <option value="2">Family House</option>
+                                        <option value="3">Apartment</option>
+                                        <option value="3">Condo</option>
+                                    </select>
+                                </div>
+                                <div class="rld-single-select">
+                                    <select class="select single-select mr-0">
+                                        <option value="1">Location</option>
+                                        <option value="2">Los Angeles</option>
+                                        <option value="3">Chicago</option>
+                                        <option value="3">Philadelphia</option>
+                                        <option value="3">San Francisco</option>
+                                        <option value="3">Miami</option>
+                                        <option value="3">Houston</option>
+                                    </select>
+                                </div>
+                                <div class="dropdown-filter"><span>Advanced Search</span></div>
+                                <div class="col-xl-2 col-lg-2 col-md-4 pl-0">
+                                    <a class="btn btn-yellow" href="#">Search Now</a>
+                                </div>
+                                <div class="explore__form-checkbox-list full-filter">
+                                    <div class="row">
+                                        
+                                      
+                                       
+                                        <div class="col-lg-5 col-md-12 col-sm-12 py-1 pr-30 mr-5 sld">
+                                            <!-- Price Fields -->
+                                            <div class="main-search-field-2">
+                                                <!-- Area Range -->
+                                                <div class="range-slider">
+                                                    <label>Area Size</label>
+                                                    <div id="area-range" data-min="0" data-max="1300" data-unit="sq ft"></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <br>
+                                                <!-- Price Range -->
+                                                <div class="range-slider">
+                                                    <label>Price Range</label>
+                                                    <div id="price-range" data-min="0" data-max="600000" data-unit="$"></div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Search Form -->
             <section class="headings-2 pt-0">
                 <div class="pro-wrapper">
                     <div class="detail-wrapper-body">
@@ -102,9 +168,9 @@
                             <i class="fa fa-expand"></i> <span>{{ $room->area }}m²</span>
                         </p>
                         <p class="homes-description">
-                            {!! \Illuminate\Support\Str::limit(strip_tags($room->description), 60, '...') !!}                        </p>
+                            {!! \Illuminate\Support\Str::limit(strip_tags($room->description), 60, '...') !!}
                         </p>
-
+            
                         <div class="room-rating">
                             @php
                                 $avgRating = $room->avg_rating;  // Assuming you have avg_rating in room model or calculate it
@@ -120,7 +186,7 @@
                                 ({{ $reviewsCount }} reviews)
                             </p>
                         </div>
-                        
+            
                         <!-- Price -->
                         <div class="price-properties">
                             <h3 class="title mt-3">
