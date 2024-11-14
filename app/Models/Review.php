@@ -43,4 +43,6 @@ class Review extends Model
       return $this->belongsTo(User::class);  // Quan hệ giữa Review và User
   }
 
+  
+
 }

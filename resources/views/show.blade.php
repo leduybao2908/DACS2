@@ -99,6 +99,7 @@
                                     @endforeach
                                 </ul>
                             </div>
+                            
                             <!-- Description Section -->
                             <div class="blog-info details mb-30">
                                 <h5 class="mb-4">Description</h5>

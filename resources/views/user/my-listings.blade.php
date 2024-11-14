@@ -300,57 +300,57 @@
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
     <script>
- document.querySelectorAll('.edit').forEach(button => {
-    button.addEventListener('click', function(event) {
-        event.preventDefault();
+    document.querySelectorAll('.edit').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
 
-        const roomData = JSON.parse(this.getAttribute('data-room'));
-        const roomId = this.getAttribute('data-room-id');
+            const roomData = JSON.parse(this.getAttribute('data-room'));
+            const roomId = this.getAttribute('data-room-id');
 
-        // Điền dữ liệu vào form
-        document.getElementById('title').value = roomData.title;
-        document.getElementById('description').value = roomData.description;
-        document.getElementById('price').value = roomData.price;
-        document.getElementById('area').value = roomData.area;
-        document.getElementById('location').value = roomData.location;
+            // Điền dữ liệu vào form
+            document.getElementById('title').value = roomData.title;
         
-        // Cập nhật room_id vào input ẩn
-        document.getElementById('room_id').value = roomId;
+            document.getElementById('price').value = roomData.price;
+            document.getElementById('area').value = roomData.area;
+            document.getElementById('location').value = roomData.location;
+            
+            // Cập nhật nội dung vào Quill editor nếu đã có Quill sẵn
+            if (window.quillEditor) {
+                window.quillEditor.root.innerHTML = roomData.description;
+            }
+            // Cập nhật room_id vào input ẩn
+            document.getElementById('room_id').value = roomId;
 
-        // Cập nhật action của form với room_id hiện tại
-        document.getElementById('editRoomForm').action = `/my-listings/${roomId}`;
-        
-        console.log('Updated form action:', document.getElementById('editRoomForm').action);
+            // Cập nhật action của form với room_id hiện tại
+            document.getElementById('editRoomForm').action = `/my-listings/${roomId}`;
+            
+            console.log('Updated form action:', document.getElementById('editRoomForm').action);
+        });
     });
-});
 
 
     </script>
 
-<script>document.addEventListener('DOMContentLoaded', function () {
-    // Initialize Quill
-    var quill = new Quill('#description-editor', {
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Quill Editor
+    window.quillEditor = new Quill('#description-editor', {
         theme: 'snow',
         placeholder: 'Describe your property...',
-        modules: {
-            toolbar: [
-                ['bold', 'italic', 'underline'],
-                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                ['emoji']  // Add emoji picker plugin here if using
-            ]
-        }
     });
 
     // Sync Quill content with hidden input field for form submission
-    quill.on('text-change', function() {
-        document.getElementById('description').value = quill.root.innerHTML;
+    window.quillEditor.on('text-change', function() {
+        document.getElementById('description').value = window.quillEditor.root.innerHTML;
+    });
+
+    // When form is submitted, make sure description is updated with the latest content
+    document.getElementById('editRoomForm').addEventListener('submit', function() {
+        // Ensure description is updated before form submission
+        document.getElementById('description').value = window.quillEditor.root.innerHTML;
     });
 });
-</script>
-    <script>
-        $(".header-user-name").on("click", function() {
-            $(".header-user-menu ul").toggleClass("hu-menu-vis");
-            $(this).toggleClass("hu-menu-visdec");
-        });
+
+
     </script>
 @endpush

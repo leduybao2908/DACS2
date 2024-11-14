@@ -308,6 +308,23 @@
                         <p class="homes-description">
                             {!! \Illuminate\Support\Str::limit(strip_tags($room->description), 60, '...') !!}                        </p>
                         </p>
+
+                        <div class="room-rating">
+                            @php
+                                $avgRating = $room->avg_rating;  // Assuming you have avg_rating in room model or calculate it
+                                $reviewsCount = $room->reviews_count;  // Assuming reviews_count is already stored in the room model
+                            @endphp
+                            <div class="rating-box">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <i class="fa fa-star {{ $i <= $avgRating ? '' : 'fa-star-o' }}"></i>
+                                @endfor
+                            </div>
+                            <!-- Show reviews count -->
+                            <p class="reviews-count">
+                                ({{ $reviewsCount }} reviews)
+                            </p>
+                        </div>
+                        
                         <!-- Price -->
                         <div class="price-properties">
                             <h3 class="title mt-3">

@@ -386,15 +386,11 @@
                             <!-- homes img -->
                             <a href="single-property-1.html" class="homes-img">
                                 <div class="homes-tag button alt featured">Featured</div>
-                                <div class="homes-tag button alt sale">For Sale</div>
+                                <div class="homes-tag button alt sale">For Rent</div>
                                 <img src="images/blog/b-11.jpg" alt="home-1" class="img-responsive">
                             </a>
                         </div>
-                        <div class="button-effect">
-                            <a href="single-property-1.html" class="btn"><i class="fa fa-link"></i></a>
-                            <a href="https://www.youtube.com/watch?v=14semTlwyUY" class="btn popup-video popup-youtube"><i class="fas fa-video"></i></a>
-                            <a href="single-property-2.html" class="img-poppu btn"><i class="fa fa-photo"></i></a>
-                        </div>
+                        
                     </div>
                     <!-- homes content -->
                     <div class="homes-content">
@@ -762,7 +758,7 @@
             </div>
         </div>
         <div class="bg-all">
-            <a href="properties-full-grid-1.html" class="btn btn-outline-light">View More</a>
+            <a href="{{ route('all-rooms') }}" class="btn btn-outline-light">View More</a>
         </div>
     </div>
 </section>
