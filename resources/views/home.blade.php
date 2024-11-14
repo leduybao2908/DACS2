@@ -25,7 +25,7 @@
 
 
 @section('content')
-   @include('layouts.searchbar')
+@include('layouts.searchbar')
 
 
 

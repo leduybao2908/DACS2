@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\PropertySearchController;
 
-Route::get('/search', [PropertySearchController::class, 'search'])->name('properties.search');
+Route::get('/search', [PropertySearchController::class, 'search'])->name('property.search');
 Route::get('/', function () {return view('home'); });
 Route::get('/properties-list', function () {
     return view('properties_list'); // Trả về view inner

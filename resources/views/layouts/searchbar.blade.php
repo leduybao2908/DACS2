@@ -21,16 +21,17 @@
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="tabs_1">
                                         <div class="rld-main-search">
+
+                                            <form action="{{ route('property.search') }}" method="GET">
+
                                             <div class="row">
                                                 <div class="rld-single-input">
-                                                    <input type="text" placeholder="Enter Keyword...">
+                                                    <input name="title" type="text" placeholder="Enter Keyword...">
                                                 </div>
                                                 <div class="rld-single-select ml-22">
-                                                    <select class="select single-select">
-                                                        <option value="1">Property Type</option>
-                                                        <option value="2">Family House</option>
-                                                        <option value="3">Apartment</option>
-                                                        <option value="3">Condo</option>
+                                                    <select class="select single-select" name="type">
+                                                        <option value="1">House</option>
+                                                        <option value="2">Apartment</option>
                                                     </select>
                                                 </div>
                                                 <div class="custom-select">
@@ -103,7 +104,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+                                                <input type="hidden" name="city" id="selected-city">
                                                 <style>
                                                 .custom-select {
                                                     position: relative;
@@ -217,6 +218,7 @@
                                                 </div>
                                                 
                                             </div>
+                                         </form>
                                         </div>
                                     </div>
                                     
