@@ -44,14 +44,7 @@
                         <!-- Search Form -->
                         <div class="col-12">
                             <div class="banner-search-wrap">
-                               {{-- <ul class="nav nav-tabs rld-banner-tab">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#tabs_1">For Sale</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#tabs_2">For Rent</a>
-                                    </li>
-                                </ul> --}}
+                               
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="tabs_1">
                                         <div class="rld-main-search">
@@ -72,28 +65,68 @@
                                                         <span class="selected-option">Select City</span>
                                                         <div class="options">
                                                             <div class="option">Hà Nội</div>
-                                                            <div class="option">Hồ Chí Minh</div>
-                                                            <div class="option">Hải Phòng</div>
-                                                            <div class="option">Đà Nẵng</div>
-                                                            <div class="option">Cần Thơ</div>
-                                                            <div class="option">An Giang</div>
-                                                            <div class="option">Bà Rịa–Vũng Tàu</div>
-                                                            <div class="option">Bạc Liêu</div>
-                                                            <div class="option">Bắc Giang</div>
-                                                            <div class="option">Bắc Kạn</div>
-                                                            <div class="option">Bắc Ninh</div>
-                                                            <div class="option">Bến Tre</div>
-                                                            <div class="option">Bình Dương</div>
-                                                            <div class="option">Bình Phước</div>
-                                                            <div class="option">Bình Thuận</div>
-                                                            <div class="option">Cà Mau</div>
-                                                            <div class="option">Cao Bằng</div>
-                                                            <div class="option">Đắk Lắk</div>
-                                                            <div class="option">Đắk Nông</div>
-                                                            <div class="option">Điện Biên</div>
-                                                            <div class="option">Đồng Nai</div>
-                                                            <div class="option">Đồng Tháp</div>
-                                                            <div class="option">Gia Lai</div>
+                                                                    <div class="option">Hồ Chí Minh</div>
+                                                                    <div class="option">Hải Phòng</div>
+                                                                    <div class="option">Đà Nẵng</div>
+                                                                    <div class="option">Cần Thơ</div>
+                                                                    <div class="option">An Giang</div>
+                                                                    <div class="option">Bà Rịa–Vũng Tàu</div>
+                                                                    <div class="option">Bạc Liêu</div>
+                                                                    <div class="option">Bắc Giang</div>
+                                                                    <div class="option">Bắc Kạn</div>
+                                                                    <div class="option">Bắc Ninh</div>
+                                                                    <div class="option">Bến Tre</div>
+                                                                    <div class="option">Bình Dương</div>
+                                                                    <div class="option">Bình Phước</div>
+                                                                    <div class="option">Bình Thuận</div>
+                                                                    <div class="option">Cà Mau</div>
+                                                                    <div class="option">Cao Bằng</div>
+                                                                    <div class="option">Đắk Lắk</div>
+                                                                    <div class="option">Đắk Nông</div>
+                                                                    <div class="option">Điện Biên</div>
+                                                                    <div class="option">Đồng Nai</div>
+                                                                    <div class="option">Đồng Tháp</div>
+                                                                    <div class="option">Gia Lai</div>
+                                                                    <div class="option">Hà Giang</div>
+                                                                    <div class="option">Hà Nam</div>
+                                                                    <div class="option">Hà Tĩnh</div>
+                                                                    <div class="option">Hải Dương</div>
+                                                                    <div class="option">Hậu Giang</div>
+                                                                    <div class="option">Hòa Bình</div>
+                                                                    <div class="option">Hưng Yên</div>
+                                                                    <div class="option">Khánh Hòa</div>
+                                                                    <div class="option">Kiên Giang</div>
+                                                                    <div class="option">Kon Tum</div>
+                                                                    <div class="option">Lai Châu</div>
+                                                                    <div class="option">Lâm Đồng</div>
+                                                                    <div class="option">Lạng Sơn</div>
+                                                                    <div class="option">Lào Cai</div>
+                                                                    <div class="option">Long An</div>
+                                                                    <div class="option">Nam Định</div>
+                                                                    <div class="option">Nghệ An</div>
+                                                                    <div class="option">Ninh Bình</div>
+                                                                    <div class="option">Ninh Thuận</div>
+                                                                    <div class="option">Phú Thọ</div>
+                                                                    <div class="option">Phú Yên</div>
+                                                                    <div class="option">Quảng Bình</div>
+                                                                    <div class="option">Quảng Nam</div>
+                                                                    <div class="option">Quảng Ngãi</div>
+                                                                    <div class="option">Quảng Ninh</div>
+                                                                    <div class="option">Quảng Trị</div>
+                                                                    <div class="option">Sóc Trăng</div>
+                                                                    <div class="option">Sơn La</div>
+                                                                    <div class="option">Tây Ninh</div>
+                                                                    <div class="option">Thái Bình</div>
+                                                                    <div class="option">Thái Nguyên</div>
+                                                                    <div class="option">Thanh Hóa</div>
+                                                                    <div class="option">Thừa Thiên Huế</div>
+                                                                    <div class="option">Tiền Giang</div>
+                                                                    <div class="option">Trà Vinh</div>
+                                                                    <div class="option">Tuyên Quang</div>
+                                                                    <div class="option">Vĩnh Long</div>
+                                                                    <div class="option">Vĩnh Phúc</div>
+                                                                    <div class="option">Yên Bái</div>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -213,144 +246,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="tabs_2">
-                                        <div class="rld-main-search">
-                                            <div class="row">
-                                                <div class="rld-single-input">
-                                                    <input type="text" placeholder="Enter Keyword...">
-                                                </div>
-                                                <div class="rld-single-select">
-                                                    <select class="select single-select mr-0">
-                                                        <option value="1">Location</option>
-                                                        <option value="2">Los Angeles</option>
-                                                        <option value="3">Chicago</option>
-                                                        <option value="4">Philadelphia</option>
-                                                        <option value="5">San Francisco</option>
-                                                        <option value="6">Miami</option>
-                                                        <option value="7">Houston</option>
-                                                    </select>
-                                                </div>
-                                                <div class="dropdown-filter"><span>Advanced Search</span></div>
-                                                <div class="col-xl-2 col-lg-2 col-md-4 pl-0">
-                                                    <a class="btn btn-yellow" href="#">Search Now</a>
-                                                </div>
-                                                <div class="explore__form-checkbox-list full-filter">
-                                                    <div class="row">
-                                                        <div class="col-lg-4 col-md-6 py-1 pr-30 pl-0">
-                                                            <!-- Form Property Status -->
-                                                            <div class="form-group categories">
-                                                                <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-home"></i>Property Status</span>
-                                                                    <ul class="list">
-                                                                        <li data-value="1" class="option selected ">For Sale</li>
-                                                                        <li data-value="2" class="option">For Rent</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <!--/ End Form Property Status -->
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-6 py-1 pr-30 pl-0 ">
-                                                            <!-- Form Bedrooms -->
-                                                            <div class="form-group beds">
-                                                                <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-bed" aria-hidden="true"></i> Bedrooms</span>
-                                                                    <ul class="list">
-                                                                        <li data-value="1" class="option selected">1</li>
-                                                                        <li data-value="2" class="option">2</li>
-                                                                        <li data-value="3" class="option">3</li>
-                                                                        <li data-value="3" class="option">4</li>
-                                                                        <li data-value="3" class="option">5</li>
-                                                                        <li data-value="3" class="option">6</li>
-                                                                        <li data-value="3" class="option">7</li>
-                                                                        <li data-value="3" class="option">8</li>
-                                                                        <li data-value="3" class="option">9</li>
-                                                                        <li data-value="3" class="option">10</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <!--/ End Form Bedrooms -->
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-6 py-1 pl-0 pr-0">
-                                                            <!-- Form Bathrooms -->
-                                                            <div class="form-group bath">
-                                                                <div class="nice-select form-control wide" tabindex="0"><span class="current"><i class="fa fa-bath" aria-hidden="true"></i> Bathrooms</span>
-                                                                    <ul class="list">
-                                                                        <li data-value="1" class="option selected">1</li>
-                                                                        <li data-value="2" class="option">2</li>
-                                                                        <li data-value="3" class="option">3</li>
-                                                                        <li data-value="3" class="option">4</li>
-                                                                        <li data-value="3" class="option">5</li>
-                                                                        <li data-value="3" class="option">6</li>
-                                                                        <li data-value="3" class="option">7</li>
-                                                                        <li data-value="3" class="option">8</li>
-                                                                        <li data-value="3" class="option">9</li>
-                                                                        <li data-value="3" class="option">10</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <!--/ End Form Bathrooms -->
-                                                        </div>
-                                                        <div class="col-lg-5 col-md-12 col-sm-12 py-1 pr-30 mr-5 sld">
-                                                            <!-- Price Fields -->
-                                                            <div class="main-search-field-2">
-                                                                <!-- Area Range -->
-                                                                <div class="range-slider">
-                                                                    <label>Area Size</label>
-                                                                    <div id="area-range-rent" data-min="0" data-max="1300" data-unit="sq ft"></div>
-                                                                    <div class="clearfix"></div>
-                                                                </div>
-                                                                <br>
-                                                                <!-- Price Range -->
-                                                                <div class="range-slider">
-                                                                    <label>Price Range</label>
-                                                                    <div id="price-range-rent" data-min="0" data-max="600000" data-unit="$"></div>
-                                                                    <div class="clearfix"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-md-6 col-sm-12 py-1 pr-30">
-                                                            <!-- Checkboxes -->
-                                                            <div class="checkboxes one-in-row margin-bottom-10 ch-1">
-                                                                <input id="check-16" type="checkbox" name="check">
-                                                                <label for="check-16">Air Conditioning</label>
-                                                                <input id="check-17" type="checkbox" name="check">
-                                                                <label for="check-17">Swimming Pool</label>
-                                                                <input id="check-18" type="checkbox" name="check">
-                                                                <label for="check-18">Central Heating</label>
-                                                                <input id="check-19" type="checkbox" name="check">
-                                                                <label for="check-19">Laundry Room</label>
-                                                                <input id="check-20" type="checkbox" name="check">
-                                                                <label for="check-20">Gym</label>
-                                                                <input id="check-21" type="checkbox" name="check">
-                                                                <label for="check-21">Alarm</label>
-                                                                <input id="check-22" type="checkbox" name="check">
-                                                                <label for="check-22">Window Covering</label>
-                                                            </div>
-                                                            <!-- Checkboxes / End -->
-                                                        </div>
-                                                        <div class="col-lg-3 col-md-6 col-sm-12 py-1 pr-30">
-                                                            <!-- Checkboxes -->
-                                                            <div class="checkboxes one-in-row margin-bottom-10 ch-2">
-                                                                <input id="check-23" type="checkbox" name="check">
-                                                                <label for="check-23">WiFi</label>
-                                                                <input id="check-24" type="checkbox" name="check">
-                                                                <label for="check-24">TV Cable</label>
-                                                                <input id="check-25" type="checkbox" name="check">
-                                                                <label for="check-25">Dryer</label>
-                                                                <input id="check-26" type="checkbox" name="check">
-                                                                <label for="check-26">Microwave</label>
-                                                                <input id="check-27" type="checkbox" name="check">
-                                                                <label for="check-27">Washer</label>
-                                                                <input id="check-28" type="checkbox" name="check">
-                                                                <label for="check-28">Refrigerator</label>
-                                                                <input id="check-29" type="checkbox" name="check">
-                                                                <label for="check-29">Outdoor Shower</label>
-                                                            </div>
-                                                            <!-- Checkboxes / End -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
