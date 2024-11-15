@@ -303,17 +303,22 @@
                     <div class="cod-pad single detail-wrapper mr-2 mt-0 d-flex justify-content-md-end align-items-center">
                         <div class="input-group border rounded input-group-lg w-auto mr-4">
                             <form method="GET" action="{{ route('property.search') }}">
-                                <label
-                                    class="input-group-text bg-transparent border-0 text-uppercase letter-spacing-093 pr-1 pl-3"
-                                    for="inputGroupSelect01"><i class="fas fa-align-left fs-16 pr-2"></i>Sortby:</label>
-
-                                    <select class="form-control border-0 bg-transparent shadow-none p-0 selectpicker sortby" name="sortby" onchange="this.form.submit()">
-                                        <option value="most_viewed" {{ request('sortby') == 'most_viewed' ? 'selected' : '' }}>Most Viewed</option>
-                                        <option value="price_asc" {{ request('sortby') == 'price_asc' ? 'selected' : '' }}>Price (low to high)</option>
-                                        <option value="price_desc" {{ request('sortby') == 'price_desc' ? 'selected' : '' }}>Price (high to low)</option>
-                                        <option value="title_asc" {{ request('sortby') == 'title_asc' ? 'selected' : '' }}>Title (A to Z)</option>
-                                        <option value="title_desc" {{ request('sortby') == 'title_desc' ? 'selected' : '' }}>Title (Z to A)</option>
-                                    </select>
+                                <label class="input-group-text bg-transparent border-0 text-uppercase letter-spacing-093 pr-1 pl-3"
+                                       for="inputGroupSelect01">
+                                    <i class="fas fa-align-left fs-16 pr-2"></i>Sortby:
+                                </label>
+                                <select class="form-control border-0 bg-transparent shadow-none p-0 selectpicker sortby" name="sortby" onchange="this.form.submit()">
+                                    <option value="most_viewed" {{ request('sortby') == 'most_viewed' ? 'selected' : '' }}>Most Viewed</option>
+                                    <option value="price_asc" {{ request('sortby') == 'price_asc' ? 'selected' : '' }}>Price (low to high)</option>
+                                    <option value="price_desc" {{ request('sortby') == 'price_desc' ? 'selected' : '' }}>Price (high to low)</option>
+                                    <option value="title_asc" {{ request('sortby') == 'title_asc' ? 'selected' : '' }}>Title (A to Z)</option>
+                                    <option value="title_desc" {{ request('sortby') == 'title_desc' ? 'selected' : '' }}>Title (Z to A)</option>
+                                </select>
+                            
+                                <!-- Truyền tất cả các tham số vào form -->
+                                @foreach(request()->except('sortby', '_token') as $key => $value)
+                                    <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+                                @endforeach
                             </form>
                         </div>
                         
@@ -353,9 +358,48 @@
                         <p class="homes-area">
                             <i class="fa fa-expand"></i> <span>{{ $room->area }}m²</span>
                         </p>
+                        <p class="homes-location">
+                            <i class="fas fa-location-arrow"></i> <span>{{ $room->location }}</span>
+                        </p>
+                        
+                        <p class="homes-city">
+                            <i class="fa fa-building"></i> <span>{{ $room->city }}</span>
+                        </p>
+                        
+                        <p class="homes-type">
+                            <i class="fa fa-home"></i> <span>{{ $room->type }}</span>
+                        </p>
+                        
                         <p class="homes-description">
                             {!! \Illuminate\Support\Str::limit(strip_tags($room->description), 60, '...') !!}
                         </p>
+
+                        <style>
+                            .homes-address,
+.homes-area,
+.homes-location,
+.homes-city,
+.homes-type,
+.homes-description {
+    overflow: hidden; /* Ensure no content spills out */
+    text-overflow: ellipsis; /* Truncate text with ellipsis when overflow occurs */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+.project-single {
+    overflow: visible; /* Allow the entire project to overflow */
+    display: flex; /* Use flex to align items */
+    justify-content: flex-start; /* Align content to the left */
+}
+
+.homes-location,
+.homes-area,
+.homes-city,
+.homes-type {
+    margin-right: 20px; /* Space between the elements */
+    display: inline-block; /* Allow elements to stay on the same line */
+}
+                        </style>
 
                         <div class="room-rating">
                             @php

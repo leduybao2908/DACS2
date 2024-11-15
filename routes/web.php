@@ -9,7 +9,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\PropertySearchController;
 
 Route::get('/search', [PropertySearchController::class, 'search'])->name('property.search');
-Route::get('/', function () {return view('home'); });
+Route::get('/', [PropertySearchController::class, 'getFeaturedProperties'])->name('home');
 Route::get('/properties-list', function () {
     return view('properties_list'); // Trả về view inner
 });
@@ -71,6 +71,7 @@ Route::middleware('guest')->group(function () {
 Route::get('/rooms/{room}', [RoomController::class, 'show'])->name('rooms.show');
 Route::post('/rooms/{room}/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 Route::get('/reviews/{roomId}', [ReviewController::class, 'show'])->name('reviews.show');
+Route::get('/featured-properties', [PropertySearchController::class, 'getFeaturedProperties'])->name('featured-properties');
 
 
 Route::post('/logout', function () {
