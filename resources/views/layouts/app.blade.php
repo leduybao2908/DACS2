@@ -28,6 +28,7 @@
 
    <!-- ARCHIVES JS -->
    @stack('scripts')
+   
 </div>
 </body>
 

@@ -31,8 +31,11 @@
                                                     </div>
                                                     <div class="rld-single-select ml-22">
                                                         <select class="select single-select" name="type">
+                                                            <option value="all">all</option>
                                                             <option value="house">House</option>
                                                             <option value="apartment">Apartment</option>
+                                                            
+
                                                         </select>
                                                     </div>
                                                     <div class="custom-select">
@@ -197,7 +200,7 @@
                                                                 option.addEventListener('click', function() {
                                                                     // Cập nhật giá trị hiển thị trong select box
                                                                     selectBoxCity.querySelector('.selected-option').textContent = option
-                                                                    .textContent;
+                                                                        .textContent;
 
                                                                     // Gán giá trị của thành phố vào input ẩn
                                                                     selectedCityInput.value = option.textContent;
@@ -238,21 +241,29 @@
                                                             style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                                                             <div class="col-lg-5 col-md-12 col-sm-12"
                                                                 style="flex: 1; max-width: 100%; margin-right: 15px;">
-                                                                <!-- Area Range -->
                                                                 <div class="range-slider">
                                                                     <label>Area Size</label>
                                                                     <div id="area-range" data-min="0"
-                                                                        data-max="100" data-unit="sq ft"></div>
-                                                                    <div class="clearfix"></div>
+                                                                        data-max="100" data-unit="m&#178;"></div>
+                                                                    <input type="hidden" name="area_min"
+                                                                        id="area-min">
+                                                                    <input type="hidden" name="area_max"
+                                                                        id="area-max">
                                                                 </div>
-                                                                <br>
-                                                                <!-- Price Range -->
+
+                                                                <!-- Giá Range -->
                                                                 <div class="range-slider">
                                                                     <label>Price Range</label>
                                                                     <div id="price-range" data-min="0"
                                                                         data-max="10000000" data-unit="VND"></div>
-                                                                    <div class="clearfix"></div>
+                                                                    <input type="hidden" name="price_min"
+                                                                        id="price-min">
+                                                                    <input type="hidden" name="price_max"
+                                                                        id="price-max">
                                                                 </div>
+                                                                <script>
+                                                                   
+                                                                </script>
                                                             </div>
 
                                                         </div>

@@ -126,6 +126,8 @@
 
                                                 </div>
                                             </div>
+
+
                                         </div>
                                         <input type="hidden" name="city" id="selected-city">
                                         <style>
@@ -294,29 +296,28 @@
                     <div class="detail-wrapper-body">
                         <div class="listing-title-bar">
                             <div class="text-heading text-left">
-                                <p class="font-weight-bold mb-0 mt-3">6 Search results</p>
+                                <p class="font-weight-bold mb-0 mt-3">{{ $rooms->total() }} Search results</p>
                             </div>
                         </div>
                     </div>
                     <div class="cod-pad single detail-wrapper mr-2 mt-0 d-flex justify-content-md-end align-items-center">
                         <div class="input-group border rounded input-group-lg w-auto mr-4">
-                            <label
-                                class="input-group-text bg-transparent border-0 text-uppercase letter-spacing-093 pr-1 pl-3"
-                                for="inputGroupSelect01"><i class="fas fa-align-left fs-16 pr-2"></i>Sortby:</label>
-                            <select class="form-control border-0 bg-transparent shadow-none p-0 selectpicker sortby"
-                                data-style="bg-transparent border-0 font-weight-600 btn-lg pl-0 pr-3"
-                                id="inputGroupSelect01" name="sortby">
-                                <option selected>Top Selling</option>
-                                <option value="1">Most Viewed</option>
-                                <option value="2">Price(low to high)</option>
-                                <option value="3">Price(high to low)</option>
-                            </select>
+                            <form method="GET" action="{{ route('property.search') }}">
+                                <label
+                                    class="input-group-text bg-transparent border-0 text-uppercase letter-spacing-093 pr-1 pl-3"
+                                    for="inputGroupSelect01"><i class="fas fa-align-left fs-16 pr-2"></i>Sortby:</label>
+
+                                    <select class="form-control border-0 bg-transparent shadow-none p-0 selectpicker sortby" name="sortby" onchange="this.form.submit()">
+                                        <option value="most_viewed" {{ request('sortby') == 'most_viewed' ? 'selected' : '' }}>Most Viewed</option>
+                                        <option value="price_asc" {{ request('sortby') == 'price_asc' ? 'selected' : '' }}>Price (low to high)</option>
+                                        <option value="price_desc" {{ request('sortby') == 'price_desc' ? 'selected' : '' }}>Price (high to low)</option>
+                                        <option value="title_asc" {{ request('sortby') == 'title_asc' ? 'selected' : '' }}>Title (A to Z)</option>
+                                        <option value="title_desc" {{ request('sortby') == 'title_desc' ? 'selected' : '' }}>Title (Z to A)</option>
+                                    </select>
+                            </form>
                         </div>
-                        <div class="sorting-options">
-                            <a href="#" class="change-view-btn active-view-btn"><i class="fa fa-th-list"></i></a>
-                            <a href="properties-full-grid-1.html" class="change-view-btn lde"><i
-                                    class="fa fa-th-large"></i></a>
-                        </div>
+                        
+                       
                     </div>
                 </div>
             </section>
@@ -355,11 +356,11 @@
                         <p class="homes-description">
                             {!! \Illuminate\Support\Str::limit(strip_tags($room->description), 60, '...') !!}
                         </p>
-            
+
                         <div class="room-rating">
                             @php
-                                $avgRating = $room->avg_rating;  // Assuming you have avg_rating in room model or calculate it
-                                $reviewsCount = $room->reviews_count;  // Assuming reviews_count is already stored in the room model
+                                $avgRating = $room->avg_rating; // Assuming you have avg_rating in room model or calculate it
+                                $reviewsCount = $room->reviews_count; // Assuming reviews_count is already stored in the room model
                             @endphp
                             <div class="rating-box">
                                 @for ($i = 1; $i <= 5; $i++)
@@ -371,11 +372,12 @@
                                 ({{ $reviewsCount }} reviews)
                             </p>
                         </div>
-            
+
                         <!-- Price -->
                         <div class="price-properties">
                             <h3 class="title mt-3">
-                                <a href="{{ route('rooms.show', $room->room_id) }}">${{ number_format($room->price, 2) }}</a>
+                                <a
+                                    href="{{ route('rooms.show', $room->room_id) }}">${{ number_format($room->price, 2) }}</a>
                             </h3>
                         </div>
                     </div>
