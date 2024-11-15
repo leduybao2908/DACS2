@@ -79,4 +79,17 @@ Route::post('/logout', function () {
     return redirect('/login');
 })->name('logout');
 
+Route::get('/shop-with-sidebar', function () { return view('uneditfile.shop-with-sidebar'); }) ->name('shop-with-sidebar');
+Route::get('/contact-us', function () { return view('uneditfile.contact-us'); })->name('contact');
+Route::get('/about', function () { return view('uneditfile.about'); })->name('about');
+Route::get('/404', function () { return view('uneditfile.404'); })->name('404');
+Route::get('/faq', function () { return view('uneditfile.faq'); })->name('faq');
+Route::get('/shop-order', function () { return view('uneditfile.shop-order'); })->name('shop-order');
+Route::get('/user-profile', function () { return view('user.profile'); })->name('user-profile');
+Route::get('/dashboard', function () { return view('uneditfile.dashboard'); })->name('dashboard');
+Route::get('/add-property', function () { return view('user.add-property'); })->name('add-property');
+Route::get('/payment-method', function () { return view('uneditfile.payment-method'); })->name('payment-method');
+
+
+
 require __DIR__.'/auth.php';

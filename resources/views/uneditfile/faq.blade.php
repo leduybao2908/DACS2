@@ -34,7 +34,7 @@
         <!-- START SECTION HEADINGS -->
         <!-- Header Container
         ================================================== -->
-        @include('layouts.header')
+        @include('layouts.navbar')
         <div class="clearfix"></div>
         <!-- Header Container / End -->
 

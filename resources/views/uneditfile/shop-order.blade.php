@@ -16,9 +16,28 @@
     <link rel="stylesheet" href="css/invoice.css">
     <!-- STYLES CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{{ asset('font/flaticon.css') }}">
+<link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/fontawesome-5-all.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+<!-- ARCHIVES CSS -->
+<link rel="stylesheet" href="{{ asset('css/search.css') }}">
+<link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+<link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+<link rel="stylesheet" href="{{ asset('css/aos2.css') }}">
+<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+<link rel="stylesheet" href="{{ asset('css/lightcase.css') }}">
+<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+<link rel="stylesheet" href="{{ asset('css/slick.css') }}">
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('css/maps.css') }}">
+<link rel="stylesheet" id="color" href="{{ asset('css/colors/pink.css') }}">
 </head>
 
 <body>
+    @include('layouts.navbar')
     <!-- Print Button -->
     <div class="print-button-container">
         <a href="javascript:window.print()" class="print-button">Print this invoice</a>
