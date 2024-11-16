@@ -373,7 +373,7 @@
                         <p class="homes-description">
                             {!! \Illuminate\Support\Str::limit(strip_tags($room->description), 60, '...') !!}
                         </p>
-
+   
                         <style>
                             .homes-address,
 .homes-area,
