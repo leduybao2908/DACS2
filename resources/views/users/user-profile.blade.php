@@ -33,13 +33,14 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css')}}">
     <link rel="stylesheet" id="color" href="{{ asset('css/default.css')}}">
 </head>
-
 <body class="maxw1600 m0a dashboard-bd">
     <!-- Wrapper -->
     <div id="wrapper" class="int_main_wraapper">
         <!-- START SECTION HEADINGS -->
         <!-- Header Container
         ================================================== -->
+        @include('layouts.navbar')
+
         <div class="dash-content-wrap">
             @include('users.header-user')
         </div>

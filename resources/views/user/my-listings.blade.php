@@ -30,11 +30,13 @@
     $bodyClass = 'inner-pages maxw1600 m0a dashboard-bd';
 @endphp
 @section('content')
+@include('layouts.navbar')
     <!-- START SECTION USER PROFILE -->
     <section class="user-page section-padding pt-5">
         <div class="container-fluid">
             <div class="row">
                 @include('user.dashboard.layout.menu')
+             
                 <div class="col-lg-9 col-md-12 col-xs-12 pl-0 user-dash2">
                     <div class="col-lg-12 mobile-dashbord dashbord">
                         <div class="dashboard_navigationbar dashxl">
@@ -58,11 +60,6 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="favorited-listings.html">
-                                            <i class="fa fa-heart mr-3" aria-hidden="true"></i>Favorited Properties
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a href="add-property.html">
                                             <i class="fa fa-list mr-3" aria-hidden="true"></i>Add Property
                                         </a>
@@ -70,21 +67,6 @@
                                     <li>
                                         <a href="payment-method.html">
                                             <i class="fas fa-credit-card mr-3"></i>Payments
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="invoice.html">
-                                            <i class="fas fa-paste mr-3"></i>Invoices
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="change-password.html">
-                                            <i class="fa fa-lock mr-3"></i>Change Password
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index.html">
-                                            <i class="fas fa-sign-out-alt mr-3"></i>Log Out
                                         </a>
                                     </li>
                                 </ul>

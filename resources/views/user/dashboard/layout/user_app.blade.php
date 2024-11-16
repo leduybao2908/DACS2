@@ -22,7 +22,6 @@
 
 <body class="{{ $bodyClass ?? 'maxw1600 m0a dashboard-bd' }}">
     <div id="wrapper" class="int_main_wraapper">
-    @include('user.dashboard.layout.header')
     
     @yield('content')
 

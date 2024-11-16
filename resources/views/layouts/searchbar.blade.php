@@ -9,7 +9,7 @@
                         <div class="welcome-text">
                             <h1 class="h1">Find Your Dream
                                 <br class="d-md-none">
-                                <span class="typed border-bottom"></span>
+                                {{-- <span class="typed border-bottom"></span> --}}
                             </h1>
                             <p class="mt-4">We Have Over Million Properties For You.</p>
                         </div>

@@ -34,16 +34,7 @@
                         <i class="fas fa-credit-card"></i> Payments
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('invoice') }}" class="{{ request()->routeIs('invoice') ? 'active' : '' }}">
-                        <i class="fas fa-paste"></i> Invoices
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('change-password') }}" class="{{ request()->routeIs('change-password') ? 'active' : '' }}">
-                        <i class="fa fa-lock"></i> Change Password
-                    </a>
-                </li>
+                
                 <li>
                     <!-- Logout Link -->
                     <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
