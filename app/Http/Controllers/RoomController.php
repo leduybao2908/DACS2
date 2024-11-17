@@ -6,12 +6,27 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\DB;
+
 
 class RoomController extends Controller
 {
     /**
      * Display a listing of the rooms.
      */
+public function displayTopCities()
+{
+    // Lấy các thành phố có nhiều phòng nhất
+    $cities = Room::select('city', DB::raw('COUNT(*) as total_rooms'))
+        ->groupBy('city')
+        ->orderByDesc('total_rooms')
+        ->limit(4)
+        ->get();
+
+    // Truyền dữ liệu thành phố vào view home
+    return view('home', compact('cities'));
+}
+
     public function index()
     {
         $rooms = Room::where('owner_id', Auth::id())->paginate(10); 

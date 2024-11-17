@@ -74,10 +74,6 @@
 <!-- END SECTION USER PROFILE -->
 @endsection
 
-
-
-
-
 @push('scripts')
     <!-- ARCHIVES JS -->
     <script src="js/jquery-3.5.1.min.js"></script>

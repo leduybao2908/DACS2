@@ -6,6 +6,19 @@ use Illuminate\Http\Request;
 
 class PropertySearchController extends Controller
 {
+    public function displayTopCities()
+{
+    // Lấy các thành phố có nhiều phòng nhất
+    $cities = Room::select('city', DB::raw('COUNT(*) as total_rooms'))
+        ->groupBy('city')
+        ->orderByDesc('total_rooms')
+        ->limit(4)
+        ->get();
+
+    // Truyền dữ liệu thành phố vào view home
+    return view('home', compact('cities'));
+}
+
     public function search(Request $request)
 {
     $title = $request->input('title');
