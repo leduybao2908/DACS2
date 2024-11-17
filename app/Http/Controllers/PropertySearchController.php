@@ -6,18 +6,6 @@ use Illuminate\Http\Request;
 
 class PropertySearchController extends Controller
 {
-    public function displayTopCities()
-{
-    // Lấy các thành phố có nhiều phòng nhất
-    $cities = Room::select('city', DB::raw('COUNT(*) as total_rooms'))
-        ->groupBy('city')
-        ->orderByDesc('total_rooms')
-        ->limit(4)
-        ->get();
-
-    // Truyền dữ liệu thành phố vào view home
-    return view('home', compact('cities'));
-}
 
     public function search(Request $request)
 {
@@ -64,6 +52,17 @@ class PropertySearchController extends Controller
     return view('all-rooms', compact('rooms'));
 }
 
+
+public function RoomCity($city)
+{
+    // Áp dụng phân trang trước khi gọi get()
+    $rooms = Room::where('city', $city)->paginate(1);
+
+    // Trả về view với dữ liệu phân trang
+    return view('all-rooms', compact('rooms', 'city'));
+}
+
+
 public function getFeaturedProperties()
 {
     // Fetch the top 6 rooms with the highest rating and review count
@@ -74,6 +73,7 @@ public function getFeaturedProperties()
 
     return $featuredRooms;
 }
+
 public function homePage()
 {   
     $featuredRooms= $this->getFeaturedProperties();
@@ -91,7 +91,7 @@ public function getFeaturedCity()
                 ->groupBy('city')
                 ->orderByDesc('total_reviews') // Ưu tiên city có nhiều đánh giá nhất
                 ->orderByDesc('avg_rating')   // Sau đó ưu tiên city có rating cao
-                ->take(5)                     // Lấy top 5 city
+                ->take(4)                     // Lấy top 4 city
                 ->get();
 
     return $featuredCities;

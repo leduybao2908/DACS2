@@ -39,86 +39,25 @@
         <div class="row">
 
             @foreach ($featuredCities as $city)
+            @if (!empty($city->city))
                 <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="150">
                     <div class="small-category-2">
                         <div class="small-category-2-thumb">
-                            <a href="#">
+                            <a href="{{ route('RoomCity',['city' => $city->city]) }}">
                                 <img src="images/popular-places/{{ $city->city }}.jpg" alt="{{ $city->city }}">
                             </a>
                         </div>
                         <div class="sc-2-detail">
                             <h4 class="sc-jb-title">
-                                <a href="#">{{ $city->city }}</a>
+                                <a href="{{ route('RoomCity',['city' => $city->city]) }}">{{ $city->city }}</a>
                             </h4>
                             <span>{{ $city->total_rooms }} Properties</span>
                         </div>
                     </div>
                 </div>
-<<<<<<< Updated upstream
+                @endif
             @endforeach
         </div> 
-=======
-            </div>
-            <!-- Single category -->
-            <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="250">
-                <div class="small-category-2">
-                    <div class="small-category-2-thumb img-2">
-                        <a href="properties-full-grid-1.html"><img src="images/popular-places/13.jpg" alt=""></a>
-                    </div>
-                    <div class="sc-2-detail">
-                        <h4 class="sc-jb-title"><a href="properties-full-grid-1.html">Los Angeles</a></h4>
-                        <span>307 Properties</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Single category -->
-            <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="350">
-                <div class="small-category-2">
-                    <div class="small-category-2-thumb img-3">
-                        <a href="properties-full-grid-1.html"><img src="images/popular-places/14.jpg" alt=""></a>
-                    </div>
-                    <div class="sc-2-detail">
-                        <h4 class="sc-jb-title"><a href="properties-full-grid-1.html">San Francisco</a></h4>
-                        <span>409 Properties</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Single category -->
-            <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="450">
-                <div class="small-category-2">
-                    <div class="small-category-2-thumb img-3">
-                        <a href="properties-full-grid-1.html"><img src="images/popular-places/9.jpg" alt=""></a>
-                    </div>
-                    <div class="sc-2-detail">
-                        <h4 class="sc-jb-title"><a href="properties-full-grid-1.html">Atlanta</a></h4>
-                        <span>409 Properties</span>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-         <div class="row">
-            @foreach ($cities as $city)
-                <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="150">
-                    <div class="small-category-2">
-                        <div class="small-category-2-thumb">
-                            <a href="{{ route('rooms.by-city', ['city' => $city->city]) }}">
-                                <!-- Hiển thị ảnh cho thành phố -->
-                                <img src="images/popular-places/{{ $city->city }}.jpg" alt="{{ $city->city }}">
-                            </a>
-                        </div>
-                        <div class="sc-2-detail">
-                            <h4 class="sc-jb-title">
-                                <a href="{{ route('rooms.by-city', ['city' => $city->city]) }}">{{ $city->city }}</a>
-                            </h4>
-                            <span>{{ $city->total_rooms }} Properties</span>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div> 
-        
->>>>>>> Stashed changes
         <!-- /row -->
     </div>
 </section>

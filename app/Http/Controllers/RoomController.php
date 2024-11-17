@@ -14,18 +14,6 @@ class RoomController extends Controller
     /**
      * Display a listing of the rooms.
      */
-public function displayTopCities()
-{
-    // Lấy các thành phố có nhiều phòng nhất
-    $cities = Room::select('city', DB::raw('COUNT(*) as total_rooms'))
-        ->groupBy('city')
-        ->orderByDesc('total_rooms')
-        ->limit(4)
-        ->get();
-
-    // Truyền dữ liệu thành phố vào view home
-    return view('home', compact('cities'));
-}
 
     public function index()
     {

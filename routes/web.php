@@ -9,17 +9,12 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\PropertySearchController;
 use App\Http\Controllers\ContactController;
 
-Route::get('/home', [RoomController::class, 'displayTopCities'])->name('home');
-
+Route::get('/RoomCity/{city}', [PropertySearchController::class, 'RoomCity'])->name('RoomCity');
 Route::get('/search', [PropertySearchController::class, 'search'])->name('property.search');
-<<<<<<< Updated upstream
-Route::get('/', [PropertySearchController::class, 'homePage'])->name('home');
-=======
 Route::get('/contact-us', [ContactController::class, 'showContactForm'])->name('contact.us');
 Route::post('/contact-us', [ContactController::class, 'sendContactEmail'])->name('contact.us.submit');
 Route::post('/send-contact', [ContactController::class, 'sendContactEmail'])->name('send.contact.email');
-Route::get('/', [PropertySearchController::class, 'getFeaturedProperties'])->name('home');
->>>>>>> Stashed changes
+Route::get('/', [PropertySearchController::class, 'homePage'])->name('home');
 Route::get('/properties-list', function () {
     return view('properties_list'); // Trả về view inner
 });

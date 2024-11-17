@@ -20,7 +20,6 @@
     </head>
 @endpush
 
-
 @section('content')
     <!-- START SECTION PROPERTIES LISTING -->
     <section class="properties-list full featured portfolio blog">
