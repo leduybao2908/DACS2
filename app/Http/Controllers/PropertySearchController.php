@@ -57,7 +57,7 @@ public function RoomCity($city)
 {
     // Áp dụng phân trang trước khi gọi get()
     $rooms = Room::where('city', $city)->paginate(1);
-
+    $rooms = $rooms->paginate(5);
     // Trả về view với dữ liệu phân trang
     return view('all-rooms', compact('rooms', 'city'));
 }
