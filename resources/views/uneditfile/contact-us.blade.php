@@ -13,15 +13,15 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/fontawesome-5-all.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- ARCHIVES CSS -->
+        <!-- ARCHIVES CSS -->
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
 <body class="inner-pages hd-white">
-    <div id="wrapper">
+        <div id="wrapper">
         <!-- START SECTION HEADINGS -->
-        <section class="headings">
+                <section class="headings">
             <div class="text-heading text-center">
                 <div class="container">
                     <h1>Contact Us</h1>
@@ -34,9 +34,9 @@
         <!-- START SECTION CONTACT US -->
         <section class="contact-us">
             <div class="container">
-                <h3>Our Location</h3>
+<h3>Our Location</h3>
                 <div class="property-location mb-5">
-                    <div class="divider-fade"></div>
+                                        <div class="divider-fade"></div>
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14656.026011044121!2d108.25202719472173!3d15.983466473872356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5nIFZp4buHdCAtIEjDoG4sIMSQ4bqhaSBo4buNYyDEkMOgIE7hurVuZw!5e1!3m2!1svi!2s!4v1731776831747!5m2!1svi!2s" 
                         width="100%" 
@@ -47,7 +47,7 @@
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-                <style>
+<style>
                     .property-location {
                         width: 100%;
                         height: 500px; /* Tăng chiều cao khung bản đồ */
@@ -74,36 +74,36 @@
                     }
                 </style>
                 <div class="row">
-                    <!-- Form liên hệ -->
+<!-- Form liên hệ -->
                     <div class="col-lg-8 col-md-12">
                         <h3 class="mb-4">Contact Us</h3>
                         <form id="contactform" class="contact-form" name="contactform" method="post" novalidate>
-                            <div id="success" class="successform">
+                                                        <div id="success" class="successform">
                                 <p class="alert alert-success font-weight-bold" role="alert">Your message was sent successfully!</p>
                             </div>
                             <div id="error" class="errorform">
                                 <p>Something went wrong, try refreshing and submitting the form again.</p>
                             </div>
-                                <form action="{{ route('send.contact.email') }}" method="POST">
+                            <form action="{{ route('send.contact.email') }}" method="POST">
                                     @csrf
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Send Message</button>
-                                </form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
                                 
                                 @if (session('success'))
                                     <p style="color: green;">{{ session('success') }}</p>
                                 @endif
                                 
                         </form>
-                    </div>
+                                            </div>
 
                     <!-- Thông tin liên hệ -->
                     <div class="col-lg-4 col-md-12 bgc">
@@ -126,7 +126,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </form>
+</form>
                     </div>
                 </div>
             </div>

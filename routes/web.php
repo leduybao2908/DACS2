@@ -11,7 +11,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\PropertySearchController;
 use App\Http\Controllers\ContactController;
 
-Route::get('/RoomCity/{city}', [PropertySearchController::class, 'RoomCity'])->name('RoomCity');
+Route::get('/RoomCity/{city}',  [PropertySearchController::class, 'RoomCity'])->name('RoomCity');
 Route::get('/search', [PropertySearchController::class, 'search'])->name('property.search');
 Route::get('/contact-us', [ContactController::class, 'showContactForm'])->name('contact.us');
 Route::post('/contact-us', [ContactController::class, 'sendContactEmail'])->name('contact.us.submit');

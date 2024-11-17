@@ -3,21 +3,21 @@
 @section('body-class', 'inner-pages agents hp-6 full hd-white')
 
 @push('styles')
-    <link rel="stylesheet" href="font/flaticon.css">
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/fontawesome-5-all.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('font/flaticon.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-5-all.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css')}}">
     <!-- ARCHIVES CSS -->
-    <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/lightcase.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" id="color" href="css/default.css">
-    </head>
+    <link rel="stylesheet" href="{{ asset('css/search.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/lightcase.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/menu.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css')}}">
+    <link rel="stylesheet" id="color" href="{{ asset('css/default.css')}}">
+   
 @endpush
 
 @section('content')
