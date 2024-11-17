@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Models\Room;
 use Illuminate\Http\Request;
 
@@ -59,7 +59,29 @@ public function getFeaturedProperties()
                          ->take(6)
                          ->get();
 
-    return view('home', compact('featuredRooms'));
+    return $featuredRooms;
+}
+public function homePage()
+{   
+    $featuredRooms= $this->getFeaturedProperties();
+    // Lấy các thành phố có nhiều đánh giá và rating nhất
+    $featuredCities =$this->getFeaturedCity();
+        // Trả về view với dữ liệu
+    return view('home', compact('featuredCities','featuredRooms'));
+}
+public function getFeaturedCity()
+{
+    // Lấy các city có tổng reviews_count và rating cao nhất
+    $featuredCities = Room::select('city', 
+                    DB::raw('SUM(reviews_count) as total_reviews'), 
+                    DB::raw('AVG(avg_rating) as avg_rating'))
+                ->groupBy('city')
+                ->orderByDesc('total_reviews') // Ưu tiên city có nhiều đánh giá nhất
+                ->orderByDesc('avg_rating')   // Sau đó ưu tiên city có rating cao
+                ->take(5)                     // Lấy top 5 city
+                ->get();
+
+    return $featuredCities;
 }
 
     /**

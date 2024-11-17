@@ -9,7 +9,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\PropertySearchController;
 
 Route::get('/search', [PropertySearchController::class, 'search'])->name('property.search');
-Route::get('/', [PropertySearchController::class, 'getFeaturedProperties'])->name('home');
+Route::get('/', [PropertySearchController::class, 'homePage'])->name('home');
 Route::get('/properties-list', function () {
     return view('properties_list'); // Trả về view inner
 });
