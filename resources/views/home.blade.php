@@ -39,12 +39,12 @@
         <div class="row">
 
             @foreach ($featuredCities as $city)
-            @if (!empty($city->city))
+            @if (!empty($city->city))  <!-- Kiểm tra xem thành phố có tồn tại không -->
                 <div class="col-xl-3 col-lg-6 col-sm-6" data-aos="fade-up" data-aos-delay="150">
                     <div class="small-category-2">
                         <div class="small-category-2-thumb">
                             <a href="{{ route('RoomCity',['city' => $city->city]) }}">
-                                <img src="images/popular-places/{{ $city->city }}.jpg" alt="{{ $city->city }}">
+                               <img src="images/popular-places/{{ $city->city }}.jpg" alt="{{ $city->city }}"> 
                             </a>
                         </div>
                         <div class="sc-2-detail">
@@ -55,8 +55,9 @@
                         </div>
                     </div>
                 </div>
-                @endif
-            @endforeach
+            @endif
+        @endforeach
+        
         </div> 
         <!-- /row -->
     </div>

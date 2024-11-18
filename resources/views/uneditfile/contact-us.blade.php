@@ -17,6 +17,38 @@
     <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "5J8K-0qHhTOuFlMs4",
+        });
+    })();
+    </script>
+    <script>
+        function sendMail() {
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    };
+
+    emailjs
+        .send("service_iq3bkja", "template_01iwr3k", parms)
+        .then(
+            () => {
+                alert("Email sent successfully!");
+            },
+            (error) => {
+                console.error("Failed to send email:", error);
+                alert("Failed to send email. Please try again.");
+            }
+        );
+}
+
+  </script>
     </head>
 <body class="inner-pages hd-white">
         <div id="wrapper">
@@ -25,7 +57,7 @@
             <div class="text-heading text-center">
                 <div class="container">
                     <h1>Contact Us</h1>
-                    <h2><a href="index.html">Home</a> &nbsp;/&nbsp; Contact Us</h2>
+                    <h2><a href="{{ route('home') }}">Home</a> &nbsp;/&nbsp; Contact Us</h2>
                 </div>
             </div>
         </section>
@@ -84,19 +116,18 @@
                             <div id="error" class="errorform">
                                 <p>Something went wrong, try refreshing and submitting the form again.</p>
                             </div>
-                            <form action="{{ route('send.contact.email') }}" method="POST">
                                     @csrf
                             <div class="form-group">
-                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+                                <textarea class="form-control" name="message" id="message" placeholder="Your Message" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-</form>
+                            <button type="submit" class="btn btn-primary" onclick="sendMail()">Send Message</button>
+                            
                                 
                                 @if (session('success'))
                                     <p style="color: green;">{{ session('success') }}</p>

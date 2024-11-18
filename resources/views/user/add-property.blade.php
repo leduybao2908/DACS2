@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" id="color" href="{{ asset('css/default.css') }}">
 @endpush
+@include('layouts.navbar')
 
 @php
     $bodyClass = 'inner-pages maxw1600 m0a dashboard-bd';
 @endphp
-
 
 @section('content')
     <section class="user-page section-padding pt-5">

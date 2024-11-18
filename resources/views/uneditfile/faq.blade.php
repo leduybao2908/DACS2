@@ -42,7 +42,7 @@
             <div class="text-heading text-center">
                 <div class="container">
                     <h1>FAQ’S</h1>
-                    <h2><a href="index.html">Home </a> &nbsp;/&nbsp; FAQ’S</h2>
+                    <h2><a href="{{ route('home') }}">Home </a> &nbsp;/&nbsp; FAQ’S</h2>
                 </div>
             </div>
         </section>
@@ -62,90 +62,70 @@
                                 </div>
                                 <div class="content">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Currently our available transaction method is VNPay.
+                                     </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <span>How to schedule a viewing?</span>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        You can contact the poster by phone or email to schedule a viewing.
                                     </p>
                                 </div>
                             </li>
                             <li>
                                 <div class="title">
-                                    <span>How can i get findhouses aid to live off campus?</span>
+                                    <span>What is the service fee when transacting through the site?  </span>
                                 </div>
                                 <div class="content">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Since we are new, our site does not currently charge any fees from consumers.
                                     </p>
                                 </div>
                             </li>
                             <li>
                                 <div class="title">
-                                    <span>Does findhouses share my information with others?</span>
+                                    <span>Do I need to provide legal documents when posting an ad?</span>
                                 </div>
                                 <div class="content">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        We currently do not require legal documents when posting, but to increase credibility you should have additional legal images for buyers to refer to.
                                     </p>
                                 </div>
                             </li>
                             <li>
                                 <div class="title">
-                                    <span>What kind of real estate advice do you give?</span>
+                                    <span>How to ensure safe transactions?</span>
                                 </div>
                                 <div class="content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
+                                    <p>Check the legal documents of the property carefully.</p>
+                                    <p>Transactions through banks instead of cash payments.</p>
+                                    <p>Use standard sales or lease contracts certified by competent authorities.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="title">
-                                    <span>How do i link multiple accounts with my profile?</span>
+                                    <span>How long is the posts valid for?</span>
                                 </div>
                                 <div class="content">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
+                                        Our site does not limit the duration of your posts. </p>
                                 </div>
                             </li>
                             <li>
                                 <div class="title">
-                                    <span>What kind of real estate advice do you give?</span>
+                                    <span>Is the information on the site reliable?</span>
                                 </div>
                                 <div class="content">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        To increase safety, you should carefully check the necessary steps before trading.
                                     </p>
                                 </div>
                             </li>
-                            <li>
-                                <div class="title">
-                                    <span>Is your advice really be helf full?</span>
-                                </div>
-                                <div class="content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <span>How can i get real estate aid to live off campus?</span>
-                                </div>
-                                <div class="content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <span>Does realhome share my information with others?</span>
-                                </div>
-                                <div class="content">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-                                </div>
-                            </li>
+                            
                         </ul>
                         <!--end of accordion-->
                     </div>

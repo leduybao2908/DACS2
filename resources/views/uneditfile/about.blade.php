@@ -56,16 +56,16 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12 who-1">
                         <div>
-                            <h2 class="text-left mb-4">About <span>Find Houses</span></h2>
+                            <h2 class="text-left mb-4">About <span>NiceLand</span></h2>
                         </div>
                         <div class="pftext">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odio id voluptatibus incidunt cum? Atque quasi eum debitis optio ab. Esse itaque officiis tempora possimus odio rerum aperiam ratione, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt.</p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odio id voluptatibus incidunt cum? Atque quasi eum debitis optio ab. Esse itaque officiis tempora possimus odio rerum aperiam ratione, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt.</p>
-                        </div>
+                            <p>
+                                <h1 style="font-size: 24px; color:black">Who we are?</h1>
+Welcome to NiceLand, NiceLand is a specialized real estate trading platform where members can easily post and search for land buying and selling opportunities. We do not directly participate in transactions or brokerage, but act as a bridge, helping to connect people who need to buy and sell quickly, transparently and effectively.
+                            <p>
+                                <h1 style="font-size: 24px; color:black"> Our Mission </h1>
+                                Making it easier for people to access the real estate market through a simple, friendly and convenient online platform.                        </div>
                         <div class="box bg-2">
-                            <a href="about.html" class="text-center button button--moema button--text-thick button--text-upper button--size-s">read More</a>
-                            <img src="images/signature.png" class="ml-5" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-xs-12">
@@ -101,7 +101,7 @@
                                 <h3>Wide Renge Of Properties</h3>
                             </div>
                             <div class="service-text-p">
-                                <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                                <p class="text-center">We are supporting transactions throughout Vietnam.</p>
                             </div>
                         </div>
                     </article>
@@ -112,7 +112,7 @@
                                 <h3>Trusted by thousands</h3>
                             </div>
                             <div class="service-text-p">
-                                <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                                <p class="text-center">With many future cooperation strategies.</p>
                             </div>
                         </div>
                     </article>
@@ -123,7 +123,7 @@
                                 <h3>Financing made easy</h3>
                             </div>
                             <div class="service-text-p">
-                                <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                                <p class="text-center">Can pay online quickly.</p>
                             </div>
                         </div>
                     </article>
@@ -185,42 +185,20 @@
                     <p>We provide full service at every step.</p>
                 </div>
                 <div class="row team-all">
-                    <div class="col-lg-3 col-md-6 team-pro">
-                        <div class="team-wrap">
-                            <div class="team-img">
-                                <img src="images/team/t-5.jpg" alt="" />
-                            </div>
-                            <div class="team-content">
-                                <div class="team-info">
-                                    <h3>Carls Jhons</h3>
-                                    <p>Financial Advisor</p>
-                                    <div class="team-socials">
-                                        <ul>
-                                            <li>
-                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span><a href="team-details.html">View Profile</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team-pro">
+                    
+                    <div class="col-lg-6 col-md-6 team-pro">
                         <div class="team-wrap">
                             <div class="team-img">
                                 <img src="images/team/t-6.jpg" alt="" />
                             </div>
                             <div class="team-content">
                                 <div class="team-info">
-                                    <h3>Arling Tracy</h3>
-                                    <p>Acountant</p>
+                                    <h3>Quang Chính</h3>
+                                    <p>Member</p>
                                     <div class="team-socials">
                                         <ul>
                                             <li>
-                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                <a href="https://www.facebook.com/le.quangchinh.589" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                                 <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                                 <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                             </li>
@@ -231,19 +209,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 team-pro pb-none">
+                    <div class="col-lg-6 col-md-6 team-pro pb-none">
                         <div class="team-wrap">
                             <div class="team-img">
                                 <img src="images/team/t-7.jpg" alt="" />
                             </div>
                             <div class="team-content">
                                 <div class="team-info">
-                                    <h3>Mark Web</h3>
-                                    <p>Founder &amp; CEO</p>
+                                    <h3>Duy Bảo</h3>
+                                    <p>Leader</p>
                                     <div class="team-socials">
                                         <ul>
                                             <li>
-                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                <a href="https://www.facebook.com/profile.php?id=100037310812731" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                                 <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                                 <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                             </li>
@@ -254,154 +232,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 team-pro kat">
-                        <div class="team-wrap">
-                            <div class="team-img">
-                                <img src="images/team/t-8.jpg" alt="" />
-                            </div>
-                            <div class="team-content">
-                                <div class="team-info">
-                                    <h3>Katy Grace</h3>
-                                    <p>Team Leader</p>
-                                    <div class="team-socials">
-                                        <ul>
-                                            <li>
-                                                <a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span><a href="team-details.html">View Profile</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
         <!-- END SECTION AGENTS -->
 
-        <!-- START SECTION TESTIMONIALS -->
-        <section class="testimonials home18 bg-white">
-            <div class="container">
-               <div class="sec-title">
-                    <h2><span>Clients </span>Testimonials</h2>
-                    <p>We collect reviews from our customers.</p>
-                </div>
-                <div class="owl-carousel style1">
-                    <div class="test-1 pb-0 pt-0">
-                        <img src="images/testimonials/ts-1.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Lisa Smith</h3>
-                        <h6 class="mt-1">New York</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                    <div class="test-1 pb-0 pt-0">
-                        <img src="images/testimonials/ts-2.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Jhon Morris</h3>
-                        <h6 class="mt-1">Los Angeles</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star-o"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                    <div class="test-1 pt-0">
-                        <img src="images/testimonials/ts-3.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Mary Deshaw</h3>
-                        <h6 class="mt-1">Chicago</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                    <div class="test-1 pt-0">
-                        <img src="images/testimonials/ts-4.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Gary Steven</h3>
-                        <h6 class="mt-1">Philadelphia</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star-o"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                    <div class="test-1 pt-0">
-                        <img src="images/testimonials/ts-5.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Cristy Mayer</h3>
-                        <h6 class="mt-1">San Francisco</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                    <div class="test-1 pt-0">
-                        <img src="images/testimonials/ts-6.jpg" alt="">
-                        <h3 class="mt-3 mb-0">Ichiro Tasaka</h3>
-                        <h6 class="mt-1">Houston</h6>
-                        <ul class="starts text-center mb-2">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star-o"></i>
-                            </li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END SECTION TESTIMONIALS -->
+       
 
         <!-- STAR SECTION PARTNERS -->
         <div class="partners bg-white-2">
@@ -427,130 +264,7 @@
         <!-- END SECTION PARTNERS -->
 
         <!-- START FOOTER -->
-<<<<<<< Updated upstream
         @include('layouts.footer')
-=======
-        <footer class="first-footer">
-            <div class="top-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="netabout">
-                                <a href="index.html" class="logo">
-                                    <img src="images/logo-footer.svg" alt="netcom">
-                                </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto soluta laboriosam, perspiciatis, aspernatur officiis esse.</p>
-                            </div>
-                            <div class="contactus">
-                                <ul>
-                                    <li>
-                                        <div class="info">
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <p class="in-p">95 South Park Avenue, USA</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="info">
-                                            <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <p class="in-p">+456 875 369 208</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="info">
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <p class="in-p ti">support@findhouses.com</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="navigation">
-                                <h3>Navigation</h3>
-                                <div class="nav-footer">
-                                    <ul>
-                                        <li><a href="index.html">Home One</a></li>
-                                        <li><a href="properties-right-sidebar.html">Properties Right</a></li>
-                                        <li><a href="properties-full-list.html">Properties List</a></li>
-                                        <li><a href="properties-details.html">Property Details</a></li>
-                                        <li class="no-mgb"><a href="agents-listing-grid.html">Agents Listing</a></li>
-                                    </ul>
-                                    <ul class="nav-right">
-                                        <li><a href="agent-details.html">Agents Details</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="blog.html">Blog Default</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li class="no-mgb"><a href="contact-us.html">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget">
-                                <h3>Twitter Feeds</h3>
-                                <div class="twitter-widget contuct">
-                                    <div class="twitter-area">
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a href="#">@findhouses</a> all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="newsletters">
-                                <h3>Newsletters</h3>
-                                <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</p>
-                            </div>
-                            <form class="bloq-email mailchimp form-inline" method="post">
-                                <label for="subscribeEmail" class="error"></label>
-                                <div class="email">
-                                    <input type="email" id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email">
-                                    <input type="submit" value="Subscribe">
-                                    <p class="subscription-success"></p>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="second-footer">
-                <div class="container">
-                    <p>2021 © Copyright - All Rights Reserved.</p>
-                    <ul class="netsocials">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
->>>>>>> Stashed changes
 
         <a data-scroll href="#wrapper" class="go-up"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
         <!-- END FOOTER -->
