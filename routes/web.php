@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\PropertySearchController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\InquiryController;
+
 
 Route::get('/RoomCity/{city}',  [PropertySearchController::class, 'RoomCity'])->name('RoomCity');
 Route::get('/search', [PropertySearchController::class, 'search'])->name('property.search');
@@ -20,13 +22,14 @@ Route::get('/', [PropertySearchController::class, 'homePage'])->name('home');
 Route::get('/properties-list', function () {
     return view('properties_list'); // Trả về view inner
 });
+Route::post('/submit-request', [InquiryController::class, 'store']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
     // Dashboard
     Route::get('/dashboard', function () {
         return view('user.dashboard.dashboard');
     })->name('dashboard');
-
+    
     // User Profile
     Route::get('/user-profile', function () {
         return view('user.profile');
@@ -40,6 +43,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/add-property', function () {
         return view('user.add-property');
     })->name('add-property');
+
+    Route::get('/user/notifications', [InquiryController::class, 'index'])->name('user.notifications');
+
 
     // Payments
     Route::get('/payment-method', function () {

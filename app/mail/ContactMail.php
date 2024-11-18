@@ -15,10 +15,15 @@ class ContactMail extends Mailable
     {
         $this->details = $details;
     }
-
     public function build()
     {
         return $this->subject('New Contact Message')
-                    ->view('emails.contact');
+                ->view('emails.contact') 
+                ->with([
+                    'name' => $this->details['name'],
+                    'email' => $this->details['email'],
+                    'messageContent' => $this->details['message'], 
+                ]);
     }
+    
 }

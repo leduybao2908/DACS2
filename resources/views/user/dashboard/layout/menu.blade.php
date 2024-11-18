@@ -1,6 +1,6 @@
 <div class="col-lg-3 col-md-12 col-xs-12 pl-0 pr-0 user-dash">
     <div class="user-profile-box mb-0">
-        <div class="sidebar-header"><img src="images/logo-blue.svg" alt="header-logo2.png"> </div>
+        <div class="sidebar-header"><img src="{{ asset('images/logo-blue.svg') }}" alt="header-logo2.png"> </div>
         <div class="header clearfix">
             <img src="{{ Auth::user()->image_url ? asset('storage/' . Auth::user()->image_url) : 'images/testimonials/ts-1.jpg' }}" alt="avatar" class="img-fluid profile-img">
         </div>
@@ -12,6 +12,12 @@
                 <li>
                     <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
                         <i class="fa fa-map-marker"></i> Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('user.notifications') }}" class="{{ request()->routeIs('Notification') ? 'active' : '' }}">
+                        <i class="fas fa-envelope-square"></i></i> Notification
                     </a>
                 </li>
                 <li>
@@ -34,6 +40,7 @@
                         <i class="fas fa-credit-card"></i> Payments
                     </a>
                 </li>
+                
                 
                 <li>
                     <!-- Logout Link -->

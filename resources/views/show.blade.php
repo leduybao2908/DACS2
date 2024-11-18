@@ -332,19 +332,19 @@
                                         </ul>
                                         <div class="agent-contact-form-sidebar">
                                             <h4>Request Inquiry</h4>
-                                            <form name="contact_form" method="post"
-                                                action="https://code-theme.com/html/findhouses/functions.php">
-                                                <input type="text" id="fname" name="full_name"
-                                                    placeholder="Full Name" required />
-                                                <input type="number" id="pnumber" name="phone_number"
-                                                    placeholder="Phone Number" required />
-                                                <input type="email" id="emailid" name="email_address"
-                                                    placeholder="Email Address" required />
+                                            <form name="contact_form" method="post" action="/submit-request">
+                                                @csrf
+                                                <input type="hidden" name="room_id" value="{{ $room->room_id }}" />
+                                                <input type="hidden" name="onwer_id" value="{{ $room->owner->id }}" />
+                                                <input type="text" id="fname" name="full_name" placeholder="Full Name" required />
+                                                <input type="number" id="pnumber" name="phone_number" placeholder="Phone Number" required />
+                                                <input type="email" id="emailid" name="email_address" placeholder="Email Address" required />
                                                 <textarea placeholder="Message" name="message" required></textarea>
-                                                <input type="submit" name="sendmessage" class="multiple-send-message"
-                                                    value="Submit Request" />
+                                                <input type="submit" name="sendmessage" class="multiple-send-message" value="Submit Request" />
                                             </form>
+                                            
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -863,6 +863,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+<!-- Thêm TinyMCE từ CDN -->
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
 <script>
     // Initialize Quill editor
     var quill = new Quill('#editor', {
