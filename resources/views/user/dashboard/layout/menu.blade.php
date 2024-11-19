@@ -17,7 +17,16 @@
 
                 <li>
                     <a href="{{ route('user.notifications') }}" class="{{ request()->routeIs('Notification') ? 'active' : '' }}">
-                        <i class="fas fa-envelope-square"></i></i> Notification
+                        <i class="fas fa-envelope-square"></i> Notification
+                        @php
+                            $unreadCount = DB::table('notification')
+                                ->where('owner_id', Auth::id())
+                                ->where('is_read', 0)
+                                ->count();
+                        @endphp
+                        @if($unreadCount > 0)
+                            <span class="badge badge-danger">{{ $unreadCount }}</span>
+                        @endif
                     </a>
                 </li>
                 <li>

@@ -45,6 +45,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('add-property');
 
     Route::get('/user/notifications', [InquiryController::class, 'index'])->name('user.notifications');
+    Route::delete('user/notifications/{id}', [InquiryController::class, 'destroy'])->name('notifications.destroy');
 
 
     // Payments

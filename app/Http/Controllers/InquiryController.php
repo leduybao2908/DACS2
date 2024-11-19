@@ -18,10 +18,38 @@ class InquiryController extends Controller
                         ->where('owner_id', $owner_id)
                         ->orderBy('created_at', 'desc')  // Sort by the most recent messages
                         ->get();
-
+                        $this->markNotificationsAsRead();
         // Pass the messages to the view
         return view('user.Notification', compact('messages'));
     }
+
+
+    public function destroy($id)
+    {
+        // Tìm và xóa thông báo
+        DB::table('notification')
+            ->where('mail_id', $id)
+            ->where('owner_id', Auth::id())
+            ->delete();
+
+        return redirect()->route('user.notifications')->with('success', 'Message deleted successfully!');
+    }
+    public function unreadNotificationsCount($ownerId)
+{
+    return DB::table('notification')
+        ->where('owner_id', $ownerId)
+        ->where('is_read', 0)
+        ->count();
+}
+
+public function markNotificationsAsRead()
+{
+    DB::table('notification')
+        ->where('owner_id', Auth::id())
+        ->where('is_read', 0)
+        ->update(['is_read' => 1]);
+}
+
     public function store(Request $request)
 {   
 

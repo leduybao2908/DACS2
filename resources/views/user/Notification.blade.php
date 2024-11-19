@@ -27,21 +27,33 @@
 
 @include('layouts.navbar')
 @section('content')
+
     <section class="user-page section-padding pt-5">
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid d-flex justify-content-center align-items-center flex-column">
+            <div class="row w-100">
                 @include('user.dashboard.layout.menu')
                 <div class="col-lg-9 col-md-12 col-xs-12 royal-add-property-area section_100 pl-0 user-dash2">
-
-                <!-- Display Notifications -->
-                <div class="col-lg-9 col-md-12">
-                    <h3>Your Sent Messages</h3>
-                    <div class="notification-list">
-                        @foreach($messages as $message)
-                            <div class="notification-item">
-                                <div class="notification-header">
-                                    <strong>{{ $message->name_request }}</strong> ({{ $message->mail_request }})
-                                    <span class="notification-date">{{ \Carbon\Carbon::parse($message->created_at)->format('d M, Y') }}</span>
+                    <!-- White Box Wrapper -->
+                    <div class="white-box">
+                        @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        <h3 class="text-center">Your Sent Messages</h3>
+                        <div class="notification-list">
+                            @foreach ($messages as $message)
+                            <div class="notification-item {{ $message->is_read ? '' : 'unread' }}">
+                                <div class="notification-header d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>{{ $message->name_request }}</strong> ({{ $message->mail_request }})
+                                        <span class="notification-date">{{ \Carbon\Carbon::parse($message->created_at)->format('d M, Y') }}</span>
+                                    </div>
+                                    <form action="{{ route('notifications.destroy', $message->mail_id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this message?');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm ml-2">Delete</button>
+                                    </form>
                                 </div>
                                 <div class="notification-body">
                                     <p><strong>Message:</strong> {!! nl2br(e($message->message)) !!}</p>
@@ -49,12 +61,14 @@
                                     <p><strong>Property ID:</strong> {{ $message->room_id }}</p>
                                 </div>
                             </div>
-                        @endforeach
+                            
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
         </div>
+
     </section>
 @endsection
 
@@ -97,7 +111,7 @@
     <script src="{{ asset('js/dropzone.js') }}"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
-   
+
     <script>
         $(".dropzone").dropzone({
             dictDefaultMessage: "<i class='fa fa-cloud-upload'></i> Click here or drop files to upload",
