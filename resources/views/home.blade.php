@@ -138,7 +138,9 @@
                         <h3>Wide Renge Of Properties</h3>
                     </div>
                     <div class="service-text-p">
-                        <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                        <p class="text-center">We are supporting transactions throughout Vietnam.
+
+                        </p>
                     </div>
                 </div>
             </article>
@@ -149,7 +151,9 @@
                         <h3>Trusted by thousands</h3>
                     </div>
                     <div class="service-text-p">
-                        <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                        <p class="text-center">With many future cooperation strategies.
+
+                        </p>
                     </div>
                 </div>
             </article>
@@ -160,7 +164,9 @@
                         <h3>Financing made easy</h3>
                     </div>
                     <div class="service-text-p">
-                        <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                        <p class="text-center">Can pay online quickly.
+
+                        </p>
                     </div>
                 </div>
             </article>
@@ -171,7 +177,7 @@
                         <h3>We are here near you</h3>
                     </div>
                     <div class="service-text-p">
-                        <p class="text-center">lorem ipsum dolor sit amet, consectetur pro adipisici consectetur debits adipisicing lacus consectetur Business Directory.</p>
+                        <p class="text-center">470 Đ. Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng, Việt Nam</p>
                     </div>
                 </div>
             </article>
