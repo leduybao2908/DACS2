@@ -42,11 +42,12 @@
                         <form class="bloq-email mailchimp form-inline mt-3" method="post">
                             <label for="subscribeEmail" class="error"></label>
                             <div class="email d-flex">
-                                <input type="email" id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email" class="form-control me-2">
-                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                                <input type="email" id="sendEmail" name="EMAIL" placeholder="Enter Your Email" class="form-control me-2">
+                                <button type="submit" class="btn btn-primary" >Subscribe</button>
                             </div>
                             <p class="subscription-success mt-2"></p>
                         </form>
+                     
                     </div>
                 </div>
             </div>
