@@ -239,7 +239,79 @@
 
 <!-- END SECTION AGENTS -->
 
-
+<!-- START SECTION TESTIMONIALS -->
+<section class="testimonials bg-white-2 rec-pro">
+    <div class="container-fluid">
+        <div class="sec-title">
+            <h2><span>Clients </span>Testimonials</h2>
+            <p>We collect reviews from our customers.</p>
+        </div>
+        <div class="owl-carousel job_clientSlide">
+            <div class="singleJobClinet" data-aos="zoom-in" data-aos-delay="150">
+                <p>
+                    "The service was fantastic! The team went above and beyond to ensure everything was perfect. Highly recommended!"
+                </p>
+                <div class="detailJC">
+                    <span><img src="images/testimonials/ts-1.jpg" alt=""/></span>
+                    <h5>Lisa Smith</h5>
+                    <p>New York</p>
+                </div>
+            </div>
+            <div class="singleJobClinet" data-aos="zoom-in" data-aos-delay="250">
+                <p>
+                    "Exceptional quality and attention to detail. I couldn’t be happier with my experience."
+                </p>
+                <div class="detailJC">
+                    <span><img src="images/testimonials/ts-2.jpg" alt=""/></span>
+                    <h5>John Morris</h5>
+                    <p>Los Angeles</p>
+                </div>
+            </div>
+            <div class="singleJobClinet" data-aos="zoom-in" data-aos-delay="350">
+                <p>
+                    "Great customer service and excellent results. I will definitely return for future projects."
+                </p>
+                <div class="detailJC">
+                    <span><img src="images/testimonials/ts-3.jpg" alt=""/></span>
+                    <h5>Mary Deshaw</h5>
+                    <p>Chicago</p>
+                </div>
+            </div>
+            <div class="singleJobClinet">
+                <p>
+                    "I was impressed by their professionalism and the high-quality outcome. Thank you for the wonderful experience!"
+                </p>
+                <div class="detailJC">
+                    <span><img src="images/testimonials/ts-4.jpg" alt=""/></span>
+                    <h5>Gary Steven</h5>
+                    <p>Philadelphia</p>
+                </div>
+            </div>
+            <div class="singleJobClinet">
+                <p>
+                    "Absolutely fantastic service! Friendly staff and a great result. I highly recommend them!"
+                </p>
+                <div class="detailJC">
+                    <span><img src="images/testimonials/ts-5.jpg" alt=""/></span>
+                    <h5>Cristy Mayer</h5>
+                    <p>San Francisco</p>
+                </div>
+            </div>
+            <div class="singleJobClinet">
+                <p>
+                    "Their expertise and dedication really shine through. I couldn't have asked for a better team."
+                </p>
+                <div class="detailJC">
+                    <span><img src="images/testimonials/ts-6.jpg" alt=""/></span>
+                    <h5>Ichiro Tasaka</h5>
+                    <p>Houston</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<!-- END SECTION TESTIMONIALS -->
 
 <!-- STAR SECTION PARTNERS -->
 <div class="partners bg-white rec-pro">

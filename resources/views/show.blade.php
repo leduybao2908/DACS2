@@ -348,7 +348,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="main-search-field-2">
+                            {{-- <div class="main-search-field-2">
                                 <div class="widget-boxed mt-5">
                                     <div class="widget-boxed-header">
                                         <h4>Recent Properties</h4>
@@ -573,13 +573,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </aside>
             </div>
             <!-- START SIMILAR PROPERTIES -->
-            <section class="similar-property featured portfolio p-0 bg-white-inner">
+            {{-- <section class="similar-property featured portfolio p-0 bg-white-inner">
                 <div class="container">
                     <h5>Similar Properties</h5>
                     <div class="row portfolio-items">
@@ -760,7 +760,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
             <!-- END SIMILAR PROPERTIES -->
         </div>
     </section>
