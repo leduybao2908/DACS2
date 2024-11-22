@@ -22,6 +22,7 @@
 </head>
 
 <body class="inner-pages hd-white">
+  
     <div id="wrapper">
         <!-- START SECTION HEADINGS -->
         <section class="headings">

@@ -33,7 +33,7 @@
                 @csrf
                 <!-- Social Login Links -->
                 <div class="access_social">
-                    <a href="#0" class="social_bt facebook">Login with Facebook</a>
+                    <a href="{{ route('facebook.login') }}" class="social_bt facebook">Login with Facebook</a>
                     <a href="#0" class="social_bt google">Login with Google</a>
                     <a href="#0" class="social_bt linkedin">Login with Linkedin</a>
                 </div>

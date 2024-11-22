@@ -34,5 +34,10 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'facebook' => [
+    'client_id' =>'461462579882890',
+    'client_secret' => '8372ff623911090a6392fab41aa0ade2',
+    'redirect' => 'http://localhost:8000/login/facebook/callback',
+],
 
 ];

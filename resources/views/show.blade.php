@@ -99,13 +99,20 @@
                                     @endforeach
                                 </ul>
                             </div>
-                            
+
                             <!-- Description Section -->
                             <div class="blog-info details mb-30">
                                 <h5 class="mb-4">Description</h5>
                                 <p class="mb-3"> {!! $room->description !!}</p>
                             </div>
-
+                            <style>
+                                .blog-info p {
+                                    word-wrap: break-word;
+                                    
+                                    white-space: normal;
+                                    
+                                }
+                            </style>
                         </div>
                     </div>
 
@@ -140,11 +147,12 @@
                         <h3 class="mb-5">{{ $room->reviews->count() }} Reviews</h3>
                         <div class="row mb-5">
                             <ul class="col-12 commented pl-0">
-                                @foreach($room->reviews as $review)
+                                @foreach ($room->reviews as $review)
                                     <li class="comm-inf">
                                         <div class="col-md-2">
                                             <!-- Display user's profile image or default image -->
-                                            <img src="{{ $review->user->image_url ? asset('storage/' . $review->user->image_url) : 'images/default-profile.jpg' }}" class="img-fluid" alt="User Profile">
+                                            <img src="{{ $review->user->image_url ? asset('storage/' . $review->user->image_url) : 'images/default-profile.jpg' }}"
+                                                class="img-fluid" alt="User Profile">
                                         </div>
 
                                         <div class="col-md-10 comments-info">
@@ -153,24 +161,27 @@
                                                 <div class="rating-box">
                                                     <div class="detail-list-rating mr-0">
                                                         <!-- Display stars based on rating -->
-                                                        @for($i = 1; $i <= 5; $i++)
-                                                        <i class="fa fa-star {{ $i <= $review->rating ? '' : 'fa-star-o' }}"></i>
-                                                    @endfor
-                                                    
+                                                        @for ($i = 1; $i <= 5; $i++)
+                                                            <i
+                                                                class="fa fa-star {{ $i <= $review->rating ? '' : 'fa-star-o' }}"></i>
+                                                        @endfor
+
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- Format and display the date of review -->
-                                            <p class="mb-4">{{ \Carbon\Carbon::parse($review->date)->format('M d, Y H:i:s') }}</p>
+                                            <p class="mb-4">
+                                                {{ \Carbon\Carbon::parse($review->date)->format('M d, Y H:i:s') }}</p>
                                             <!-- Display review comment with line breaks -->
                                             <p>{!! nl2br(e($review->comment)) !!}</p>
-                    
+
                                             <!-- Display review images if available -->
-                                            @if($review->images_url && is_array(json_decode($review->images_url)))
+                                            @if ($review->images_url && is_array(json_decode($review->images_url)))
                                                 <div class="resti">
-                                                    @foreach(json_decode($review->images_url) as $image)
+                                                    @foreach (json_decode($review->images_url) as $image)
                                                         <div class="rest">
-                                                            <img src="{{ asset('storage/' . $image) }}" class="img-fluid" alt="Review Image">
+                                                            <img src="{{ asset('storage/' . $image) }}" class="img-fluid"
+                                                                alt="Review Image">
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -181,7 +192,7 @@
                             </ul>
                         </div>
                     </section>
-                    
+
                     <!-- End Reviews -->
                     <!-- Star Add Review -->
                     <section class="single reviews leve-comments details">
@@ -189,15 +200,17 @@
                             <!-- Add Review -->
                             <h3 class="listing-desc-headline margin-bottom-20 mb-4">Add Review</h3>
                             <span class="leave-rating-title">Your rating for this listing</span>
-                            
-                            <form action="{{ route('reviews.store', ['room' => $room->room_id]) }}" method="POST" enctype="multipart/form-data">
+
+                            <form action="{{ route('reviews.store', ['room' => $room->room_id]) }}" method="POST"
+                                enctype="multipart/form-data">
                                 @csrf
-                    
+
                                 <!-- Rating -->
                                 <div class="row mb-4">
                                     <div class="col-md-6">
                                         <div class="leave-rating margin-bottom-30">
-                                            <input type="radio" name="rating" id="rating-5" value="5" required />
+                                            <input type="radio" name="rating" id="rating-5" value="5"
+                                                required />
                                             <label for="rating-5" class="fa fa-star"></label>
                                             <input type="radio" name="rating" id="rating-4" value="4" />
                                             <label for="rating-4" class="fa fa-star"></label>
@@ -209,7 +222,7 @@
                                             <label for="rating-1" class="fa fa-star"></label>
                                         </div>
                                     </div>
-                    
+
                                     <!-- Upload Photos -->
                                     <div class="col-md-6">
                                         <div class="add-review-photos margin-bottom-30">
@@ -220,7 +233,7 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                                 <!-- Review Text -->
                                 <div class="row">
                                     <div class="col-md-12 data">
@@ -229,12 +242,12 @@
                                         </div>
                                     </div>
                                 </div>
-                    
+
                                 <button type="submit" class="btn btn-primary btn-lg mt-2">Submit Review</button>
                             </form>
                         </div>
                     </section>
-                    
+
                     <!-- End Add Review -->
                 </div>
                 <aside class="col-lg-4 col-md-12 car">
@@ -334,17 +347,22 @@
                                             <h4>Request Inquiry</h4>
                                             <form name="contact_form" method="post" action="/submit-request">
                                                 @csrf
+                                                <input type="hidden" name="room_id" value="{{ $room }}" />
                                                 <input type="hidden" name="room_id" value="{{ $room->room_id }}" />
                                                 <input type="hidden" name="onwer_id" value="{{ $room->owner->id }}" />
-                                                <input type="text" id="fname" name="full_name" placeholder="Full Name" required />
-                                                <input type="number" id="pnumber" name="phone_number" placeholder="Phone Number" required />
-                                                <input type="email" id="emailid" name="email_address" placeholder="Email Address" required />
+                                                <input type="text" id="fname" name="full_name"
+                                                    placeholder="Full Name" required />
+                                                <input type="number" id="pnumber" name="phone_number"
+                                                    placeholder="Phone Number" required />
+                                                <input type="email" id="emailid" name="email_address"
+                                                    placeholder="Email Address" required />
                                                 <textarea placeholder="Message" name="message" required></textarea>
-                                                <input type="submit" name="sendmessage" class="multiple-send-message" value="Submit Request" />
+                                                <input type="submit" name="sendmessage" class="multiple-send-message"
+                                                    value="Submit Request" />
                                             </form>
-                                            
+
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -439,48 +457,59 @@
     </script>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Lắng nghe sự kiện thay đổi (change) cho các radio button
-    const ratingRadios = document.querySelectorAll('input[name="rating"]');
-    
-    ratingRadios.forEach(radio => {
-        radio.addEventListener('change', function() {
-            // Lấy giá trị rating đã chọn
-            const ratingValue = this.value;
-            console.log("Selected Rating:", ratingValue);  // In ra giá trị rating đã chọn
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lắng nghe sự kiện thay đổi (change) cho các radio button
+            const ratingRadios = document.querySelectorAll('input[name="rating"]');
 
-            // Bạn có thể thực hiện các hành động khác với ratingValue, ví dụ gửi dữ liệu qua AJAX, hoặc hiển thị cho người dùng
+            ratingRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    // Lấy giá trị rating đã chọn
+                    const ratingValue = this.value;
+                    console.log("Selected Rating:", ratingValue); // In ra giá trị rating đã chọn
+
+                    // Bạn có thể thực hiện các hành động khác với ratingValue, ví dụ gửi dữ liệu qua AJAX, hoặc hiển thị cho người dùng
+                });
+            });
         });
-    });
-});
-</script>
-<!-- Thêm TinyMCE từ CDN -->
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    </script>
+    <!-- Thêm TinyMCE từ CDN -->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-<script>
-    // Initialize Quill editor
-    var quill = new Quill('#editor', {
-        theme: 'snow', // You can use 'snow' or 'bubble' theme
-        modules: {
-            toolbar: [
-                [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
-                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                ['bold', 'italic', 'underline'],
-                ['link', 'blockquote', 'code-block'],
-                [{ 'align': [] }],
-                ['image', 'video']
-            ]
-        },
-        placeholder: 'Write your review here...',
-        readOnly: false,
-    });
+    <script>
+        // Initialize Quill editor
+        var quill = new Quill('#editor', {
+            theme: 'snow', // You can use 'snow' or 'bubble' theme
+            modules: {
+                toolbar: [
+                    [{
+                        'header': '1'
+                    }, {
+                        'header': '2'
+                    }, {
+                        'font': []
+                    }],
+                    [{
+                        'list': 'ordered'
+                    }, {
+                        'list': 'bullet'
+                    }],
+                    ['bold', 'italic', 'underline'],
+                    ['link', 'blockquote', 'code-block'],
+                    [{
+                        'align': []
+                    }],
+                    ['image', 'video']
+                ]
+            },
+            placeholder: 'Write your review here...',
+            readOnly: false,
+        });
 
-    // On form submission, capture the content of the editor
-    document.querySelector('form').onsubmit = function() {
-        var reviewContent = quill.root.innerHTML;
-        console.log(reviewContent); // You can send this to the server
-    };
-</script>
-
+        // On form submission, capture the content of the editor
+        document.querySelector('form').onsubmit = function() {
+            var reviewContent = quill.root.innerHTML;
+            console.log(reviewContent); // You can send this to the server
+        };
+    </script>
 @endpush

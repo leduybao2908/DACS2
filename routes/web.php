@@ -10,11 +10,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\PropertySearchController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Auth\SocialController;
 use App\Http\Controllers\InquiryController;
 
 // Route để in thông tin tin nhắn theo mail_id
 Route::get('/print/{room}', [InquiryController::class, 'print'])->name('print');
 
+Route::get('login/facebook', [SocialController::class, 'redirectToFacebook'])->name('facebook.login');
+Route::get('login/facebook/callback', [SocialController::class, 'handleFacebookCallback']);
 Route::get('/RoomCity/{city}',  [PropertySearchController::class, 'RoomCity'])->name('RoomCity');
 Route::get('/search', [PropertySearchController::class, 'search'])->name('property.search');
 Route::get('/contact-us', [ContactController::class, 'showContactForm'])->name('contact.us');
@@ -29,7 +32,7 @@ Route::post('/submit-request', [InquiryController::class, 'store']);
 Route::middleware(['auth', 'verified'])->group(function () {
     // Dashboard
     Route::get('/dashboard', function () {
-        return view('user.dashboard.dashboard');
+        return view(view: 'user.dashboard.dashboard');
     })->name('dashboard');
     
     // User Profile
