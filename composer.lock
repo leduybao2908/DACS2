@@ -803,6 +803,7 @@
             },
             "time": "2024-11-01T03:51:45+00:00"
         },
+        {
             "name": "firebase/php-jwt",
             "version": "v6.10.1",
             "source": {

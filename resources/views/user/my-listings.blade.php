@@ -97,7 +97,7 @@
                                     <tr>
                                         <td class="image myelist">
                                             <a href="{{ route('rooms.show', $room->room_id) }}">
-                                                <img alt="property-image" src="{{ asset('storage/' . $room->first_image) }}"
+                                                <img alt="property-image" src="data:image/png;base64,{{ $room->first_image }}"
                                                     class="img-fluid">
                                             </a>
                                         </td>

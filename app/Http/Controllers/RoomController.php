@@ -65,21 +65,21 @@ class RoomController extends Controller
 
         // Handle image uploads after saving the room (so we can use room_id)
         if ($request->hasFile('images')) {
-            $imagePaths = [];
+            $imageData = [];
             foreach ($request->file('images') as $image) {
-                // Generate unique filename based on owner_id, room_id, and current time
-                $filename = Auth::id() . '-'  . time() . '.' . $image->getClientOriginalExtension();
-
-                // Store image
-                $path = $image->storeAs('rooms', $filename, 'public');
-
-                $imagePaths[] = $path;
+                // Lấy nội dung của ảnh và chuyển thành chuỗi base64
+                $imageContent = file_get_contents($image->getRealPath());
+                $base64Image = base64_encode($imageContent);
+        
+                // Lưu chuỗi base64 vào mảng
+                $imageData[] = $base64Image;
             }
-
-            // Update the images after uploading
-            $room->images = json_encode($imagePaths);
-            $room->save();  
+        
+            // Lưu chuỗi base64 dưới dạng JSON vào cơ sở dữ liệu
+            $room->images = json_encode($imageData);
+            $room->save();
         }
+    
 
         // Redirect with success message
         return redirect()->route('my-listings')->with('success', 'Room added successfully!');
@@ -147,18 +147,18 @@ public function displayAllRooms()
 
     // Nếu có hình ảnh mới, xử lý việc lưu trữ hình ảnh
     if ($request->hasFile('images')) {
-        $imagePaths = [];
+        $imageData = [];
         foreach ($request->file('images') as $image) {
-            // Generate unique filename based on owner_id, room_id, and current time
-            $filename = Auth::id() . '-'  . '.' . $image->getClientOriginalExtension();
-            
-            $path = $image->storeAs('rooms', $filename, 'public');
-
-            $imagePaths[] = $path;
+            // Lấy nội dung của ảnh và chuyển thành chuỗi base64
+            $imageContent = file_get_contents($image->getRealPath());
+            $base64Image = base64_encode($imageContent);
+    
+            // Lưu chuỗi base64 vào mảng
+            $imageData[] = $base64Image;
         }
-
-        $room->images = json_encode($imagePaths);
-        $room->save();  
+    
+        // Lưu chuỗi base64 dưới dạng JSON vào cơ sở dữ liệu
+        $room->images = json_encode($imageData);
     }
 
 
