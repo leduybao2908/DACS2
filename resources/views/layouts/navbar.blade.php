@@ -28,7 +28,7 @@
 
                         <li><a href="#">Pages</a>
                             <ul>
-                                <li><a href="{{ route('shop-order') }}">History</a>
+                                {{-- <li><a href="{{ route('print') }}">Print Bill</a> --}}
                                    
                                 </li>
                                 <li><a href="#">User Panel</a>

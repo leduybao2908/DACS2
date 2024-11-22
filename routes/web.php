@@ -12,6 +12,8 @@ use App\Http\Controllers\PropertySearchController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InquiryController;
 
+// Route để in thông tin tin nhắn theo mail_id
+Route::get('/print/{room}', [InquiryController::class, 'print'])->name('print');
 
 Route::get('/RoomCity/{city}',  [PropertySearchController::class, 'RoomCity'])->name('RoomCity');
 Route::get('/search', [PropertySearchController::class, 'search'])->name('property.search');
@@ -98,7 +100,7 @@ Route::get('/contact-us', function () { return view('uneditfile.contact-us'); })
 Route::get('/about', function () { return view('uneditfile.about'); })->name('about');
 Route::get('/404', function () { return view('uneditfile.404'); })->name('404');
 Route::get('/faq', function () { return view('uneditfile.faq'); })->name('faq');
-Route::get('/shop-order', function () { return view('uneditfile.shop-order'); })->name('shop-order');
+Route::get('/shop-order', function () { return view('views.print'); })->name('shop-order');
 Route::get('/user-profile', function () { return view('user.profile'); })->name('user-profile');
 Route::get('/dashboard', function () { return view('uneditfile.dashboard'); })->name('dashboard');
 Route::get('/add-property', function () { return view('user.add-property'); })->name('add-property');

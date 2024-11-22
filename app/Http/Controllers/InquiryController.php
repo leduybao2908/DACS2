@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\PDF;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Room;
+use App\Models\Notification;
+
+
 class InquiryController extends Controller
 {       
 
@@ -79,4 +84,25 @@ public function markNotificationsAsRead()
     // Trả về phản hồi hoặc chuyển hướng
     return redirect()->back()->with('success', 'Request submitted successfully!');
 }
+
+public function print($room_id)
+{
+    // Lấy thông tin phòng
+    $room = Room::with('owner')->find($room_id);
+
+    if (!$room) {
+        return redirect()->back()->with('error', 'Room not found.');
+    }
+
+    // Lấy thông tin notification liên quan đến phòng
+    $notification = Notification::where('room_id', $room_id)->first();
+
+    if (!$notification) {
+        return redirect()->back()->with('error', 'No notification found for this room.');
+    }
+
+    // Trả về view và truyền thông tin phòng và notification
+    return view('print', compact('room', 'notification'));
+}
+
 }

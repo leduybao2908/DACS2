@@ -42,6 +42,7 @@
                         @endif
                         <h3 class="text-center">Your Sent Messages</h3>
                         <div class="notification-list">
+                        
                             @foreach ($messages as $message)
                             <div class="notification-item {{ $message->is_read ? '' : 'unread' }}">
                                 <div class="notification-header d-flex justify-content-between align-items-center">
@@ -49,20 +50,31 @@
                                         <strong>{{ $message->name_request }}</strong> ({{ $message->mail_request }})
                                         <span class="notification-date">{{ \Carbon\Carbon::parse($message->created_at)->format('d M, Y') }}</span>
                                     </div>
-                                    <form action="{{ route('notifications.destroy', $message->mail_id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this message?');">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm ml-2">Delete</button>
-                                    </form>
                                 </div>
                                 <div class="notification-body">
                                     <p><strong>Message:</strong> {!! nl2br(e($message->message)) !!}</p>
                                     <p><strong>Phone Number:</strong> {{ $message->phone_number }}</p>
                                     <p><strong>Property ID:</strong> {{ $message->room_id }}</p>
                                 </div>
-                            </div>
                             
+                                <!-- Nút Print và Delete ở dưới góc -->
+                                <div class="btn-container">
+                                    <!-- Nút Print -->
+                                    <form class="mr-2">
+                                        <a href="{{ route('print', ['room' => $message->room_id]) }}" class="btn btn-print btn-sm">Print</a>
+                                    </form>
+                                    
+                                    
+                                    <!-- Nút Delete -->
+                                    <form action="{{ route('notifications.destroy', $message->mail_id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this message?');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-delete btn-sm">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
                             @endforeach
+                            
                         </div>
                     </div>
                 </div>
