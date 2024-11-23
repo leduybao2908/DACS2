@@ -11409,6 +11409,12 @@ section.featured.home15 {
     margin-bottom: 10px;
   }
 }
+
+.homes-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Hoặc 'contain' nếu bạn muốn ảnh giữ nguyên tỷ lệ */
+}
 @media screen and (max-width: 991px) {
   .featured.home15 .item.landscapes.no-pb {
     padding-bottom: 0px;

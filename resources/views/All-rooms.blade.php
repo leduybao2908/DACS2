@@ -3,21 +3,20 @@
 @section('body-class', 'inner-pages agents hp-6 full hd-white')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('font/flaticon.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/fontawesome-5-all.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('font/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-5-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <!-- ARCHIVES CSS -->
-    <link rel="stylesheet" href="{{ asset('css/search.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/lightcase.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/menu.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/styles.css')}}">
-    <link rel="stylesheet" id="color" href="{{ asset('css/default.css')}}">
-   
+    <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/lightcase.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" id="color" href="{{ asset('css/default.css') }}">
 @endpush
 
 @section('content')
@@ -47,8 +46,7 @@
 
                                     <div class="row">
                                         <div class="rld-single-input">
-                                            <input name="title" type="text"
-                                                placeholder="Enter Keyword...">
+                                            <input name="title" type="text" placeholder="Enter Keyword...">
                                         </div>
                                         <div class="rld-single-select ml-22">
                                             <select class="select single-select" name="type">
@@ -220,7 +218,7 @@
                                                     option.addEventListener('click', function() {
                                                         // Cập nhật giá trị hiển thị trong select box
                                                         selectBoxCity.querySelector('.selected-option').textContent = option
-                                                        .textContent;
+                                                            .textContent;
 
                                                         // Gán giá trị của thành phố vào input ẩn
                                                         selectedCityInput.value = option.textContent;
@@ -264,16 +262,16 @@
                                                     <!-- Area Range -->
                                                     <div class="range-slider">
                                                         <label>Area Size</label>
-                                                        <div id="area-range" data-min="0"
-                                                            data-max="100" data-unit="sq ft"></div>
+                                                        <div id="area-range" data-min="0" data-max="100"
+                                                            data-unit="sq ft"></div>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                     <br>
                                                     <!-- Price Range -->
                                                     <div class="range-slider">
                                                         <label>Price Range</label>
-                                                        <div id="price-range" data-min="0"
-                                                            data-max="10000000" data-unit="VND"></div>
+                                                        <div id="price-range" data-min="0" data-max="10000000"
+                                                            data-unit="VND"></div>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </div>
@@ -302,26 +300,33 @@
                     <div class="cod-pad single detail-wrapper mr-2 mt-0 d-flex justify-content-md-end align-items-center">
                         <div class="input-group border rounded input-group-lg w-auto mr-4">
                             <form method="GET" action="{{ route('property.search') }}">
-                                <label class="input-group-text bg-transparent border-0 text-uppercase letter-spacing-093 pr-1 pl-3"
-                                       for="inputGroupSelect01">
+                                <label
+                                    class="input-group-text bg-transparent border-0 text-uppercase letter-spacing-093 pr-1 pl-3"
+                                    for="inputGroupSelect01">
                                     <i class="fas fa-align-left fs-16 pr-2"></i>Sortby:
                                 </label>
-                                <select class="form-control border-0 bg-transparent shadow-none p-0 selectpicker sortby" name="sortby" onchange="this.form.submit()">
-                                    <option value="most_viewed" {{ request('sortby') == 'most_viewed' ? 'selected' : '' }}>Most Viewed</option>
-                                    <option value="price_asc" {{ request('sortby') == 'price_asc' ? 'selected' : '' }}>Price (low to high)</option>
-                                    <option value="price_desc" {{ request('sortby') == 'price_desc' ? 'selected' : '' }}>Price (high to low)</option>
-                                    <option value="title_asc" {{ request('sortby') == 'title_asc' ? 'selected' : '' }}>Title (A to Z)</option>
-                                    <option value="title_desc" {{ request('sortby') == 'title_desc' ? 'selected' : '' }}>Title (Z to A)</option>
+                                <select class="form-control border-0 bg-transparent shadow-none p-0 selectpicker sortby"
+                                    name="sortby" onchange="this.form.submit()">
+                                    <option value="most_viewed"
+                                        {{ request('sortby') == 'most_viewed' ? 'selected' : '' }}>Most Viewed</option>
+                                    <option value="price_asc" {{ request('sortby') == 'price_asc' ? 'selected' : '' }}>
+                                        Price (low to high)</option>
+                                    <option value="price_desc" {{ request('sortby') == 'price_desc' ? 'selected' : '' }}>
+                                        Price (high to low)</option>
+                                    <option value="title_asc" {{ request('sortby') == 'title_asc' ? 'selected' : '' }}>
+                                        Title (A to Z)</option>
+                                    <option value="title_desc" {{ request('sortby') == 'title_desc' ? 'selected' : '' }}>
+                                        Title (Z to A)</option>
                                 </select>
-                            
+
                                 <!-- Truyền tất cả các tham số vào form -->
-                                @foreach(request()->except('sortby', '_token') as $key => $value)
+                                @foreach (request()->except('sortby', '_token') as $key => $value)
                                     <input type="hidden" name="{{ $key }}" value="{{ $value }}">
                                 @endforeach
                             </form>
                         </div>
-                        
-                       
+
+
                     </div>
                 </div>
             </section>
@@ -338,13 +343,16 @@
                                     <a href="{{ route('rooms.show', $room->room_id) }}" class="homes-img">
                                         <div class="homes-tag button alt rent">For Rent</div>
                                         <div class="homes-price">${{ number_format($room->price, 2) }}</div>
-                                        <img src="{{ asset('storage/' . json_decode($room->images)[0] ?? 'images/default.jpg') }}"
-                                            alt="home-1" class="img-responsive">
+                                        <img src="data:image/png;base64,{{ $room->first_image }}" alt="home-1"
+                                            class="img-responsive">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <style>
+
+                    </style>
                     <!-- homes content -->
                     <div class="col-lg-8 col-md-12 homes-content pb-0 mb-4" data-aos="fade-up">
                         <!-- homes address -->
@@ -360,44 +368,52 @@
                         <p class="homes-location">
                             <i class="fas fa-location-arrow"></i> <span>{{ $room->location }}</span>
                         </p>
-                        
+
                         <p class="homes-city">
                             <i class="fa fa-building"></i> <span>{{ $room->city }}</span>
                         </p>
-                        
+
                         <p class="homes-type">
                             <i class="fa fa-home"></i> <span>{{ $room->type }}</span>
                         </p>
-                        
+
                         <p class="homes-description">
                             {!! \Illuminate\Support\Str::limit(strip_tags($room->description), 60, '...') !!}
                         </p>
-   
+
                         <style>
                             .homes-address,
-.homes-area,
-.homes-location,
-.homes-city,
-.homes-type,
-.homes-description {
-    overflow: hidden; /* Ensure no content spills out */
-    text-overflow: ellipsis; /* Truncate text with ellipsis when overflow occurs */
-    white-space: nowrap; /* Prevent text from wrapping to the next line */
-}
+                            .homes-area,
+                            .homes-location,
+                            .homes-city,
+                            .homes-type,
+                            .homes-description {
+                                overflow: hidden;
+                                /* Ensure no content spills out */
+                                text-overflow: ellipsis;
+                                /* Truncate text with ellipsis when overflow occurs */
+                                white-space: nowrap;
+                                /* Prevent text from wrapping to the next line */
+                            }
 
-.project-single {
-    overflow: visible; /* Allow the entire project to overflow */
-    display: flex; /* Use flex to align items */
-    justify-content: flex-start; /* Align content to the left */
-}
+                            .project-single {
+                                overflow: visible;
+                                /* Allow the entire project to overflow */
+                                display: flex;
+                                /* Use flex to align items */
+                                justify-content: flex-start;
+                                /* Align content to the left */
+                            }
 
-.homes-location,
-.homes-area,
-.homes-city,
-.homes-type {
-    margin-right: 20px; /* Space between the elements */
-    display: inline-block; /* Allow elements to stay on the same line */
-}
+                            .homes-location,
+                            .homes-area,
+                            .homes-city,
+                            .homes-type {
+                                margin-right: 20px;
+                                /* Space between the elements */
+                                display: inline-block;
+                                /* Allow elements to stay on the same line */
+                            }
                         </style>
 
                         <div class="room-rating">

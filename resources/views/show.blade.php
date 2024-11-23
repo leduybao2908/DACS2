@@ -71,7 +71,7 @@
                                     @foreach (json_decode($room->images) as $index => $image)
                                         <div class="item carousel-item {{ $index === 0 ? 'active' : '' }}"
                                             data-slide-number="{{ $index }}">
-                                            <img src="{{ asset('storage/' . $image) }}" class="img-fluid"
+                                            <img src="data:image/png;base64,{{$image}}" class="img-fluid"
                                                 alt="slider-listing">
                                         </div>
                                     @endforeach
@@ -92,7 +92,7 @@
                                         <li class="list-inline-item {{ $index === 0 ? 'active' : '' }}">
                                             <a id="carousel-selector-{{ $index }}"
                                                 data-slide-to="{{ $index }}" data-target="#listingDetailsSlider">
-                                                <img src="{{ asset('storage/' . $image) }}" class="img-fluid"
+                                                <img src="data:image/png;base64,{{$image}}" class="img-fluid"
                                                     alt="listing-small">
                                             </a>
                                         </li>
