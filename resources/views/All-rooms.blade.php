@@ -461,21 +461,21 @@
                         </li>
                     @else
                         <li class="page-item">
-                            <a class="page-link" href="{{ $rooms->previousPageUrl() . '&' . http_build_query(request()->query()) }}" tabindex="-1">Previous</a>
+                            <a class="page-link" href="{{ $rooms->previousPageUrl() . '&' . http_build_query(request()->except('page')) }}" tabindex="-1">Previous</a>
                         </li>
                     @endif
             
                     <!-- Page Number Links -->
                     @foreach ($rooms->getUrlRange(1, $rooms->lastPage()) as $page => $url)
                         <li class="page-item {{ $page == $rooms->currentPage() ? 'active' : '' }}">
-                            <a class="page-link" href="{{ $url . '&' . http_build_query(request()->query()) }}">{{ $page }}</a>
+                            <a class="page-link" href="{{ $url . '&' . http_build_query(request()->except('page')) }}">{{ $page }}</a>
                         </li>
                     @endforeach
             
                     <!-- Next Page Link -->
                     @if ($rooms->hasMorePages())
                         <li class="page-item">
-                            <a class="page-link" href="{{ $rooms->nextPageUrl() . '&' . http_build_query(request()->query()) }}">Next</a>
+                            <a class="page-link" href="{{ $rooms->nextPageUrl() . '&' . http_build_query(request()->except('page')) }}">Next</a>
                         </li>
                     @else
                         <li class="page-item disabled">
@@ -484,6 +484,7 @@
                     @endif
                 </ul>
             </nav>
+            
         </div>
     </section>
     <!-- END SECTION PROPERTIES LISTING -->
