@@ -154,7 +154,7 @@
                                             <img src="{{ $review->user->image_url ? asset('storage/' . $review->user->image_url) : 'images/default-profile.jpg' }}"
                                                 class="img-fluid" alt="User Profile">
                                         </div>
-
+                    
                                         <div class="col-md-10 comments-info">
                                             <div class="conra">
                                                 <h5 class="mb-2">{{ $review->user->name }}</h5>
@@ -162,26 +162,23 @@
                                                     <div class="detail-list-rating mr-0">
                                                         <!-- Display stars based on rating -->
                                                         @for ($i = 1; $i <= 5; $i++)
-                                                            <i
-                                                                class="fa fa-star {{ $i <= $review->rating ? '' : 'fa-star-o' }}"></i>
+                                                            <i class="fa fa-star {{ $i <= $review->rating ? '' : 'fa-star-o' }}"></i>
                                                         @endfor
-
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- Format and display the date of review -->
-                                            <p class="mb-4">
-                                                {{ \Carbon\Carbon::parse($review->date)->format('M d, Y H:i:s') }}</p>
+                                            <p class="mb-4">{{ \Carbon\Carbon::parse($review->date)->format('M d, Y H:i:s') }}</p>
                                             <!-- Display review comment with line breaks -->
                                             <p>{!! nl2br(e($review->comment)) !!}</p>
-
+                    
                                             <!-- Display review images if available -->
                                             @if ($review->images_url && is_array(json_decode($review->images_url)))
                                                 <div class="resti">
-                                                    @foreach (json_decode($review->images_url) as $image)
+                                                    @foreach (json_decode($review->images_url) as $imageBase64)
                                                         <div class="rest">
-                                                            <img src="{{ asset('storage/' . $image) }}" class="img-fluid"
-                                                                alt="Review Image">
+                                                            <!-- Use the base64 data directly -->
+                                                            <img src="{{ $imageBase64 }}" class="img-fluid" alt="Review Image">
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -192,6 +189,7 @@
                             </ul>
                         </div>
                     </section>
+                    
 
                     <!-- End Reviews -->
                     <!-- Star Add Review -->

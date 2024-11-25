@@ -11,7 +11,8 @@ class ReviewController extends Controller
 {
     // Store a new review
     // Store a new review
-public function store(Request $request, Room $room)
+
+    public function store(Request $request, Room $room)
 {
     // Validate the request
     $request->validate([
@@ -21,15 +22,17 @@ public function store(Request $request, Room $room)
         'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
     ]);
 
-    // Store images if any
+    // Convert images to base64 if any
     $images = [];
     if ($request->hasFile('images')) {
         foreach ($request->file('images') as $image) {
-            // Generate a custom filename based on user_id, room_id, and the current timestamp
-            $filename = Auth::id() . '-' . $room->room_id . '-' . Carbon::now()->timestamp . '.' . $image->getClientOriginalExtension();
-            
-            // Store image with the generated filename
-            $images[] = $image->storeAs('reviews', $filename, 'public');
+            // Read the file contents
+            $fileContent = file_get_contents($image->getRealPath());
+
+            // Convert the file content to base64
+            $base64Image = 'data:' . $image->getClientMimeType() . ';base64,' . base64_encode($fileContent);
+
+            $images[] = $base64Image;
         }
     }
 
@@ -39,7 +42,7 @@ public function store(Request $request, Room $room)
         'room_id' => $room->room_id,
         'rating' => $request->rating,
         'comment' => $request->comment,
-        'images_url' => json_encode($images),
+        'images_url' => json_encode($images), // Store base64 images as JSON
         'date' => now(),  // Set current date and time
     ]);
 
@@ -54,7 +57,6 @@ public function store(Request $request, Room $room)
     return redirect()->route('rooms.show', ['room' => $room->room_id])->with('success', 'Review added successfully!');
 }
 
-    
 
     public function show($room_id)
     {
