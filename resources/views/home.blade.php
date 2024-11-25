@@ -81,7 +81,7 @@
                             <a href="{{ route('rooms.show', $room->room_id) }}" class="homes-img">
                                 <div class="homes-tag button alt sale">For Rent</div>
                                 @if ($room->images)
-                                    <img src="{{ asset('storage/' . json_decode($room->images)[0] ?? 'images/default.jpg') }}" alt="home-1" class="img-responsive">
+                                    <img src="data:image/png;base64,{{$room->first_image}}" alt="home-1" class="img-responsive">
                                 @else
                                     <img src="default-image.jpg" alt="default" class="img-responsive">
                                 @endif
