@@ -102,6 +102,7 @@
                                             </a>
                                         </td>
                                         <td>
+                                         
                                             <div class="inner">
                                                 <h2>{{ $room->title }}</h2>
                                                 <figure><i class="lni-map-marker"></i> {{ $room->location }}</figure>

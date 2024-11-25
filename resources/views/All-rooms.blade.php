@@ -338,7 +338,7 @@
                                     <a href="{{ route('rooms.show', $room->room_id) }}" class="homes-img">
                                         <div class="homes-tag button alt rent">For Rent</div>
                                         <div class="homes-price">${{ number_format($room->price, 2) }}</div>
-                                        <img src="{{ asset('storage/' . json_decode($room->images)[0] ?? 'images/default.jpg') }}"
+                                        <img src="data:image/png;base64,{{ $room->first_image }}"
                                             alt="home-1" class="img-responsive">
                                     </a>
                                 </div>
@@ -398,6 +398,17 @@
     margin-right: 20px; /* Space between the elements */
     display: inline-block; /* Allow elements to stay on the same line */
 }
+
+.homes-img {
+    aspect-ratio: 4 / 3; /* Tỷ lệ 4:3 hoặc thay bằng tỷ lệ bạn muốn */
+    overflow: hidden;
+}
+.homes-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
                         </style>
 
                         <div class="room-rating">
