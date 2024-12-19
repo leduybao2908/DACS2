@@ -98,28 +98,34 @@
                             <h5 class="mb-4">Gallery</h5>
                             <div class="carousel-inner">
                                 @foreach (json_decode($room->images) as $index => $image)
-                                    <div class="item carousel-item {{ $index === 0 ? 'active' : '' }}" data-slide-number="{{ $index }}">
-                                        <img src="{{ asset('storage/' . $image) }}" class="img-fluid" alt="slider-listing">
+                                    <div class="item carousel-item {{ $index === 0 ? 'active' : '' }}"
+                                        data-slide-number="{{ $index }}">
+                                        @if ($index === 0)
+                <div class="item carousel-item active" data-slide-number="{{ $index }}">
+                    <img src="data:image/png;base64,{{$image}}" class="img-fluid" alt="slider-listing">
+                </div>
+            @endif
                                     </div>
                                 @endforeach
                             </div>
-                            <a class="carousel-control left" href="#listingDetailsSlider" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a class="carousel-control right" href="#listingDetailsSlider" data-slide="next">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
+                            <a class="carousel-control left" href="#listingDetailsSlider" data-slide="prev"><i
+                                    class="fa fa-angle-left"></i></a>
+                            <a class="carousel-control right" href="#listingDetailsSlider" data-slide="next"><i
+                                    class="fa fa-angle-right"></i></a>
 
                             <!-- main slider carousel nav controls -->
                             <ul class="carousel-indicators smail-listing list-inline">
                                 @php
+                                    // Decode the JSON string into an array
                                     $images = json_decode($room->images);
                                 @endphp
 
                                 @foreach ($images as $index => $image)
                                     <li class="list-inline-item {{ $index === 0 ? 'active' : '' }}">
-                                        <a id="carousel-selector-{{ $index }}" data-slide-to="{{ $index }}" data-target="#listingDetailsSlider">
-                                            <img src="{{ asset('storage/' . $image) }}" class="img-fluid" alt="listing-small">
+                                        <a id="carousel-selector-{{ $index }}"
+                                            data-slide-to="{{ $index }}" data-target="#listingDetailsSlider">
+                                            <img src="data:image/png;base64,{{$image}}" class="img-fluid"
+                                                alt="listing-small">
                                         </a>
                                     </li>
                                 @endforeach
@@ -205,137 +211,81 @@
     </div>
     <script>
     function printInvoice() {
-        const printContent = document.getElementById('invoice').innerHTML;
-        const newWindow = window.open('', '_blank');
-        newWindow.document.write(`
-            <html>
-            <head>
-                <title>Print Invoice</title>
-                <style>
-                    /* Cải thiện căn chỉnh tổng thể */
-.pro-wrapper, .detail-wrapper-body {
-    padding: 15px;
+    const printContent = document.getElementById('invoice').innerHTML;
+
+    // Tạo một cửa sổ mới để in
+    const newWindow = window.open('', '_blank');
+    newWindow.document.write(`
+        <html>
+        <head>
+            <title>Print Invoice</title>
+            <style>
+                /* Cải thiện căn chỉnh tổng thể */
+                .pro-wrapper, .detail-wrapper-body {
+                    padding: 15px;
+                }
+
+                .listing-title-bar h3 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #333;
+                    margin-bottom: 10px;
+                }
+
+                /* Chỉ in ảnh trong gallery */
+                .print-container img {
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                /* Ẩn các phần không cần thiết */
+                .print-button {
+                    display: none !important;
+                }
+
+                .carousel-inner, .carousel-indicators, .carousel-control {
+                    display: none; /* Ẩn các phần tử không cần thiết trong gallery */
+                }
+
+                /* In ẩn các phần không cần thiết */
+                .carousel-item img {
+                    display: block; /* Chỉ hiển thị ảnh trong carousel */
+                }
+            </style>
+        </head>
+        <body>
+            ${printContent}
+        </body>
+        </html>
+    `);
+    newWindow.document.close();
+    newWindow.print();
 }
 
-/* Cải thiện khoảng cách và kích thước */
-.listing-title-bar h3 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.category-tag {
-    font-size: 14px;
-    color: #007bff;
-    padding: 2px 8px;
-    background-color: #e0f4ff;
-    border-radius: 3px;
-}
-
-.listing-title-bar p, .listing-title-bar a {
-    font-size: 14px;
-    color: #555;
-    margin-top: 5px;
-}
-
-/* Section giá và diện tích */
-.single .detail-wrapper-body {
-    margin-bottom: 20px;
-}
-
-.single .listing-title-bar h4 {
-    font-size: 18px;
-    color: #007bff;
-    margin-top: 10px;
-}
-
-.single .listing-title-bar p {
-    font-size: 13px;
-    color: #555;
-}
-
-/* Bố cục cho thông tin khách hàng */
-.print-container .row {
-    margin-top: 15px;
-}
-
-.print-container .col-md-6 {
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.print-container .col-md-6 p {
-    font-size: 14px;
-    color: #333;
-}
-
-/* Cải thiện các phần tử hình ảnh, văn bản, khoảng cách */
-.container-fluid {
-    width: 100%;
-    padding: 0;
-}
-
-@media print {
-    /* Cải thiện bố cục khi in */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #fff;
-        color: #000;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* In ẩn các phần không cần thiết */
-    .print-button {
-        display: none !important;
-    }
-
-    .pro-wrapper, .detail-wrapper-body {
-        width: 100%;
-        padding: 10px !important;
-    }
-
-    .listing-title-bar {
-        border-bottom: 2px solid #007bff;
-        padding-bottom: 15px;
-    }
-
-    .listing-title-bar h3 {
-        font-size: 22px;
-    }
-
-    .listing-title-bar h4 {
-        font-size: 18px;
-    }
-
-    .listing-title-bar p {
-        margin-top: 5px;
-        font-size: 14px;
-    }
-
-    /* Cải thiện khoảng cách giữa các cột thông tin khách hàng */
-    .print-container .col-md-6 {
-        width: 50%;
-        padding: 15px;
-        box-sizing: border-box;
-    }
-}
-
-                </style>
-            </head>
-            <body>
-                ${printContent}
-            </body>
-            </html>
-        `);
-        newWindow.document.close();
-        newWindow.print();
-    }
 </script>
 </section>
 
 <style>
+@media print {
+    /* Ẩn tất cả các hình ảnh không cần thiết */
+    .carousel-item img {
+        display: block; /* Chỉ hiển thị ảnh trong carousel */
+    }
+
+    .carousel-inner, .carousel-indicators, .carousel-control {
+        display: none; /* Ẩn các phần tử không cần thiết trong gallery */
+    }
+
+    .print-container img {
+        display: block;
+        margin: 0 auto; /* Căn giữa ảnh khi in */
+    }
+
+    /* Ẩn tất cả các phần tử khác */
+    .print-button {
+        display: none !important;
+    }
+}
 
 .print-button {
     display: inline-block;
