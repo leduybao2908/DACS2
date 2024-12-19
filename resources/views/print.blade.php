@@ -2,6 +2,8 @@
 @section('title', 'Room Details')
 @section('body-class', 'inner-pages sin-1 homepage-4 hd-white')
 @push('styles')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.min.css">
+
     <!-- Quill.js Styles -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <!-- FONT AWESOME -->
@@ -32,7 +34,9 @@
 
 @section('content')
 <section class="single-proper blog details container-fluid">
-    <div class="container-fluid d-flex align-items-center justify-content-center" style="width: 100%;">
+    <a href="#" onclick="printInvoice()" class="print-button" >Print this invoice</a>
+<br> <br> <br>
+    <div class="container-fluid d-flex align-items-center justify-content-center" style="width: 100%;" id="invoice">
         <!-- Nội dung của bạn -->
         <div class="row" style="width: 100%;"> <!-- Chiếm toàn bộ chiều rộng -->
             <div class="col-12"> <!-- Chiếm toàn bộ chiều rộng -->
@@ -52,29 +56,34 @@
                                         </div>
                                     </div>
                                 </div>
+                        
+                                <!-- Section Giá cả và diện tích -->
                                 <div class="single detail-wrapper mr-2">
                                     <div class="detail-wrapper-body">
                                         <div class="listing-title-bar">
+                                            <p><strong>Price:</strong> This is the total price for the room.</p>
+
                                             <h4>${{ number_format($room->price, 2) }}</h4>
                                             <div class="mt-0">
                                                 <a href="#listing-location" class="listing-address">
+                                                    <p><strong>Area:</strong> The total area of the room in square feet (sqft).</p>
+
                                                     <p>{{ $room->area }} sqft</p>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                        
+                                <!-- Customer Information -->
                                 <div class="print-container container-fluid">
                                     <h3 class="text-center mb-3">Customer information</h3>
                                     <div class="row">
-                                        <div class="col-1"></div>
-
-                                        <div class="col-6">
+                                        <div class="col-md-6">
                                             <p><strong>Name:</strong> {{ $notification->name_request }}</p>
                                             <p><strong>Email:</strong> {{ $notification->mail_request }}</p>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-md-6">
                                             <p><strong>Phone Number:</strong> {{ $notification->phone_number }}</p>
                                             <p><strong>Message:</strong> {!! nl2br(e($notification->message)) !!}</p>
                                         </div>
@@ -82,6 +91,7 @@
                                 </div>
                             </div>
                         </section>
+                        
 
                         <!-- Gallery -->
                         <div id="listingDetailsSlider" class="carousel listing-details-sliders slide mb-30">
@@ -183,6 +193,7 @@
                                     @endforeach
                                 </ul>
                             </div>
+                            
                         </section>
 
                         <!-- Notification Section -->
@@ -192,9 +203,166 @@
             </div>
         </div>
     </div>
+    <script>
+    function printInvoice() {
+        const printContent = document.getElementById('invoice').innerHTML;
+        const newWindow = window.open('', '_blank');
+        newWindow.document.write(`
+            <html>
+            <head>
+                <title>Print Invoice</title>
+                <style>
+                    /* Cải thiện căn chỉnh tổng thể */
+.pro-wrapper, .detail-wrapper-body {
+    padding: 15px;
+}
+
+/* Cải thiện khoảng cách và kích thước */
+.listing-title-bar h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.category-tag {
+    font-size: 14px;
+    color: #007bff;
+    padding: 2px 8px;
+    background-color: #e0f4ff;
+    border-radius: 3px;
+}
+
+.listing-title-bar p, .listing-title-bar a {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Section giá và diện tích */
+.single .detail-wrapper-body {
+    margin-bottom: 20px;
+}
+
+.single .listing-title-bar h4 {
+    font-size: 18px;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+.single .listing-title-bar p {
+    font-size: 13px;
+    color: #555;
+}
+
+/* Bố cục cho thông tin khách hàng */
+.print-container .row {
+    margin-top: 15px;
+}
+
+.print-container .col-md-6 {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.print-container .col-md-6 p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Cải thiện các phần tử hình ảnh, văn bản, khoảng cách */
+.container-fluid {
+    width: 100%;
+    padding: 0;
+}
+
+@media print {
+    /* Cải thiện bố cục khi in */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* In ẩn các phần không cần thiết */
+    .print-button {
+        display: none !important;
+    }
+
+    .pro-wrapper, .detail-wrapper-body {
+        width: 100%;
+        padding: 10px !important;
+    }
+
+    .listing-title-bar {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 15px;
+    }
+
+    .listing-title-bar h3 {
+        font-size: 22px;
+    }
+
+    .listing-title-bar h4 {
+        font-size: 18px;
+    }
+
+    .listing-title-bar p {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    /* Cải thiện khoảng cách giữa các cột thông tin khách hàng */
+    .print-container .col-md-6 {
+        width: 50%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+}
+
+                </style>
+            </head>
+            <body>
+                ${printContent}
+            </body>
+            </html>
+        `);
+        newWindow.document.close();
+        newWindow.print();
+    }
+</script>
 </section>
 
 <style>
+
+.print-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff; /* Màu nền xanh */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Loại bỏ gạch chân */
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.print-button:hover {
+    background-color: #0056b3; /* Đậm hơn khi hover */
+    transform: translateY(-2px); /* Nổi lên một chút */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.print-button:active {
+    transform: translateY(0); /* Hiệu ứng nhấn xuống */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Đảm bảo mở rộng chiều rộng */
 .single-proper.blog.details {
     width: 100%;
@@ -238,6 +406,8 @@
     <script src="{{ asset('js/map-single.js') }}"></script>
     <script src="{{ asset('js/color-switcher.js') }}"></script>
     <script src="{{ asset('js/inner.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.min.js"></script>
+
 
     <!-- Date Dropper Script-->
     <script>
