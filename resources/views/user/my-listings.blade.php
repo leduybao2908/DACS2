@@ -130,8 +130,8 @@
                                         <td>{{ $room->city }}</td>
                                         <td>{{ $room->type }}</td>
                                         <td class="actions">
-                                            <a href="#" class="edit" data-room-id="{{ $room->room_id }}"
-                                                data-room="{{ json_encode($room) }}">
+                                            <a href="#" class="edit" onclick="scrollToEditSection(event)" data-room-id="{{ $room->room_id }}"
+                                                data-room="{{ json_encode($room) }} ">
                                                 <i class="lni-pencil"></i>Edit
                                             </a>
 
@@ -189,7 +189,7 @@
                         </div>
                     </div>
                     <div class="single-add-property">
-                        <h3>Property Description and Price</h3>
+                        <h3 id="property-section">Property Description and Price</h3>
                         <div class="property-form-group">
                             <form method="POST" enctype="multipart/form-data" id="editRoomForm">
                                 @csrf
@@ -512,7 +512,16 @@
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
     <!-- MAIN JS -->
     <script src="js/script.js"></script>
+
+
     <script>
+          function scrollToEditSection(event) {
+        event.preventDefault(); // Ngăn trình duyệt tải lại trang
+        const editSection = document.getElementById('property-section'); // Lấy phần cần cuộn tới
+        if (editSection) {
+            editSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Cuộn mượt
+        }
+    }
         document.querySelectorAll('.edit').forEach(button => {
             button.addEventListener('click', function(event) {
                 event.preventDefault();

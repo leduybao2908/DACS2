@@ -67,6 +67,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/change-password', function () {
         return view('user.change-password');
     })->name('change-password');
+
+    // Change Password
+    Route::put('/change-password', [ProfileController::class, 'updatePassword'])->name('change-password');
+
+    
 });
 
 Route::get('/all-rooms', [RoomController::class, 'displayAllRooms'])->name('all-rooms');
