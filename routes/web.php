@@ -67,6 +67,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/change-password', function () {
         return view('user.change-password');
     })->name('change-password');
+
+    // Change Password
+    Route::put('/change-password', [ProfileController::class, 'updatePassword'])->name('change-password');
+
+    
 });
 
 Route::get('/all-rooms', [RoomController::class, 'displayAllRooms'])->name('all-rooms');
@@ -108,7 +113,7 @@ Route::get('/user-profile', function () { return view('user.profile'); })->name(
 Route::get('/dashboard', function () { return view('uneditfile.dashboard'); })->name('dashboard');
 Route::get('/add-property', function () { return view('user.add-property'); })->name('add-property');
 Route::get('/payment-method', function () { return view('uneditfile.payment-method'); })->name('payment-method');
-Route::get('/sent', function () { return view('emails.contact'); })->name('payment-method');
+Route::get('/sent', function () { return view('emails.contact'); })->name('sent');
 
 Route::get('/send-email',function(){
     Mail::to('test@test.com')->send(new FirstMail("Chinh"));

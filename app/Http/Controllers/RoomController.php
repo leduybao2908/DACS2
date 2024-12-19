@@ -17,7 +17,7 @@ class RoomController extends Controller
 
     public function index()
     {
-        $rooms = Room::where('owner_id', Auth::id())->paginate(10); 
+        $rooms = Room::where('owner_id', Auth::id())->paginate(5); 
         return view('user.my-listings', compact('rooms'));  // Trả dữ liệu ra view
     }
 
@@ -102,7 +102,7 @@ class RoomController extends Controller
 public function displayAllRooms()
 {
     // Retrieve all rooms with pagination
-    $rooms = Room::paginate(10);
+    $rooms = Room::paginate(5);
     return view('All-rooms', compact('rooms'));
 }
     /**

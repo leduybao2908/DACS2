@@ -6,7 +6,7 @@
             <div class="left-side">
                 <!-- Logo -->
                 <div id="logo">
-                    <a href="/"><img src="images/logo-red.svg" alt=""></a>
+                    <a href="/"><img src="{{ asset('images/logo.png') }}" alt=""  style="width: 70px; height: 70px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);"></a>
                 </div>
                 <!-- Mobile Navigation -->
                 <div class="mmenu-trigger">

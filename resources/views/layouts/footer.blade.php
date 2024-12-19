@@ -5,8 +5,8 @@
                 <!-- About Section -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="netabout">
-                        <a href="index.html" class="logo d-block mb-3">
-                            <img src="{{ asset('images/logo-footer.svg') }}" alt="netcom" class="img-fluid">
+                        <a href="/" class="logo d-block mb-3">
+                            <img src="{{ asset('images/logo-footer.png') }}" alt="netcom" class="img-fluid">
                         </a>
                         <p>The leading real estate platform, connecting buyers and sellers of land most effectively! With thousands of quality listings, a friendly interface and smart search tools, we help you easily search or sell real estate quickly and safely.</p>
                     </div>
