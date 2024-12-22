@@ -113,13 +113,13 @@
                                     <div class="col-lg-6 col-md-12">
                                         <p class="no-mb">
                                             <label for="price">Price</label>
-                                            <input type="number" name="price" placeholder="USD" id="price" required>
+                                            <input type="number" name="price" placeholder="VND" id="price" required>
                                         </p>
                                     </div>
                                     <div class="col-lg-6 col-md-12">
                                         <p class="no-mb last">
                                             <label for="area">Area</label>
-                                            <input type="text" name="area" placeholder="Sqft" id="area"
+                                            <input type="text" name="area" placeholder="m²" id="area"
                                                 required>
                                         </p>
                                     </div>

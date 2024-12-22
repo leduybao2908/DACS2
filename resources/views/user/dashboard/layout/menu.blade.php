@@ -15,33 +15,42 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="{{ route('user.notifications') }}" class="{{ request()->routeIs('Notification') ? 'active' : '' }}">
-                        <i class="fas fa-envelope-square"></i> Notification
-                        @php
-                            $unreadCount = DB::table('notification')
-                                ->where('owner_id', Auth::id())
-                                ->where('is_read', 0)
-                                ->count();
-                        @endphp
-                        @if($unreadCount > 0)
-                            <span class="badge badge-danger">{{ $unreadCount }}</span>
-                        @endif
-                    </a>
-                </li>
+                @if (Auth::user()->role !== 'tenant')
+                    <li>
+                        <a href="{{ route('user.notifications') }}" class="{{ request()->routeIs('Notification') ? 'active' : '' }}">
+                            <i class="fas fa-envelope-square"></i> Notification
+                            @php
+                                $unreadCount = DB::table('notification')
+                                    ->where('owner_id', Auth::id())
+                                    ->where('is_read', 0)
+                                    ->count();
+                            @endphp
+                            @if($unreadCount > 0)
+                                <span class="badge badge-danger">{{ $unreadCount }}</span>
+                            @endif
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('my-listings') }}" class="{{ request()->routeIs('my-listings') ? 'active' : '' }}">
+                            <i class="fa fa-list" aria-hidden="true"></i> My Properties
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('add-property') }}" class="{{ request()->routeIs('add-property') ? 'active' : '' }}">
+                            <i class="fa fa-list" aria-hidden="true"></i> Add Property
+                        </a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ route('favourites.index') }}" class="{{ request()->routeIs('favourite-properties') ? 'active' : '' }}">
+                            <i class="fa fa-heart" aria-hidden="true"></i> Favourite Property
+                        </a>
+                    </li>
+                @endif
+
                 <li>
                     <a href="{{ route('user-profile') }}" class="{{ request()->routeIs('user-profile') ? 'active' : '' }}">
                         <i class="fa fa-user"></i> Profile
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('my-listings') }}" class="{{ request()->routeIs('my-listings') ? 'active' : '' }}">
-                        <i class="fa fa-list" aria-hidden="true"></i> My Properties
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('add-property') }}" class="{{ request()->routeIs('add-property') ? 'active' : '' }}">
-                        <i class="fa fa-list" aria-hidden="true"></i> Add Property
                     </a>
                 </li>
                 <li>
@@ -49,7 +58,6 @@
                         <i class="fas fa-credit-card"></i> Payments
                     </a>
                 </li>
-                
                 
                 <li>
                     <!-- Logout Link -->

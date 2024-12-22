@@ -63,6 +63,8 @@ class Room extends Model
         return isset($images[0]) ? $images[0] : null;  // Trả về ảnh đầu tiên trong mảng
     }
 
+
+    
     /**
      * Get the reviews for the room.
      */

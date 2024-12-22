@@ -12,6 +12,9 @@ use App\Http\Controllers\PropertySearchController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Auth\SocialController;
 use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\FavouriteController;
+use App\Http\Controllers\PaymentController;
+
 
 // Route để in thông tin tin nhắn theo mail_id
 Route::get('/print/{room}', [InquiryController::class, 'print'])->name('print');
@@ -58,6 +61,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('user.payment-method');
     })->name('payment-method');
 
+    Route::get('/payments', [PaymentController::class, 'create'])->name('payments.create');
+
+    //Favourite
+   
+    Route::post('/favourites', [FavouriteController::class, 'store'])->name('favourites.store');
+    Route::get('/favourites', [FavouriteController::class, 'index'])->name('favourites.index');
+    Route::delete('/favourites/{id}', [FavouriteController::class, 'destroy'])->name('favourites.destroy');
+
+
+
     // Invoices
     Route::get('/invoice', function () {
         return view('user.invoices');
@@ -96,7 +109,8 @@ Route::get('/rooms/{room}', [RoomController::class, 'show'])->name('rooms.show')
 Route::post('/rooms/{room}/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 Route::get('/reviews/{roomId}', [ReviewController::class, 'show'])->name('reviews.show');
 Route::get('/featured-properties', [PropertySearchController::class, 'getFeaturedProperties'])->name('featured-properties');
-
+//Route::post('/favourites', [FavouriteController::class, 'store'])->name('favourites.store');
+ 
 
 Route::post('/logout', function () {
     Auth::logout();

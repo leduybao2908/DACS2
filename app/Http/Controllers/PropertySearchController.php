@@ -43,6 +43,14 @@ class PropertySearchController extends Controller
         $query->whereBetween('area', [$areaMin, $areaMax]);
     }
 
+    if ($priceMin !== null && $priceMax !== null) {
+    $query->whereBetween('price', [$priceMin, $priceMax]);
+}
+
+if ($areaMin !== null && $areaMax !== null) {
+    $query->whereBetween('area', [$areaMin, $areaMax]);
+}
+
     // Gọi phương thức sắp xếp
     $rooms = $this->applySorting($query, $sortby);
 
