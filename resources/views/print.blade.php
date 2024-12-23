@@ -106,9 +106,7 @@
                                     </div>
                                 @endforeach
                             </div>
-<<<<<<< Updated upstream
-                           
-=======
+
                             <a class="carousel-control left" href="#listingDetailsSlider" data-slide="prev"><i
                                     class="fa fa-angle-left"></i></a>
                             <a class="carousel-control right" href="#listingDetailsSlider" data-slide="next"><i
