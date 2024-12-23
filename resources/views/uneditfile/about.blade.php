@@ -344,7 +344,7 @@ Welcome to NiceLand, NiceLand is a specialized real estate trading platform wher
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 team-pro">
                     <div class="team-wrap">
                         <div class="team-img">
-                            <img src="images/team/t-6.jpg" alt="" />
+                            <img src="images/team/t-5.jpg" alt="" />
                         </div>
                         <div class="team-content">
                             <div class="team-info">

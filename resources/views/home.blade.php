@@ -255,7 +255,7 @@
             <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2" data-aos="fade-up" data-aos-delay="350">
                 <div class="inner-box team-details">
                     <div class="image team-head">
-                        <a href="agents-listing-grid.html"><img src="images/team/t-7.jpg" alt="" /></a>
+                        <a href="agents-listing-grid.html"><img src="images/team/t-5.jpg" alt="" /></a>
                         <div class="team-hover">
                             <ul class="team-social">
                                 <li><a href="https://www.facebook.com/le.tuankhai2110" class="facebook"><i class="fa fa-facebook"></i></a></li>
