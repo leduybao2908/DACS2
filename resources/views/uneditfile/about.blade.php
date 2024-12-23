@@ -184,7 +184,7 @@ Welcome to NiceLand, NiceLand is a specialized real estate trading platform wher
                     <h2><span>Our </span>Team</h2>
                     <p>We provide full service at every step.</p>
                 </div>
-                {{-- <div class="row team-all">
+                <div class="row team-all">
                     
                     <div class="col-lg-6 col-md-6 team-pro">
                         <div class="team-wrap">
@@ -230,139 +230,9 @@ Welcome to NiceLand, NiceLand is a specialized real estate trading platform wher
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 team-pro">
-                        <div class="team-wrap">
-                            <div class="team-img">
-                                <img src="images/team/t-6.jpg" alt="" />
-                            </div>
-                            <div class="team-content">
-                                <div class="team-info">
-                                    <h3>Quang Chính</h3>
-                                    <p>Member</p>
-                                    <div class="team-socials">
-                                        <ul>
-                                            <li>
-                                                <a href="https://www.facebook.com/le.quangchinh.589" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>                                             
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span><a href="team-details.html">View Profile</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 team-pro">
-                        <div class="team-wrap">
-                            <div class="team-img">
-                                <img src="images/team/t-6.jpg" alt="" />
-                            </div>
-                            <div class="team-content">
-                                <div class="team-info">
-                                    <h3>Quang Chính</h3>
-                                    <p>Member</p>
-                                    <div class="team-socials">
-                                        <ul>
-                                            <li>
-                                                <a href="https://www.facebook.com/le.quangchinh.589" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>                                             
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span><a href="team-details.html">View Profile</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-            <div class="row team-all">
-                    
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 team-pro">
-                    <div class="team-wrap">
-                        <div class="team-img">
-                            <img src="images/team/t-6.jpg" alt="" />
-                        </div>
-                        <div class="team-content">
-                            <div class="team-info">
-                                <h3>Quang Chính</h3>
-                                <p>Member</p>
-                                <div class="team-socials">
-                                    <ul>
-                                        <li>
-                                            <a href="https://www.facebook.com/le.quangchinh.589" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>                                             
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{-- Duy Bảo --}}
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 team-pro">
-                    <div class="team-wrap">
-                        <div class="team-img">
-                            <img src="images/team/t-7.jpg" alt="" />
-                        </div>
-                        <div class="team-content">
-                            <div class="team-info">
-                                <h3>Duy Bảo</h3>
-                                <p>Leader</p>
-                                <div class="team-socials">
-                                    <ul>
-                                        <li>
-                                            <a href="https://www.facebook.com/profile.php?id=100037310812731" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                            <a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                            <a href="#" title="instagran"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{-- Trường Thành --}}
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 team-pro">
-                    <div class="team-wrap">
-                        <div class="team-img">
-                            <img src="images/team/t-8.jpg" alt="" />
-                        </div>
-                        <div class="team-content">
-                            <div class="team-info">
-                                <h3>Trường Thành</h3>
-                                <p>Member</p>
-                                <div class="team-socials">
-                                    <ul>
-                                        <li>
-                                            <a href="https://www.facebook.com/truong.thanh.547037" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>                                             
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{-- Tuấn Khải --}}
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 team-pro">
-                    <div class="team-wrap">
-                        <div class="team-img">
-                            <img src="images/team/t-5.jpg" alt="" />
-                        </div>
-                        <div class="team-content">
-                            <div class="team-info">
-                                <h3>Tuấn Khải</h3>
-                                <p>Member</p>
-                                <div class="team-socials">
-                                    <ul>
-                                        <li>
-                                            <a href="https://www.facebook.com/le.tuankhai2110" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>                                             
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
+            
         </section>
         <!-- END SECTION AGENTS -->
 

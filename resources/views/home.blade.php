@@ -232,44 +232,6 @@
                     </div>
                 </div>
             </div>
-            {{-- Clear tại đây --}}
-            <!--Team Block-->
-            <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2" data-aos="fade-up" data-aos-delay="350">
-                <div class="inner-box team-details">
-                    <div class="image team-head">
-                        <a href="agents-listing-grid.html"><img src="images/team/t-8.jpg" alt="" /></a>
-                        <div class="team-hover">
-                            <ul class="team-social">
-                                <li><a href="https://www.facebook.com/truong.thanh.547037" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="lower-box">
-                        <h3><a href="agents-listing-grid.html">Trường Thành</a></h3>
-                        <div class="designation">Member</div>
-                    </div>
-                </div>
-            </div>
-            <!--Team Block-->
-            <div class="team-block col-sm-6 col-md-4 col-lg-4 col-xl-2" data-aos="fade-up" data-aos-delay="350">
-                <div class="inner-box team-details">
-                    <div class="image team-head">
-                        <a href="agents-listing-grid.html"><img src="images/team/t-5.jpg" alt="" /></a>
-                        <div class="team-hover">
-                            <ul class="team-social">
-                                <li><a href="https://www.facebook.com/le.tuankhai2110" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="lower-box">
-                        <h3><a href="agents-listing-grid.html">Tuấn Khải</a></h3>
-                        <div class="designation">Member</div>
-                    </div>
-                </div>
-            </div>
-            {{-- tới đây --}}
         </div>
     </div>
 </section>
