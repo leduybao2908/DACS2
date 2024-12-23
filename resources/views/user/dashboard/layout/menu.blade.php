@@ -2,7 +2,7 @@
     <div class="user-profile-box mb-0">
         <div class="sidebar-header"><img src="{{ asset('images/logo-blue.svg') }}" alt="header-logo2.png"> </div>
         <div class="header clearfix">
-            <img src="{{ Auth::user()->image_url ? asset('storage/' . Auth::user()->image_url) : 'images/testimonials/ts-1.jpg' }}" alt="avatar" class="img-fluid profile-img">
+            <img src="{{ Auth::user()->image_url ? asset('storage/' . Auth::user()->image_url) : 'images/testimonials/free-user-icon-3296-thumb.png' }}" alt="avatar" class="img-fluid profile-img">
         </div>
         <div class="active-user">
             <h2>{{ Auth::user()->name }}</h2>

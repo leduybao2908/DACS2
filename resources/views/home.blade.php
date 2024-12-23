@@ -103,7 +103,7 @@
                         </p>
                         <div class="price-properties footer pt-3 pb-0">
                             <h3 class="title mt-3">
-                                <a href="{{ route('rooms.show', $room->room_id) }}">${{ number_format($room->price, 2) }}</a>
+                                <a href="{{ route('rooms.show', $room->room_id) }}">₫{{ number_format($room->price) }}</a>
                             </h3>
                             <div class="rating">
                                 <i class="fa fa-star"></i> {{ number_format($room->avg_rating, 1) }} ({{ $room->reviews_count }} reviews)

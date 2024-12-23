@@ -22,7 +22,7 @@
 @php
     $bodyClass = 'inner-pages maxw1600 m0a dashboard-bd';
 @endphp
-
+@include('layouts.navbar')  
 @section('content')
     <!-- START SECTION USER PROFILE -->
 

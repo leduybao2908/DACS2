@@ -78,7 +78,7 @@
             <div class="header-user-menu user-menu add" id="user-menu">
                 <div class="header-user-name" style="color: black;">
                     <span>
-                        <img src="{{ Auth::user()->image_url ? asset('storage/' . Auth::user()->image_url) : asset('images/testimonials/ts-1.jpg') }}" alt="">
+                        <img src="{{ Auth::user()->image_url ? asset('storage/' . Auth::user()->image_url) : asset('images/testimonials/free-user-icon-3296-thumb.png') }}" alt="">
                     </span> 
                     Hi, {{ Auth::user()->name }}
                 </div>

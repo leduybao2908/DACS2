@@ -30,7 +30,7 @@ class PaymentController extends Controller
 
 
            // Lấy các biến cần thiết
-    $phone_number = $user->phone_number ?? '0000000000'; // Số điện thoại người dùng (giả sử user có cột phone_number)
+    $phone_number = $owner->phone_number ?? '0000000000'; // Số điện thoại người dùng (giả sử user có cột phone_number)
     $user_name = $user->name ?? 'Unknown';              // Tên người dùng
     $price = $property->price ?? 0;                     // Giá phòng (giả sử room có cột price)
 
@@ -50,7 +50,7 @@ class PaymentController extends Controller
             ),
             CURLOPT_POSTFIELDS => json_encode(array (
         'type' => 'text',
-        'data' => '2|99|' . $phone_number .'|'. $user_name . '|0|0|' . $price . '|Thanh toan tien phong'.'|transfer_myqr',//'2|99|' . $phone_number . $user_name . '|0|0|' . $price . '|Thanh toan tien phong|'.'|transfer_myqr',
+        'data' => '2|99|' . $phone_number .'|'. $user_name . '||0|0|' . $price . '|Thanh toan tien phong'.'|transfer_myqr',//'2|99|' . $phone_number . $user_name . '|0|0|' . $price . '|Thanh toan tien phong|'.'|transfer_myqr',
         'background' => 'rgb(255,255,255)',
         'foreground' => 'rgb(0,0,0)',
         'logo' => 'https:\/\/site.com\/logo.png',
@@ -60,7 +60,7 @@ class PaymentController extends Controller
         $response = curl_exec($curl);
 
         curl_close($curl);
-        echo $response;
+       
 
         $qrLink = json_decode($response);
 
