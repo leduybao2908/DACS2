@@ -122,7 +122,7 @@
                                                 {{ ucfirst($room->status) }}
                                             </span>
                                         </td>
-                                        <td>{{ substr($room->description, 0, 30) . (strlen($room->description) > 50 ? '...' : '') }}
+                                        <td>{{ substr(strip_tags($room->description), 0, 30) . (strlen(strip_tags($room->description)) > 30 ? '...' : '') }}
                                         </td>
 
                                         <td>{{ $room->created_at }}</td>

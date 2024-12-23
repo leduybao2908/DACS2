@@ -25,7 +25,7 @@
     $bodyClass = 'inner-pages maxw1600 m0a dashboard-bd';
 @endphp
 
-@include('layouts.navbar')
+
 @section('content')
 
     <section class="user-page section-padding pt-5">
