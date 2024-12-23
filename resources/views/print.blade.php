@@ -106,7 +106,32 @@
                                     </div>
                                 @endforeach
                             </div>
+<<<<<<< Updated upstream
                            
+=======
+                            <a class="carousel-control left" href="#listingDetailsSlider" data-slide="prev"><i
+                                    class="fa fa-angle-left"></i></a>
+                            <a class="carousel-control right" href="#listingDetailsSlider" data-slide="next"><i
+                                    class="fa fa-angle-right"></i></a>
+
+                            <!-- main slider carousel nav controls -->
+                            <ul class="carousel-indicators smail-listing list-inline">
+                                @php
+                                    // Decode the JSON string into an array
+                                    $images = json_decode($room->images);
+                                @endphp
+
+                                @foreach ($images as $index => $image)
+                                    <li class="list-inline-item {{ $index === 0 ? 'active' : '' }}">
+                                        <a id="carousel-selector-{{ $index }}"
+                                            data-slide-to="{{ $index }}" data-target="#listingDetailsSlider">
+                                            <img src="data:image/png;base64,{{$image}}" class="img-fluid"
+                                                alt="listing-small">
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+>>>>>>> Stashed changes
                         </div>
                         
                         <!-- Description Section -->

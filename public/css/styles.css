@@ -15175,8 +15175,8 @@ a.button {
 }
 
 .inner-pages .nice-select.open .list {
-  overflow: visible;
-  z-index: 99999;
+/*   overflow: visible;
+ */  z-index: 99999;
   width: auto;
 }
 

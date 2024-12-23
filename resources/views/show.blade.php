@@ -33,6 +33,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-12 blog-pots">
+
+
                     <div class="row">
                         <div class="col-md-12">
                             <section class="headings-2 pt-0">
@@ -55,7 +57,7 @@
                                                 <h4>${{ number_format($room->price, 2) }}</h4>
                                                 <div class="mt-0">
                                                     <a href="#listing-location" class="listing-address">
-                                                        <p>{{ $room->area }} sqft</p>
+                                                        <p>{{ $room->area }} m²</p>
                                                     </a>
                                                 </div>
                                             </div>
@@ -63,7 +65,22 @@
                                     </div>
                                 </div>
                             </section>
+                            @auth
+                                @if (Auth::user()->role === 'tenant')
+                                    <form action="{{ route('favourites.store') }}" method="POST">
+                                        @csrf
+                                        
+                                        <input type="hidden" name="room_id" value="{{ $room->room_id }}">
+                                        <button type="submit" class="btn btn-danger btn-lg mt-2">Add to Favourite</button>
+                                    </form>
+                                    @if (session('success'))
+                                        <div class="alert alert-success">{{ session('success') }}</div>
+                                    @endif
+                                @endif
+                            @endauth
 
+                            <br>
+                            <br>
                             <!-- Gallery -->
                             <div id="listingDetailsSlider" class="carousel listing-details-sliders slide mb-30">
                                 <h5 class="mb-4">Gallery</h5>
@@ -71,7 +88,7 @@
                                     @foreach (json_decode($room->images) as $index => $image)
                                         <div class="item carousel-item {{ $index === 0 ? 'active' : '' }}"
                                             data-slide-number="{{ $index }}">
-                                            <img src="data:image/png;base64,{{$image}}" class="img-fluid"
+                                            <img src="data:image/png;base64,{{ $image }}" class="img-fluid"
                                                 alt="slider-listing">
                                         </div>
                                     @endforeach
@@ -92,7 +109,7 @@
                                         <li class="list-inline-item {{ $index === 0 ? 'active' : '' }}">
                                             <a id="carousel-selector-{{ $index }}"
                                                 data-slide-to="{{ $index }}" data-target="#listingDetailsSlider">
-                                                <img src="data:image/png;base64,{{$image}}" class="img-fluid"
+                                                <img src="data:image/png;base64,{{ $image }}" class="img-fluid"
                                                     alt="listing-small">
                                             </a>
                                         </li>
@@ -108,9 +125,9 @@
                             <style>
                                 .blog-info p {
                                     word-wrap: break-word;
-                                    
+
                                     white-space: normal;
-                                    
+
                                 }
                             </style>
                         </div>
@@ -154,7 +171,7 @@
                                             <img src="{{ $review->user->image_url ? asset('storage/' . $review->user->image_url) : 'images/default-profile.jpg' }}"
                                                 class="img-fluid" alt="User Profile">
                                         </div>
-                    
+
                                         <div class="col-md-10 comments-info">
                                             <div class="conra">
                                                 <h5 class="mb-2">{{ $review->user->name }}</h5>
@@ -162,23 +179,26 @@
                                                     <div class="detail-list-rating mr-0">
                                                         <!-- Display stars based on rating -->
                                                         @for ($i = 1; $i <= 5; $i++)
-                                                            <i class="fa fa-star {{ $i <= $review->rating ? '' : 'fa-star-o' }}"></i>
+                                                            <i
+                                                                class="fa fa-star {{ $i <= $review->rating ? '' : 'fa-star-o' }}"></i>
                                                         @endfor
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- Format and display the date of review -->
-                                            <p class="mb-4">{{ \Carbon\Carbon::parse($review->date)->format('M d, Y H:i:s') }}</p>
+                                            <p class="mb-4">
+                                                {{ \Carbon\Carbon::parse($review->date)->format('M d, Y H:i:s') }}</p>
                                             <!-- Display review comment with line breaks -->
                                             <p>{!! nl2br(e($review->comment)) !!}</p>
-                    
+
                                             <!-- Display review images if available -->
                                             @if ($review->images_url && is_array(json_decode($review->images_url)))
                                                 <div class="resti">
                                                     @foreach (json_decode($review->images_url) as $imageBase64)
                                                         <div class="rest">
                                                             <!-- Use the base64 data directly -->
-                                                            <img src="{{ $imageBase64 }}" class="img-fluid" alt="Review Image">
+                                                            <img src="{{ $imageBase64 }}" class="img-fluid"
+                                                                alt="Review Image">
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -189,7 +209,7 @@
                             </ul>
                         </div>
                     </section>
-                    
+
 
                     <!-- End Reviews -->
                     <!-- Star Add Review -->
@@ -364,12 +384,12 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </aside>
             </div>
-            
+
         </div>
     </section>
     <!-- END SECTION PROPERTIES LISTING -->
